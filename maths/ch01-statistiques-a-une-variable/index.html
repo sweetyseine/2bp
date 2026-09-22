@@ -74,415 +74,830 @@ footer.pied b{font-weight:800}
   .hero{grid-template-columns:1fr}
   h1{font-size:27px}
   .bar .qui{margin-left:0;width:100%}}
-
-/* ══════ la réponse prend la place de la zone de réponse ══════ */
-.rep{margin:10px 0 4px;padding:12px 16px 10px;border-radius:14px;
+:root{--bg:#eef1f4;--card:#fff;--ink:#0d1a22;--ink2:#0d1a22;--mut:#0d1a22;
+  --line:#9fb0bb;--line2:#5d707b;--cy:#00A5BF;--cy-d:#00778a;--cy-l:#e2f6fa;
+  --vi:#7C4BD8;--or:#FFB627;--ve:#2f7f2f;--r:16px}
+.cx *{box-sizing:border-box}
+.cx h1,.cx h2,.cx h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;font-weight:700;
+  letter-spacing:-.02em;margin:0}
+.cx .ident{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 0}
+.cx .ident>div{flex:1 1 200px}
+.cx .ident label{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--mut);margin:0 0 5px 10px}
+.cx .ident input{width:100%;font:inherit;font-size:17px;padding:11px 14px;border:2px solid #fff;
+  border-radius:12px;background:rgba(255,255,255,.75);color:var(--ink)}
+.cx .ident input:focus{outline:none;border-color:var(--cy);background:#fff}
+.cx #idw .qui{margin:0 0 16px;font-size:15.5px;color:var(--ink)}
+.cx #idw .qui b{font-weight:700}
+.cx #idw .qui button{font:inherit;font-size:14px;font-weight:600;color:var(--cy-d);
+  background:none;border:0;border-bottom:1.5px solid var(--cy-d);padding:0 0 1px;
+  margin-left:6px;cursor:pointer}
+.cx #idw .qui button:hover{color:var(--ink)}
+.cx .pasmoi{flex:0 0 auto;align-self:flex-end;font:inherit;font-size:13.5px;font-weight:600;
+  color:var(--cy-d);background:none;border:0;border-bottom:1.5px solid var(--cy-d);
+  padding:0 0 2px;margin:0 0 12px;cursor:pointer}
+.cx .pasmoi:hover{color:var(--ink)}
+.cx .cons{background:var(--card);border-radius:var(--r);padding:18px 22px;margin:0 0 22px;
+  box-shadow:0 1px 2px rgba(13,26,34,.05),0 10px 30px -18px rgba(13,26,34,.4);
+  border-left:5px solid var(--or)}
+.cx .cons h3{font-size:16px;margin:0 0 8px}
+.cx .cons ol{margin:0;padding-left:20px;font-size:15px;color:var(--ink2)}
+.cx .cons li{margin:0 0 5px}
+.cx .zlb{margin:14px 0 4px;font-size:13.5px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--cy-d)}
+.cx .tch{display:inline-flex;align-items:center;gap:5px;vertical-align:-2px;margin:0 2px}
+.cx .tch .k{display:inline-flex;align-items:center;justify-content:center;
+  min-width:26px;height:26px;padding:0 7px;border-radius:6px;
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;
+  color:var(--ink);background:linear-gradient(#fff,#eef3f6);
+  border:1px solid #9fb2bd;border-bottom-width:3px;border-bottom-color:#7d95a3;
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset}
+.cx .tch .pl{font-size:12px;color:var(--ink2);font-weight:600}
+.cx .tch .k svg{display:block}
+.cx .exo{background:var(--card);border-radius:var(--r);margin:0 0 20px;overflow:hidden;
+  box-shadow:0 1px 2px rgba(13,26,34,.05),0 10px 30px -18px rgba(13,26,34,.4)}
+.cx .exo-h{display:flex;align-items:center;gap:12px;padding:15px 24px;background:#fbfdfe;
+  border-bottom:1px solid var(--line);flex-wrap:wrap}
+.cx .exo-t{flex:1 1 auto;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px}
+.cx .etat{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;background:#eef3f6;color:var(--mut);border-radius:20px;padding:4px 12px}
+.cx .etat.ok{background:#eaf8ea;color:var(--ve)}
+.cx .exo-c{padding:22px 24px 6px}
+.cx .exo-f{padding:16px 24px 20px;border-top:1px solid var(--line);display:flex;
+  align-items:center;gap:14px;flex-wrap:wrap}
+.cx .env{border:0;background:var(--cy-d);color:#fff;border-radius:12px;padding:11px 20px;
+  font:inherit;font-weight:700;font-size:15px;cursor:pointer;transition:.16s}
+.cx .env:hover{background:#006373;transform:translateY(-1px)}
+.cx .note-env{font-size:13.5px;color:var(--ve);flex:1 1 200px}
+.cx .sit{background:linear-gradient(120deg,#efe8fd,#f7f3fe);border-radius:12px;padding:15px 18px;margin:0 0 16px}
+.cx .sit .lb{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:#5b32ab;margin:0 0 5px}
+.cx .sit p{margin:0 0 10px;font-size:15.5px}
+.cx .sit p:last-child{margin:0}
+.cx p.pb{margin:14px 0 0;background:var(--cy-l);border-left:4px solid var(--cy);
+  border-radius:10px;padding:10px 14px;font-size:15.5px}
+.cx p.en{margin:0 0 12px}
+.cx .serie{font-family:"IBM Plex Mono",monospace;font-size:14.5px;background:#f5f8fa;border-radius:12px;
+  padding:13px 17px;color:var(--ink2);line-height:1.85;margin:0 0 14px}
+.cx .cmp{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  background:#efe8fd;color:#5b32ab;border-radius:20px;padding:2px 9px;margin-right:7px;display:inline-block}
+.cx .crit,.cx .ccf{background:#fff8ea;border:1px solid #f0dcb0;border-radius:12px;padding:14px 18px;margin:0 0 14px}
+.cx .crit>b,.cx .ccf>b{display:block;color:#8a5c05;font-weight:700;margin-bottom:8px}
+.cx .crit ol,.cx .crit ul,.cx .ccf ul{margin:0;padding-left:20px}
+.cx .crit li,.cx .ccf li{margin:0 0 5px;font-size:15px}
+.cx .dbl{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 14px}
+.cx .dlb{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;background:#8FBE1F;color:#2c3d05;border-radius:20px;padding:3px 11px;
+  margin-bottom:8px;font-weight:600}
+.cx pre.code{font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.75;background:#132734;
+  color:#e6f1f5;border-radius:12px;padding:15px 18px;overflow-x:auto;margin:12px 0;white-space:pre}
+.cx .alerte{display:none}
+.cx .q{margin:0 0 20px;padding:0 0 18px;border-bottom:1px dashed var(--line2)}
+.cx .q:last-child{border-bottom:0}
+.cx .q-h{display:flex;align-items:flex-start;gap:12px;margin:0 0 10px;flex-wrap:wrap}
+.cx .qdoc{margin:0 0 12px}
+.cx .qdoc svg{max-width:100%;height:auto}
+.cx .chx{list-style:none;margin:10px 0 4px;padding:0;display:grid;
+  grid-template-columns:1fr 1fr;gap:10px}
+.cx .chx li{margin:0}
+.cx .chx .ch-e{display:flex;align-items:center;gap:12px;width:100%;text-align:left;
+  font:inherit;font-size:15.5px;cursor:pointer;padding:11px 15px;background:#fff;
+  border:1.6px solid var(--line2);border-radius:14px;color:var(--ink);
+  transition:background .2s,border-color .2s,box-shadow .2s}
+.cx .chx .ch-e:hover{background:#f3f9fb;border-color:var(--cy)}
+.cx .chx .ch-e b{display:inline-grid;place-items:center;flex:none;width:30px;height:30px;
+  border-radius:10px;background:#eef3f6;color:var(--cy-d);font-weight:800;font-size:15px;
+  transition:background .2s,color .2s}
+.cx .chx .ch-e.on{background:#eaf6fa;border-color:var(--cy);
+  box-shadow:0 0 0 3px var(--cy-l)}
+.cx .chx .ch-e.on b{background:var(--cy);color:#fff}
+@media(max-width:760px){.cx .chx{grid-template-columns:1fr}}
+.cx .q-n{flex:1 1 300px;font-weight:600;font-size:16px;line-height:1.4}
+.cx .q-n .qn{color:var(--cy-d);font-weight:700}
+.cx .coef{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;
+  background:#eef3f6;color:var(--ink2);border-radius:20px;padding:3px 10px;white-space:nowrap}
+.cx textarea{width:100%;font:inherit;font-size:16px;padding:12px 15px;border:2px solid var(--line2);
+  border-radius:12px;background:#fbfdfe;resize:vertical;color:var(--ink);line-height:1.6}
+.cx textarea:focus{outline:none;border-color:var(--cy);background:#fff;box-shadow:0 0 0 4px var(--cy-l)}
+.cx textarea.plein{border-color:var(--cy)}
+.cx .tw{overflow-x:auto;overflow-y:hidden;margin:0 0 14px;border:1.5px solid #bcdbe7;border-radius:18px;
+  background:#fff;box-shadow:0 3px 14px -8px rgba(13,26,34,.35)}
+.cx table{border-collapse:separate;border-spacing:0;width:100%;background:#fff;font-size:15px}
+.cx th,.cx td{border-bottom:1px solid #cfe2ea;border-right:1px solid #dceaf1;padding:10px 13px;text-align:left}
+.cx th:last-child,.cx td:last-child{border-right:0}
+.cx tbody tr:last-child th,.cx tbody tr:last-child td{border-bottom:0}
+.cx thead th{background:linear-gradient(180deg,#e3f4fa,#d2ecf5);font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#0c4a58;font-weight:700;
+  border-bottom:2px solid #9ed2e3;border-right-color:#b6d9e6}
+.cx tbody tr:nth-child(even){background:#f5fbfd}
+.cx tbody th{background:#eef6fa;color:#123a46;font-weight:700;border-right-color:#cbe3ec}
+.cx tbody tr:nth-child(even) th{background:#e8f2f7}
+.cx table.num td,.cx table.num th:not(:first-child){text-align:center}
+.cx td.v{background:#fff8e6;padding:0}
+.cx input.tc{width:100%;min-width:74px;font:inherit;font-size:16px;text-align:center;padding:12px 6px;
+  border:1px dashed #c79320;border-radius:8px;background:transparent;color:var(--ink)}
+.cx input.tc:focus{outline:2px solid var(--cy);outline-offset:-2px;background:var(--cy-l);border-color:transparent}
+.cx input.tc.plein{background:#f2fbfd;font-weight:600;border-style:solid;border-color:#9ed2e3}
+.cx .zone{border:2.5px dashed var(--line2);border-radius:12px;background:#fbfdfe;padding:26px 20px;
+  text-align:center;cursor:pointer;transition:.18s;min-height:110px;display:grid;
+  place-content:center;gap:6px}
+.cx .zone:hover,.cx .zone:focus{border-color:var(--cy);background:var(--cy-l);outline:none}
+.cx .zone p{margin:0;font-size:15px;color:var(--ink2)}
+.cx .zone .rappel{font-size:13px;color:var(--mut)}
+.cx .zone.pleine{padding:10px;border-style:solid;border-color:var(--cy);background:#fff;display:block}
+.cx .zone img{max-width:100%;border-radius:8px;display:block;margin:0 auto;cursor:zoom-in}
+.cx .cdp{background:linear-gradient(140deg,#eafaf0,#f5fdf8);border:1px solid #7fbf9b;
+  border-left:5px solid #1f7a4d;border-radius:12px;padding:11px 16px;margin:10px 0 8px}
+.cx .cdp .lb{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.15em;text-transform:uppercase;background:#1f7a4d;color:#fff;
+  border-radius:20px;padding:3px 11px;margin-bottom:7px}
+.cx .cdp p{margin:0;font-size:15.5px;color:var(--ink)}
+.cx .aide{background:linear-gradient(140deg,#eafaf0,#f5fdf8);border:1px solid #c8e9d6;
+  border-radius:var(--r);padding:18px 22px;margin:0 0 20px}
+.cx .aide .lb{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.15em;text-transform:uppercase;background:#1f7a4d;color:#fff;
+  border-radius:20px;padding:3px 11px;margin-bottom:9px}
+.cx .aide h3{font-size:17px;margin:0 0 10px}
+.cx .aide ul{margin:0;padding-left:20px}
+.cx .aide .fx,.cx .aide code{font-family:"IBM Plex Mono",monospace;font-size:14px;background:#1f7a4d;
+  color:#fff;border-radius:6px;padding:2px 9px;display:inline-block}
+.cx .rsg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:9px}
+.cx .rs{background:#fff;border:1px solid #d5ecdf;border-radius:11px;padding:11px 13px}
+.cx .rs b{display:block;font-size:14.5px}
+.cx .rs span{font-size:13px;color:var(--mut)}
+.cx svg.gr{width:100%;height:auto;display:block;max-width:460px;margin:0 auto 14px}
+.cx .q4{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.cx .q4 .it{background:#fbfdfe;border:1px solid var(--line2);border-radius:12px;padding:12px}
+.cx .q4 .hd{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.cx .q4 .l{font-weight:700;color:var(--cy-d)}
+.cx .q4 .z{flex:1 1 auto;height:26px;border-bottom:1.5px solid var(--line2)}
+.cx .auto{position:fixed;right:16px;bottom:16px;background:rgba(13,26,34,.86);color:#fff;
+  border-radius:12px;padding:8px 14px;font-size:12.5px;z-index:60}
+.cx .loupe{position:fixed;inset:0;background:rgba(13,26,34,.9);z-index:200;display:none;
+  place-items:center;padding:30px;cursor:zoom-out}
+.cx .loupe.on{display:grid}
+.cx .loupe img{max-width:100%;max-height:100%;border-radius:10px}
+@media(max-width:760px){.cx .q4,.cx .dbl{grid-template-columns:1fr}}
+.cx .avf{display:none!important}
+.cx .outn{margin:14px 0 0;background:#fbfdfe;border:1px solid #5f9fb4;border-radius:14px;padding:12px 18px 14px}
+.cx .outn>.et{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;font-weight:700;color:#00778a;margin-bottom:6px}
+.cx .outn ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cx .outn li{margin:0}
+.cx .outn a{display:inline-block;text-decoration:none;font-size:14.5px;font-weight:600;color:#00778a;
+  background:#e2f6fa;border:1px solid #7fc9d9;border-radius:20px;padding:6px 14px}
+.cx .outn a:hover{background:#00778a;color:#fff;border-color:#00778a}
+.cx .prop{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cx .prop li{background:#f4f8fa;border:1px solid #cfdae1;border-radius:10px;padding:8px 12px;font-size:15px}
+.cx .prop li b{color:#00778a;margin-right:6px}
+@media(max-width:640px){.cx .prop{grid-template-columns:1fr}}
+.cx .exo.verrou .exo-f{display:none}
+.cx .vbx{padding:22px 4px 8px;text-align:center}
+.cx .vbx .vt{margin:0 0 14px;font-size:16px;color:#0d1a22}
+.cx .vin{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cx .vin input{width:150px;font:inherit;font-size:22px;letter-spacing:.22em;text-align:center;
+  text-transform:uppercase;padding:10px 12px;border:2px solid #cfdae1;border-radius:12px;background:#fbfdfe}
+.cx .vin input:focus{outline:none;border-color:#00A5BF;background:#fff}
+.cx .vin button{font:inherit;font-weight:700;font-size:16px;padding:10px 22px;border:0;border-radius:12px;
+  background:#00778a;color:#fff;cursor:pointer}
+.cx .vin button:hover{filter:brightness(1.1)}
+.cx .vbx .vm{margin:12px 0 0;color:#a5281b;font-weight:600;min-height:20px}
+.cx .exo.verrou .exo-h .exo-t:before{content:"\1F512  ";font-size:15px}
+.cx .cslg{margin:14px 0 0;background:#f2f8fb;border:1px solid #5f9fb4;border-left:5px solid #00A5BF;border-radius:12px;padding:12px 18px;font-size:15.5px;color:#0d1a22}
+.cx .cslg b{color:#00778a}
+.cx .cslg ul{margin:6px 0 0;padding-left:20px}
+.cx .cslg li{margin:3px 0}
+.cx .barre-b .col-b{display:flex;flex-direction:column;gap:2px;min-width:0}
+.cx .barre-b .msg-s{font-size:13px;color:#2f7d32;font-weight:700;max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cx .barre-b .dos{display:flex;align-items:baseline;gap:8px;font-size:12px;color:#0d1a22;white-space:nowrap}
+.cx #nomDossier{max-width:230px;overflow:hidden;text-overflow:ellipsis}
+.cx #bDossier{border:0;background:none;padding:0;font:inherit;font-size:12px;color:#00778a;text-decoration:underline;cursor:pointer}
+.cx .barre-b .auto{position:static;background:none;color:#0d1a22;padding:0;z-index:auto;white-space:nowrap}
+.cx .barre-b{position:fixed;right:16px;bottom:14px;z-index:70;display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.95);border:1px solid #b9c8d1;border-radius:12px;padding:8px 12px;
+  box-shadow:0 6px 22px -10px rgba(13,26,34,.45)}
+.cx #bSauver{font:inherit;font-size:15px;font-weight:700;border:0;border-radius:9px;padding:9px 16px;
+  background:#2E5266;color:#fff;cursor:pointer}
+.cx #bSauver:hover{background:#1e3a49}
+.cx #bSauver:disabled{opacity:.5;cursor:default}
+.cx .note-env.encours{color:#8a5c05;font-weight:600}
+.cx .note-env.ok{color:#2f7d32;font-weight:700}
+.cx .note-env.att{color:#0d1a22;line-height:1.5}
+.cx .note-env .lien-depot{display:inline-block;margin-top:6px;padding:8px 16px;border-radius:9px;background:#00778a;color:#fff;font-weight:700;text-decoration:none}
+.cx .note-env .lien-depot:hover{background:#005d6c}
+.cx #idw{display:none}
+.cx #idw{position:fixed;inset:0;background:linear-gradient(150deg,#dcf1f7,#f3eefd 55%,#fde3de);
+  display:flex;align-items:center;justify-content:center;padding:22px;z-index:50}
+.cx #idw .bx{background:#fff;border:1px solid #b9c8d1;border-radius:20px;max-width:620px;width:100%;
+  padding:30px 34px;box-shadow:0 24px 60px -28px rgba(13,26,34,.5)}
+.cx #idw h2{margin:0 0 4px;font-family:"Bricolage Grotesque",sans-serif;font-size:25px;color:#0d1a22}
+.cx #idw .sst{margin:0 0 20px;color:#0d1a22;font-size:16px}
+.cx #idw label{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:#00778a;font-weight:600;margin:0 0 6px}
+.cx #idw .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cx #idw input{width:100%;font:inherit;font-size:18px;padding:11px 14px;border:2px solid #cfdae1;
+  border-radius:12px;background:#fbfdfe;color:#0d1a22}
+.cx #idw input:focus{outline:none;border-color:#00A5BF;background:#fff}
+.cx #idw button.pr{margin-top:18px;font:inherit;font-weight:700;font-size:16px;padding:12px 24px;
+  border:0;border-radius:12px;background:#00778a;color:#fff;cursor:pointer}
+.cx #idw button.pr:hover{filter:brightness(1.1)}
+.cx #idw .ch{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.cx #idw .ch button{font:inherit;font-weight:600;font-size:15px;padding:10px 18px;border:2px solid #00A5BF;
+  border-radius:12px;background:#fff;color:#00778a;cursor:pointer}
+.cx #idw .ch button:hover{background:#e2f6fa}
+.cx #idw .ch button.no{border-color:#cfdae1;color:#0d1a22}
+.cx #idw .msg{margin-top:16px;font-size:16px;color:#0d1a22;background:#fff6e6;border-left:4px solid #FFB627;
+  border-radius:12px;padding:12px 16px}
+.cx #idw .msg.err{background:#fdecea;border-left-color:#FF6B5B}
+.cx #idw .et{display:none}
+.cx #idw .et.on{display:block}
+.cx .nom-fixe input,.cx #nom[readonly],.cx #prenom[readonly]{background:#eef3f6;font-weight:700}
+.cx .rlv-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 6px}
+.cx .rlv-h b{font-size:14.5px;color:#3c5410}
+.cx .rlv-h span{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:#5d707b}
+.cx .asg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+.cx .asi{border:1px solid var(--line2);border-radius:14px;padding:12px 14px;background:#fff;
+  position:relative}
+.cx .asi .asl{position:absolute;top:10px;left:12px;font-family:"IBM Plex Mono",monospace;
+  font-weight:700;font-size:13px;color:var(--cy-d)}
+.cx .asi svg,.cx .asi .gr{width:100%;height:auto;max-height:150px;display:block;margin:6px auto 8px}
+@media(max-width:760px){.cx .asg{grid-template-columns:1fr}}
+.cx .ong{position:relative;border-radius:0 14px 14px 14px;padding:15px 20px 14px;
+  margin:34px 0 16px;border:1px solid}
+.cx .ong>.lb{position:absolute;top:-25px;left:-1px;display:inline-block;
+  font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:.02em;color:#fff;background:none;
+  border-radius:10px 10px 0 0;padding:5px 18px 4px;margin:0}
+.cx .ong p{margin:0 0 9px;font-size:16px}
+.cx .ong p:last-child{margin:0}
+.cx .ong.obj{background:#f4f0fe;border-color:#7c4bd8}
+.cx .ong.obj>.lb{background:#7c4bd8}
+.cx .ong.situ{background:#eaf7fb;border-color:#00778a}
+.cx .ong.situ>.lb{background:#00778a}
+.cx .ong.docu{background:#f4f7f9;border-color:#2E5266}
+.cx .ong.docu>.lb{background:#2E5266}
+.cx .ong.docu .dtit{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;
+  font-size:16px;color:#2E5266;margin:0 0 10px}
+.cx .ong.docu .tw{margin:0}
+.cx .exo-c>.ong:first-child{margin-top:28px}
+.cx .exo-f{display:block;padding-top:26px}
+.cx .note-env{display:block;margin:10px 0 0}
+.cx .env{display:block;margin:14px 0 0}
+.cx .aenv{position:relative;margin:0;
+  background:#f4f7f9;border:1px solid #2E5266;border-radius:0 14px 14px 14px;
+  padding:14px 18px 12px}
+.cx .aenv>.lb{position:absolute;top:-25px;left:-1px;display:inline-block;
+  font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;font-size:13px;
+  color:#fff;background:#2E5266;border-radius:10px 10px 0 0;padding:5px 15px 4px}
+.cx .aenv ol{margin:0;padding-left:20px}
+.cx .aenv li{margin:0 0 7px;font-size:14.5px;line-height:1.5}
+.cx .aenv li:last-child{margin-bottom:0}
+.cx .calc-b{position:fixed;left:16px;bottom:16px;z-index:55;font:inherit;font-size:14.5px;
+  font-weight:700;cursor:pointer;background:#fff;color:#2E5266;border:1px solid #b9c8d1;
+  border-radius:24px;padding:10px 20px;box-shadow:0 4px 16px -6px rgba(13,26,34,.4)}
+.cx .calc-b:hover{background:#eef3f6}
+.cx .calc-b.on{background:#2E5266;color:#fff;border-color:#2E5266}
+.cx .calc{position:fixed;left:16px;bottom:64px;z-index:56;width:264px;background:#fff;
+  border:1px solid #b9c8d1;border-radius:18px;padding:12px;
+  box-shadow:0 14px 40px -12px rgba(13,26,34,.5)}
+.cx .calc-h{display:flex;align-items:center;justify-content:space-between;
+  font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;font-size:14px;
+  color:#2E5266;margin:0 2px 8px}
+.cx .calc-h button{border:0;background:none;font-size:20px;line-height:1;cursor:pointer;
+  color:#55666f;padding:0 4px}
+.cx .calc-e{display:block;background:#f4f7f9;border:1px solid #cfd9df;border-radius:12px;
+  padding:12px 14px;text-align:right;font-family:"IBM Plex Mono",monospace;
+  font-size:24px;font-weight:600;color:#0d1a22;margin:0 0 10px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cx .calc-t{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.cx .calc-t button{font:inherit;font-size:17px;font-weight:600;cursor:pointer;
+  background:#f4f7f9;color:#0d1a22;border:1px solid #dbe4e9;border-radius:12px;
+  padding:11px 0;transition:.12s}
+.cx .calc-t button:hover{background:#e6edf1}
+.cx .calc-t button.frappe{background:#bfe3ec;transform:scale(.94)}
+.cx .calc-t button.o.frappe{background:#9fd6e3}
+.cx .calc-t button.e.frappe{background:#005d6c}
+.cx .calc-a{margin:9px 2px 0;font-size:11.5px;color:#6b7d88;text-align:center}
+.cx p.ttab{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;
+  font-size:16px;color:#2E5266;margin:0 0 8px}
+.cx p.ttab + .tw{margin-top:0}
+.cx textarea[data-r]{overflow-y:hidden;resize:vertical}
+.cx .calc-t button.o{background:#e6f5f9;color:#00778a;border-color:#a9d7e3}
+.cx .calc-t button.g{background:#f0f2f4;color:#55666f;font-size:15px}
+.cx .calc-t button.e{background:#00778a;color:#fff;border-color:#00778a}
+.cx .calc-t button.l{grid-column:span 2}
+.cx .ong.cons{background:#fffaf0;border-color:#c98a10;box-shadow:none;padding:15px 20px 14px}
+.cx .ong.cons>.lb{background:#c98a10}
+.cx .cons-t{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;
+  font-size:16px;color:#7a5205;margin:0 0 8px}
+.cx .ong.cons ul{margin:0;padding-left:20px}
+.cx .ong.cons li{margin:0 0 7px;font-size:16px;color:var(--ink)}
+.cx .ong.cons li:last-child{margin-bottom:0}
+.cx .cmp{font-family:inherit;font-size:inherit;font-style:italic;font-weight:700;
+  color:#1B6CA8;background:none;text-transform:none;letter-spacing:0;
+  border-radius:0;padding:0;margin-right:4px;display:inline}
+.cx .cmp::after{content:"."}
+.cx .aide .lb{font-size:12.5px;font-weight:700;letter-spacing:.09em;padding:4px 13px;
+  margin-bottom:10px}
+.cx .aide h3{font-size:19px}
+.cx p.pb{font-size:16.5px;margin:22px 0 4px}
+.cx p.pb b{font-size:16.5px}
+.cx .q{margin:0 0 4px;padding:16px 0 10px;border-bottom:0}
+.cx .q:first-child{padding-top:6px}
+.cx .q>.q-h{margin:0 0 11px}
+.cx .exo-c>.tw,.cx .exo-c>figure{margin:20px 0}
+.cx .cgr{background:#fff;border:2px solid #5d9db6;border-radius:18px;padding:16px 18px 18px;margin:12px 0}
+.cx .cgr-hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+.cx .cgr-hd .et{background:#0c4a58;color:#fff;border-radius:20px;padding:4px 13px;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:700}
+.cx .cgr-ai{font-size:13.5px;color:var(--mut)}
+.cx .cgr .tw{margin:0 0 12px}
+.cx .cgr-c0{background:#eef6fa;text-align:left!important;white-space:nowrap}
+.cx .cgr-ti{display:grid;gap:10px;margin:12px 0 0}
+.cx .cgr-tb th.cgr-c0{padding:6px}
+.cx .cgr-tb th.cgr-c0 input.gax{width:100%;min-width:190px;font:inherit;font-size:15px;
+  font-weight:700;text-align:left;border:1px dashed #c79320;border-radius:9px;
+  background:#fff8e6;padding:8px 10px;color:#0d1a22}
+.cx .cgr-tb th.cgr-c0 input.gax::placeholder{font-weight:400;font-style:italic;color:#8a99a3}
+.cx .cgr-tb th.cgr-c0 input.gax:focus{outline:2px solid var(--cy);outline-offset:-2px;background:#fff}
+.cx .cgr-tb th.cgr-c0 input.gax.plein{background:#f2fbfd;border-style:solid;border-color:#9ed2e3}
+.cx .cgr-ax{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cx .cgr-ax[hidden]{display:none}
+.cx .cgr-ti label{display:block}
+.cx .cgr-ti label span{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.11em;text-transform:uppercase;color:#55666f;margin:0 0 4px}
+.cx input.gti{width:100%;border:1px dashed #c79320;border-radius:10px;background:#fff8e6;
+  padding:9px 12px;font:inherit;font-size:15px;color:#0d1a22}
+.cx .ylabm{display:block;font-weight:700;text-align:left;min-width:170px}
+.cx .ylabm.vide{font-weight:400;font-style:italic;color:#8a99a3}
+.cx input.gti:focus{outline:2px solid var(--cy);outline-offset:-2px;background:#fff}
+.cx input.gti.plein{background:#f2fbfd;border-style:solid;border-color:#9ed2e3}
+.cx .cgr.fige input.gti{pointer-events:none;background:#f2fbfd;border-style:solid;border-color:#9ed2e3}
+@media(max-width:620px){.cx .cgr-ax{grid-template-columns:1fr}}
+.cx input.gv{width:100%;min-width:64px;border:1px dashed #c79320;border-radius:8px;background:#fff8e6;
+  font:inherit;font-size:16px;font-weight:600;text-align:center;padding:9px 4px;color:var(--ink)}
+.cx input.gv:focus{outline:2px solid var(--cy);outline-offset:-2px;background:#fff}
+.cx input.gv.plein{background:#f2fbfd;border-style:solid;border-color:#9ed2e3}
+.cx .cgr-tb td{padding:6px}
+.cx .cgr-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px}
+.cx .gt{border:1.5px solid var(--line2);background:#fff;color:var(--ink2);border-radius:11px;
+  padding:8px 15px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:.16s}
+.cx .gt:hover{border-color:var(--cy);color:var(--cy-d);background:var(--cy-l)}
+.cx .gt.on{background:var(--cy);border-color:var(--cy);color:#fff}
+.cx .cgr-msg{font-size:13px;color:var(--mut);margin-left:auto}
+.cx .cgr-vue{min-height:120px;display:grid;place-items:center;background:#f7fbfd;border-radius:14px;
+  padding:10px}
+.cx .cgr-vide{margin:0;font-size:13.5px;color:var(--mut);text-align:center;max-width:38ch}
+.cx .cgr-vide.pb{color:#a4370f;font-weight:600}
+.cx .cgr-vue svg{max-width:100%;height:auto}
+.cx .cgr.fige input.gv{pointer-events:none;background:#f2fbfd;border-style:solid;border-color:#9ed2e3}
+.cx .cgr.fige .gt{pointer-events:none}
+.cx .cgr.fige .cgr-ai{display:none}
+@media(max-width:620px){.cx .cgr-bar{gap:6px}
+.cx .gt{padding:7px 11px;font-size:12.5px}}
+.cx .rep{margin:10px 0 4px;padding:12px 16px 10px;border-radius:14px;
   background:#f4fbf4;border:1px solid #9ec89e;border-left:4px solid #5da65d}
-/* ═══════ un QCM au tableau ═══════
-   Les propositions sont des cartes, pas des lignes de liste : la classe les
-   lit du fond de la salle. La bonne s'allume avec la reponse, les autres
-   s'effacent. La reponse s'ecrit en grand, le raisonnement vient dessous. */
-.qdoc{margin:0 0 12px}
-.qdoc svg{max-width:100%;height:auto}
-.qcm{list-style:none;margin:16px 0 4px;padding:0;display:grid;
+.cx .qdoc{margin:0 0 12px}
+.cx .qdoc svg{max-width:100%;height:auto}
+.cx .qcm{list-style:none;margin:16px 0 4px;padding:0;display:grid;
   grid-template-columns:1fr 1fr;gap:12px}
-.qcm li{display:flex;align-items:center;gap:14px;margin:0;padding:14px 18px;
+.cx .qcm li{display:flex;align-items:center;gap:14px;margin:0;padding:14px 18px;
   background:#fff;border:1.6px solid #cfdae1;border-radius:16px;
   box-shadow:0 1px 2px rgba(13,26,34,.04);position:relative;
   transition:background .3s ease,border-color .3s ease,opacity .3s ease,
              transform .3s ease,box-shadow .3s ease}
-.qcm li .l{display:inline-grid;place-items:center;flex:none;width:36px;height:36px;
+.cx .qcm li .l{display:inline-grid;place-items:center;flex:none;width:36px;height:36px;
   border-radius:12px;background:#eef3f6;color:#00778a;font-weight:800;font-size:17px;
   transition:background .3s ease,color .3s ease}
-.qcm li .t{font-size:19px;font-weight:600;color:#0d1a22;line-height:1.3}
-.q.rvl .qcm li:not(.bon){opacity:.38}
-.q.rvl .qcm li.bon{background:#eaf7ec;border-color:#2f7f3d;
+.cx .qcm li .t{font-size:19px;font-weight:600;color:#0d1a22;line-height:1.3}
+.cx .q.rvl .qcm li:not(.bon){opacity:.38}
+.cx .q.rvl .qcm li.bon{background:#eaf7ec;border-color:#2f7f3d;
   box-shadow:0 0 0 2px rgba(47,127,61,.22),0 10px 24px -18px rgba(13,26,34,.8);
   transform:translateY(-2px)}
-.q.rvl .qcm li.bon .l{background:#2f7f3d;color:#fff}
-.q.rvl .qcm li.bon .t{color:#14501f;padding-right:26px}
-.q.rvl .qcm li.bon:after{content:"\2713";position:absolute;right:16px;
+.cx .q.rvl .qcm li.bon .l{background:#2f7f3d;color:#fff}
+.cx .q.rvl .qcm li.bon .t{color:#14501f;padding-right:26px}
+.cx .q.rvl .qcm li.bon:after{content:"\2713";position:absolute;right:16px;
   color:#2f7f3d;font-size:22px;font-weight:800;line-height:1}
-@media(max-width:760px){.qcm{grid-template-columns:1fr}}
-
-/* la reponse d'un QCM : elle commence sur la ligne de l'etiquette, comme la
-   competence commence sur la ligne de la question. */
-.rep.qcm-r .rh{display:flex;align-items:center;gap:16px;margin:0;flex-wrap:wrap}
-.rep.qcm-r .rh>.lb{margin:0!important;flex:none}
-.rep.qcm-r:not(.on) .rq{display:none}
-.rep.qcm-r .rq{display:flex;align-items:center;gap:13px;margin:0}
-.rep.qcm-r .rl{display:inline-grid;place-items:center;flex:none;width:40px;height:40px;
+@media(max-width:760px){.cx .qcm{grid-template-columns:1fr}}
+.cx .rep.qcm-r .rh{display:flex;align-items:center;gap:16px;margin:0;flex-wrap:wrap}
+.cx .rep.qcm-r .rh>.lb{margin:0!important;flex:none}
+.cx .rep.qcm-r:not(.on) .rq{display:none}
+.cx .rep.qcm-r .rq{display:flex;align-items:center;gap:13px;margin:0}
+.cx .rep.qcm-r .rl{display:inline-grid;place-items:center;flex:none;width:40px;height:40px;
   border-radius:13px;background:#2f7f3d;color:#fff;font-weight:800;font-size:20px}
-.rep.qcm-r .rv{font-size:30px;font-weight:800;color:#14501f;line-height:1.1;
+.cx .rep.qcm-r .rv{font-size:30px;font-weight:800;color:#14501f;line-height:1.1;
   letter-spacing:-.01em}
-.rep.qcm-r .rr{margin:12px 0 0;padding:14px 18px;background:#fff;
+.cx .rep.qcm-r .rr{margin:12px 0 0;padding:14px 18px;background:#fff;
   border:1px solid #cfe0cf;border-radius:14px}
-.rep.qcm-r .rr p{margin:0;font-size:16.5px;line-height:1.75;color:#28343a}
-.rep.qcm-r .rr p + p{margin-top:9px}
-@media print{
-  .qcm li:not(.bon){opacity:.45}
-  .qcm li.bon{background:#eaf7ec;border-color:#2f7f3d}
-  .qcm li.bon .l{background:#2f7f3d;color:#fff}
-}
-
-/* ══════ la réponse prend la place de la zone de réponse ══════ */
-.rep{margin:10px 0 4px;padding:12px 16px 10px;border-radius:14px;
+.cx .rep.qcm-r .rr p{margin:0;font-size:16.5px;line-height:1.75;color:#28343a}
+.cx .rep.qcm-r .rr p + p{margin-top:9px}
+.cx .rep{margin:10px 0 4px;padding:12px 16px 10px;border-radius:14px;
   background:#f4fbf4;border:1px solid #9ec89e;border-left:4px solid #5da65d}
-.rep>.lb,.rep>.rh>.lb{display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+.cx .rep>.lb,.cx .rep>.rh>.lb{display:inline-flex;align-items:center;gap:7px;cursor:pointer;
   font-family:"IBM Plex Mono",monospace;font-size:10px;
   letter-spacing:.14em;text-transform:uppercase;color:#2f6b2f;background:#dcefdc;
   border:1px solid #a9d3a9;border-radius:20px;padding:3px 12px;margin:0;
   font-weight:600;transition:.15s}
-.rep>.lb:hover{background:#c9e6c9}
-.rep>.lb::before{content:"▸";font-size:12px;line-height:1}
-
-/* ══════ la réponse arrive au clic ══════
-   Le professeur projette la question, la classe cherche, il clique, la réponse
-   tombe. Tant qu'elle n'est pas appelée, le cadre n'est qu'une pastille : rien
-   ne se lit par-dessus l'épaule, et la place ne bouge pas sous les yeux. */
-.rep{transition:background .2s,border-color .2s}
-.rep:not(.on){background:#fbfcfb;border-color:#d5e2d5;border-left-color:#b6d2b6;
+.cx .rep>.lb:hover{background:#c9e6c9}
+.cx .rep>.lb::before{content:"▸";font-size:12px;line-height:1}
+.cx .rep{transition:background .2s,border-color .2s}
+.cx .rep:not(.on){background:#fbfcfb;border-color:#d5e2d5;border-left-color:#b6d2b6;
   padding:8px 16px}
-.rep:not(.on) .rc{display:none}
-.rep.on>.lb::before,.rep.on>.rh>.lb::before{content:"▾"}
-.rep.on>.lb{margin:0 0 7px}
-.rep .rc{animation:rvl .25s ease-out}
+.cx .rep:not(.on) .rc{display:none}
+.cx .rep.on>.lb::before,.cx .rep.on>.rh>.lb::before{content:"▾"}
+.cx .rep.on>.lb{margin:0 0 7px}
+.cx .rep .rc{animation:rvl .25s ease-out}
 @keyframes rvl{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-/* La question qu'on vient d'ouvrir s'éclaire, le temps d'un regard. Un trait
-   posé à sa gauche se lisait comme un signe moins devant le numéro. */
-.q>.q-h{border-radius:9px;transition:background .25s}
-.q.viser>.q-h{background:#e4f4e4}
-.rep p{margin:4px 0}
-.rep p:last-child{margin-bottom:0}
-.rep .tw{margin:8px 0 4px}
-.rep svg,.rep .gr{max-width:100%;height:auto;display:block;margin:8px auto 2px}
-.rep.vide{background:#f7f9fa;border-color:#c3cfd6;border-left-color:#8fa4b0}
-.rep.vide>.lb{color:#55666f;background:#e6ecef}
-.rep.vide p{color:#55666f;font-style:italic}
-.asr{margin:4px 0 0;text-align:center;font-weight:700;color:#2f6b2f}
-.etat.cor{background:#dcefdc;color:#2f6b2f;border-color:#9ec89e}
-
-/* ══════ les titres de bloc se lisent ══════
-   « Objectif », « Situation », « À retenir », « Réponse » sont les titres de
-   ce qu'ils annoncent, et ils s'écrivaient en 9,5 px : à la projection, au
-   fond de la classe, ils disparaissaient. Ils sont en gras et plus gros. */
-/* Objectif, Situation, Document, la compétence, la taille des titres et
-   l'air entre les encadrés sont désormais dans la feuille commune (eleve.py) :
-   les deux fiches se ressemblent. Ne rien redéfinir ici. */
-
-/* ══════ le tableau à compléter se remplit sous les yeux ══════
-   « On voit le tableau, mais sans les réponses. » Le tableau vide reste en
-   place dès la question ; au clic, ses cases se remplissent - il ne se
-   remplace pas par un autre. */
-.rep.tab:not(.on){background:#fbfcfb;padding:12px 16px 10px}
-.rep.tab:not(.on) .tz{display:block}
-.rep.tab .vr{font-style:normal;opacity:0;transition:opacity .3s ease}
-.rep.tab.on .vr{opacity:1}
-.rep.tab .tw{margin:8px 0 2px}
-.rep.tab .tw td.v{background:#fff8e6;border:1px dashed #c79320;border-radius:8px;
+.cx .q>.q-h{border-radius:9px;transition:background .25s}
+.cx .q.viser>.q-h{background:#e4f4e4}
+.cx .rep p{margin:4px 0}
+.cx .rep p:last-child{margin-bottom:0}
+.cx .rep .tw{margin:8px 0 4px}
+.cx .rep svg,.cx .rep .gr{max-width:100%;height:auto;display:block;margin:8px auto 2px}
+.cx .rep.vide{background:#f7f9fa;border-color:#c3cfd6;border-left-color:#8fa4b0}
+.cx .rep.vide>.lb{color:#55666f;background:#e6ecef}
+.cx .rep.vide p{color:#55666f;font-style:italic}
+.cx .asr{margin:4px 0 0;text-align:center;font-weight:700;color:#2f6b2f}
+.cx .etat.cor{background:#dcefdc;color:#2f6b2f;border-color:#9ec89e}
+.cx .rep.tab:not(.on){background:#fbfcfb;padding:12px 16px 10px}
+.cx .rep.tab:not(.on) .tz{display:block}
+.cx .rep.tab .vr{font-style:normal;opacity:0;transition:opacity .3s ease}
+.cx .rep.tab.on .vr{opacity:1}
+.cx .rep.tab .tw{margin:8px 0 2px}
+.cx .rep.tab .tw td.v{background:#fff8e6;border:1px dashed #c79320;border-radius:8px;
   box-shadow:inset 0 0 0 3px #fff;text-align:center;transition:background .3s,border-color .3s}
-.rep.tab .tw td.v.tot{font-weight:700}
-.rep.tab.on .tw td.v{background:#eaf6ea;border:1px solid #9ec89e}
-
-/* ══════ compter dans le relevé ══════
-   Au clic, toutes les valeurs égales à celle qu'on cherche s'allument dans le
-   relevé : la classe compte avec le professeur au lieu de recevoir le compte. */
-.vv{display:inline-block;min-width:22px;padding:2px 4px;border-radius:7px;
+.cx .rep.tab .tw td.v.tot{font-weight:700}
+.cx .rep.tab.on .tw td.v{background:#eaf6ea;border:1px solid #9ec89e}
+.cx .vv{display:inline-block;min-width:22px;padding:2px 4px;border-radius:7px;
   transition:background .25s ease,color .25s ease,transform .25s ease}
-.vv.on{background:#ffb627;color:#0d1a22;font-weight:700;transform:scale(1.12)}
-
-/* Le tableau posé sous la question se remplit case par case, à sa place. */
-.tprog{margin:16px 0 4px}
-.tprog .tw{margin:0}
-.tprog .tw td.v{background:#fff8e6;border:1px dashed #c79320;border-radius:8px;
+.cx .vv.on{background:#ffb627;color:#0d1a22;font-weight:700;transform:scale(1.12)}
+.cx .tprog{margin:16px 0 4px}
+.cx .tprog .tw{margin:0}
+.cx .tprog .tw td.v{background:#fff8e6;border:1px dashed #c79320;border-radius:8px;
   box-shadow:inset 0 0 0 3px #fff;text-align:center;
   transition:background .3s,border-color .3s}
-.tprog .tw td.v:has(.vr.on){background:#eaf6ea;border:1px solid #9ec89e}
-.vr{font-style:normal;opacity:0;transition:opacity .3s ease}
-.vr.on{opacity:1}
-.rep.tab.on .vr{opacity:1}
-
-/* Compter en cliquant la colonne : le tableau EST la commande. */
-.tprog .tw th.cpt{cursor:pointer;background:linear-gradient(180deg,#fff2d6,#ffe6b8);
+.cx .tprog .tw td.v:has(.vr.on){background:#eaf6ea;border:1px solid #9ec89e}
+.cx .vr{font-style:normal;opacity:0;transition:opacity .3s ease}
+.cx .vr.on{opacity:1}
+.cx .rep.tab.on .vr{opacity:1}
+.cx .tprog .tw th.cpt{cursor:pointer;background:linear-gradient(180deg,#fff2d6,#ffe6b8);
   color:#7a4e06;transition:.15s}
-.tprog .tw th.cpt:hover{background:linear-gradient(180deg,#ffe6b8,#ffd78e)}
-.tprog .tw th.cpt.on{background:linear-gradient(180deg,#ffb627,#f0a30d);color:#0d1a22}
-/* Tout ce qui porte une valeur se clique : la case de la ligne comptee comme
-   la valeur du releve. Le curseur le dit, sinon on cherche ou cliquer. */
-.tprog.compteur .tw tbody td.v,
-.tprog.compteur .tw tbody th,
-.tprog.compteur .rlv .vv{cursor:pointer}
-.tprog.compteur .rlv .vv{border-radius:7px;padding:3px 7px;margin:-3px -7px;
+.cx .tprog .tw th.cpt:hover{background:linear-gradient(180deg,#ffe6b8,#ffd78e)}
+.cx .tprog .tw th.cpt.on{background:linear-gradient(180deg,#ffb627,#f0a30d);color:#0d1a22}
+.cx .tprog.compteur .tw tbody td.v,.cx .tprog.compteur .tw tbody th,.cx .tprog.compteur .rlv .vv{cursor:pointer}
+.cx .tprog.compteur .rlv .vv{border-radius:7px;padding:3px 7px;margin:-3px -7px;
   transition:background .15s}
-.tprog.compteur .rlv .vv:hover{background:#ffe6b8}
-.aidec{margin:10px 0 0;font-size:14px;color:#55666f;font-style:italic}
-.rlv{margin:12px 0 0;border:1px solid #b9c8d1;border-radius:0 14px 14px 14px;
+.cx .tprog.compteur .rlv .vv:hover{background:#ffe6b8}
+.cx .aidec{margin:10px 0 0;font-size:14px;color:#55666f;font-style:italic}
+.cx .rlv{margin:12px 0 0;border:1px solid #b9c8d1;border-radius:0 14px 14px 14px;
   padding:14px 16px 12px;background:#f4f7f9;position:relative}
-.rlv>.lb{position:absolute;top:-25px;left:-1px;display:inline-block;
+.cx .rlv>.lb{position:absolute;top:-25px;left:-1px;display:inline-block;
   font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;font-size:13px;
   color:#fff;background:#2E5266;border-radius:10px 10px 0 0;padding:5px 15px 4px}
-.rlv{margin-top:36px}
-.rlv .tw{margin:0}
-
-/* ══════ les calculs et la phrase réponse ══════
-   Les élèves doivent écrire TOUS leurs calculs et une phrase réponse : le
-   corrigé montre donc les deux, sous le tableau, pas seulement le résultat. */
-/* Le comptage : le nombre en grand, ce qu'il compte dessous. Écrit au fil du
-   texte en chasse fixe, il revenait à la ligne n'importe où - « 4 / articles :
-   9 » - et ne se lisait pas à trois mètres. */
-.cnt{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:10px;
+.cx .rlv{margin-top:36px}
+.cx .rlv .tw{margin:0}
+.cx .cnt{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:10px;
   margin:12px 0 0}
-.cnt>div{background:#fff;border:1px solid #cfe0d0;border-radius:14px;
+.cx .cnt>div{background:#fff;border:1px solid #cfe0d0;border-radius:14px;
   padding:12px 10px 10px;text-align:center}
-.cnt b{display:block;font-family:"Bricolage Grotesque","Segoe UI",sans-serif;
+.cx .cnt b{display:block;font-family:"Bricolage Grotesque","Segoe UI",sans-serif;
   font-size:27px;line-height:1;color:#2f6b2f}
-.cnt span{display:block;margin-top:5px;font-size:13px;color:#55666f}
-
-/* Les calculs : une ligne par calcul, toutes alignées sur les signes égal. */
-.ops{display:grid;grid-template-columns:repeat(5,max-content);justify-content:start;
+.cx .cnt span{display:block;margin-top:5px;font-size:13px;color:#55666f}
+.cx .ops{display:grid;grid-template-columns:repeat(5,max-content);justify-content:start;
   gap:9px 12px;
   align-items:baseline;background:#fff;border:1px solid #cfe0d0;border-radius:14px;
   padding:15px 20px;margin:12px 0 0;font-size:17px}
-.ops .g{font-weight:700;color:#2f6b2f;white-space:nowrap}
-/* Une fraction s'écrit l'une sur l'autre, séparées d'un trait : « 12 ÷ 50 »
-   n'est pas ce que l'élève doit poser sur sa copie. */
-.fr2{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;
+.cx .ops .g{font-weight:700;color:#2f6b2f;white-space:nowrap}
+.cx .fr2{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;
   line-height:1.2;margin:0 2px}
-.fr2 .h{padding:0 7px 2px;border-bottom:1.8px solid #28323a}
-.fr2 .b{padding:2px 7px 0}
-.flit{background:#fff;border:2px solid #5da65d;border-radius:12px;
+.cx .fr2 .h{padding:0 7px 2px;border-bottom:1.8px solid #28323a}
+.cx .fr2 .b{padding:2px 7px 0}
+.cx .flit{background:#fff;border:2px solid #5da65d;border-radius:12px;
   padding:13px 20px;margin:12px 0 0;display:flex;align-items:center;
   justify-content:center;gap:12px;font-size:19px}
-.flit .g{font-weight:700;color:#2f6b2f}
-.ops .eq{color:#9ab39a}
-.ops .c{color:#28323a;font-variant-numeric:tabular-nums}
-.ops b{color:#1f5f1f;white-space:nowrap;font-variant-numeric:tabular-nums}
-@media(max-width:620px){.ops{grid-template-columns:repeat(3,max-content);font-size:15.5px}}
-
-/* La vérification : ce qui dit que le travail est juste. */
-p.verif{display:flex;align-items:flex-start;gap:11px;background:#fff;
+.cx .flit .g{font-weight:700;color:#2f6b2f}
+.cx .ops .eq{color:#9ab39a}
+.cx .ops .c{color:#28323a;font-variant-numeric:tabular-nums}
+.cx .ops b{color:#1f5f1f;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:620px){.cx .ops{grid-template-columns:repeat(3,max-content);font-size:15.5px}}
+.cx p.verif{display:flex;align-items:flex-start;gap:11px;background:#fff;
   border:1px solid #9ec89e;border-left:4px solid #5da65d;border-radius:12px;
   padding:12px 16px;margin:12px 0 0;font-size:16px}
-p.verif .ok{flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#5da65d;
+.cx p.verif .ok{flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#5da65d;
   color:#fff;font-size:14px;line-height:23px;text-align:center;font-weight:700}
-
-p.phr{background:#fff;border:1px solid #9ec89e;border-left:4px solid #5da65d;
+.cx p.phr{background:#fff;border:1px solid #9ec89e;border-left:4px solid #5da65d;
   border-radius:12px;padding:15px 19px;margin:12px 0 2px;font-size:16.5px;
   line-height:1.65}
-
-/* ══════ d'où vient la réponse ══════
-   Le morceau de la situation qui porte la réponse s'allume au moment où la
-   réponse arrive : la classe voit d'où ça sort, au lieu de croire sur parole. */
-mark.sur{background:none;color:inherit;padding:1px 2px;border-radius:4px;
+.cx mark.sur{background:none;color:inherit;padding:1px 2px;border-radius:4px;
   transition:background .35s ease,box-shadow .35s ease}
-mark.sur.on{background:#ffe9a8;box-shadow:0 0 0 2px #ffe9a8}
-.aide .lb{font-size:12.5px;font-weight:700;letter-spacing:.09em;padding:4px 13px;
+.cx mark.sur.on{background:#ffe9a8;box-shadow:0 0 0 2px #ffe9a8}
+.cx .aide .lb{font-size:12.5px;font-weight:700;letter-spacing:.09em;padding:4px 13px;
   margin-bottom:10px}
-.aide h3{font-size:19px}
-.rep>.lb,.rep>.rh>.lb{font-size:12.5px;letter-spacing:.09em;padding:4px 14px}
-
-/* dans la feuille commune */
-.rep{margin:16px 0}
-.rep + .rep{margin-top:18px}
-.rep:last-child{margin-bottom:2px}
-
-/* ══════ le bandeau du document du professeur ══════
-   Le repère « corrigé » se tient à DROITE du titre, sur la même ligne : le
-   titre du bloc ne se réécrit plus dessous, le repère y remonte. */
-.tete-w{position:relative}
-.mrq{position:absolute;top:0;right:24px;z-index:2;
+.cx .aide h3{font-size:19px}
+.cx .rep>.lb,.cx .rep>.rh>.lb{font-size:12.5px;letter-spacing:.09em;padding:4px 14px}
+.cx .rep{margin:16px 0}
+.cx .rep + .rep{margin-top:18px}
+.cx .rep:last-child{margin-bottom:2px}
+.cx .tete-w{position:relative}
+.cx .mrq{position:absolute;top:0;right:24px;z-index:2;
   display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;
   letter-spacing:.16em;text-transform:uppercase;color:#0c4a58;background:#d8eef5;
   border:1px solid #7fb8c8;border-radius:20px;padding:3px 13px;margin:0;
   white-space:nowrap}
-/* Sur un ecran etroit il repasse dans le flux plutot que de chevaucher le titre. */
-@media(max-width:820px){.mrq{position:static;margin:0 0 10px}}
-/* Une séance qui ne porte qu'un bloc : plus de barre de titre à ouvrir. */
-.exo.seule > .exo-c{padding-top:4px}
-
-/* Un corrigé se lit et s'imprime : ni saisie, ni envoi, ni enregistrement. */
-/* Ce que la fiche de l'élève porte et qu'un corrigé n'a que faire : le cadre
-   d'identité, la barre d'enregistrement, l'envoi de la copie - et la
-   pagination du moteur élève (`.pgnav`), à ne pas confondre avec les écrans du
-   corrigé (`.ecnav`), qui eux doivent rester visibles. */
-.ident,.barre-b,.pgnav,.exo-f,.env,.note-env{display:none!important}
-
-/* ══════ la barre de pilotage ══════ */
-.pilote{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;
+@media(max-width:820px){.cx .mrq{position:static;margin:0 0 10px}}
+.cx .exo.seule > .exo-c{padding-top:4px}
+.cx .ident,.cx .barre-b,.cx .pgnav,.cx .exo-f,.cx .env,.cx .note-env{display:none!important}
+.cx .pilote{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;
   display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.96);
   border:1px solid #b9c8d1;border-radius:30px;padding:7px 9px 7px 16px;
   box-shadow:0 6px 24px -10px rgba(13,26,34,.45);backdrop-filter:blur(8px)}
-.pilote .cpt{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+.cx .pilote .cpt{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
   color:#2E5266;white-space:nowrap}
-.pilote button{font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
+.cx .pilote button{font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
   border:1px solid #9ec89e;background:#eaf6ea;color:#2f6b2f;
   border-radius:20px;padding:6px 15px;transition:.15s}
-.pilote button:hover{background:#d7eed7}
-.pilote button.g{border-color:#b9c8d1;background:#f1f5f7;color:#2E5266}
-.pilote .ast{font-size:12px;color:#6b7d88;white-space:nowrap}
-@media(max-width:700px){.pilote .ast{display:none}}
-
-/* ══════════════════════════════════════════════════════════ les pages
-   Le corrigé sert de projection : une page remplit l'écran, une seule à la
-   fois, et rien ne déborde. Le facteur d'échelle est posé par le JS. */
-body.ecrans{overflow:hidden;height:100vh;padding:0;margin:0}
-body.ecrans .tete,body.ecrans .prop-pied{display:none}
-body.ecrans .wrap{max-width:none;width:100%;padding:0;margin:0}
-/* La scène s'arrête au-dessus de la barre du bas - une seule, qui porte à la
-   fois les pages et le pilotage. Sans cela, le pilotage recouvrait la dernière
-   réponse de la page. */
-.ecs{position:fixed;inset:0;bottom:60px;overflow:hidden}
-hr.saut{display:none}
-.ec{display:none;position:absolute;inset:0;padding:22px 30px 10px;
+.cx .pilote button:hover{background:#d7eed7}
+.cx .pilote button.g{border-color:#b9c8d1;background:#f1f5f7;color:#2E5266}
+.cx .pilote .ast{font-size:12px;color:#6b7d88;white-space:nowrap}
+@media(max-width:700px){.cx .pilote .ast{display:none}}
+.cx .ecs{position:fixed;inset:0;bottom:60px;overflow:hidden}
+.cx hr.saut{display:none}
+.cx .ec{display:none;position:absolute;inset:0;padding:22px 30px 10px;
   overflow:hidden}
-.ec.on{display:flex;flex-direction:column}
-.ec-c{flex:1;min-height:0;display:block}
-.ec-in{transform-origin:top left}
-.ec-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+.cx .ec.on{display:flex;flex-direction:column}
+.cx .ec-c{flex:1;min-height:0;display:block}
+.cx .ec-in{transform-origin:top left}
+.cx .ec-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
   border-bottom:2px solid #d7e3ea;padding-bottom:9px;margin-bottom:16px}
-.ec-t{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;
+.cx .ec-t{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;font-weight:700;
   font-size:21px;color:#0d1a22}
-.ec-s{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;
+.cx .ec-s{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;
   color:#2E5266;background:#e8f2f6;border-radius:20px;padding:4px 14px}
-.ec .q{margin:0}
-.ec .q + .q{margin-top:16px}
-.port:empty{display:none}
-
-/* la barre de pages, sous la barre de pilotage */
-.ecnav{position:fixed;left:0;right:0;bottom:0;z-index:70;
+.cx .ec .q{margin:0}
+.cx .ec .q + .q{margin-top:16px}
+.cx .port:empty{display:none}
+.cx .ecnav{position:fixed;left:0;right:0;bottom:0;z-index:70;
   display:flex;align-items:center;gap:10px;justify-content:center;
   background:#fff;border-top:1px solid #d7e3ea;padding:9px 14px;
   box-shadow:0 -2px 14px rgba(13,26,34,.07)}
-.ecnav button{font:inherit;font-size:14px;font-weight:600;cursor:pointer;
+.cx .ecnav button{font:inherit;font-size:14px;font-weight:600;cursor:pointer;
   border:1px solid #b9c8d1;background:#f1f5f7;color:#2E5266;
   border-radius:20px;padding:6px 16px;transition:.15s}
-.ecnav button:hover:not(:disabled){background:#e2ebef}
-.ecnav button:disabled{opacity:.35;cursor:default}
-.ecnav .num{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;
+.cx .ecnav button:hover:not(:disabled){background:#e2ebef}
+.cx .ecnav button:disabled{opacity:.35;cursor:default}
+.cx .ecnav .num{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;
   color:#0d1a22;min-width:96px;text-align:center}
-/* En écrans, le pilotage rentre DANS la barre du bas : deux barres empilées
-   mangeaient 122 px de hauteur d'écran pour dire deux choses. */
-body.ecrans .ecnav .pilote{position:static;transform:none;background:none;
-  box-shadow:none;border:0;padding:0;gap:9px}
-body.ecrans .ecnav .sep{width:1px;height:24px;background:#d7e3ea}
-
-/* ── le sommaire ──
-   Une liste dessinée, jamais le menu déroulant du navigateur : il s'ouvrait en
-   gris système, hors de la page, et donnait le numéro sans dire ce qu'on
-   travaille. Chaque entrée porte sa compétence. */
-.som{position:relative}
-.som > button{font:inherit;font-size:14px;font-weight:600;cursor:pointer;
+.cx .som{position:relative}
+.cx .som > button{font:inherit;font-size:14px;font-weight:600;cursor:pointer;
   border:1px solid #b9c8d1;background:#f1f5f7;color:#2E5266;
   border-radius:20px;padding:6px 18px 6px 16px;transition:.15s}
-.som > button::after{content:"▴";font-size:11px;margin-left:8px;
+.cx .som > button::after{content:"▴";font-size:11px;margin-left:8px;
   display:inline-block;transition:transform .15s}
-.som > button:hover{background:#e2ebef}
-.som > button.on{background:#2E5266;border-color:#2E5266;color:#fff}
-.som > button.on::after{transform:rotate(180deg)}
-.som-p{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);
+.cx .som > button:hover{background:#e2ebef}
+.cx .som > button.on{background:#2E5266;border-color:#2E5266;color:#fff}
+.cx .som > button.on::after{transform:rotate(180deg)}
+.cx .som-p{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);
   min-width:380px;max-width:min(580px,92vw);max-height:min(62vh,540px);overflow-y:auto;
   background:#fff;border:1px solid #b9c8d1;border-radius:16px;padding:7px;
   box-shadow:0 10px 34px rgba(13,26,34,.20);z-index:90}
-.som-l{display:flex;align-items:center;gap:11px;width:100%;
+.cx .som-l{display:flex;align-items:center;gap:11px;width:100%;
   font:inherit;font-size:15px;text-align:left;cursor:pointer;
   border:0;background:none;color:#0d1a22;border-radius:11px;padding:8px 11px;
   transition:background .12s}
-.som-l:hover{background:#eef4f7}
-.som-l.ici{background:#e4f4e4}
-.som-n{flex:0 0 27px;height:27px;display:flex;align-items:center;justify-content:center;
+.cx .som-l:hover{background:#eef4f7}
+.cx .som-l.ici{background:#e4f4e4}
+.cx .som-n{flex:0 0 27px;height:27px;display:flex;align-items:center;justify-content:center;
   font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
   color:#2E5266;background:#e8f2f6;border-radius:9px}
-.som-l.ici .som-n{background:#2f6b2f;color:#fff}
-.som-t{flex:1 1 auto;min-width:0;font-weight:600}
-.som-c{flex:0 0 auto;font-size:13px;font-weight:700;font-style:italic;
+.cx .som-l.ici .som-n{background:#2f6b2f;color:#fff}
+.cx .som-t{flex:1 1 auto;min-width:0;font-weight:600}
+.cx .som-c{flex:0 0 auto;font-size:13px;font-weight:700;font-style:italic;
   color:#1F3E8C;background:#eaf0fb;border-radius:20px;padding:3px 11px;white-space:nowrap}
-@media(max-width:700px){.som-p{min-width:250px}.som-c{display:none}}
+@media(max-width:700px){.cx .som-p{min-width:250px}
+.cx .som-c{display:none}}
+@media screen{.cx .q-n{min-width:0}
+.cx .calcs{overflow-x:auto}}
+@media screen and (max-width:620px){.cx .tw table.num th:first-child{white-space:normal}
+.cx .tw.ajuste table.num td{padding-left:12px;padding-right:12px}}
+@media screen and (max-width:430px){.cx .tw.ajuste table.num td{padding-left:6px;padding-right:6px}}
+@media screen and (max-width:620px){.cx .calcs,.cx .deux .calcs,.cx .calcs.cadree,.cx .calcs.avecnotes,.cx .calcs.nuls,.cx .grp.fus>.calcs.cadree{grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr);
+    justify-content:stretch;width:auto;gap:7px 5px;padding-left:10px;padding-right:10px}
+.cx .calcs .cl,.cx .calcs .nt{grid-column:1 / -1}
+.cx .calcs .n,.cx .calcs .donne,.cx .calcs .ct{width:auto;min-width:0}
+.cx .calcs .n input.ec,.cx .calcs input.ec,.cx .calcs .case{width:100%;min-width:0}}
+@media screen and (min-width:621px) and (max-width:1000px){.cx .deux .calcs,.cx .grp.fus>.calcs,.cx .deux .calcs.cadree,.cx .deux .calcs.avecnotes,.cx .grp.fus>.calcs.cadree,.cx .grp.fus>.calcs.avecnotes{grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr);
+    justify-content:stretch;width:auto;gap:7px 6px}
+.cx .deux .calcs>.cadre,.cx .grp.fus>.calcs>.cadre{display:none}
+.cx .deux .calcs .cl,.cx .deux .calcs .nt,.cx .grp.fus>.calcs .cl,.cx .grp.fus>.calcs .nt{grid-column:1 / -1;white-space:normal}
+.cx .deux .calcs .n,.cx .deux .calcs .donne,.cx .deux .calcs .ct,.cx .grp.fus>.calcs .n,.cx .grp.fus>.calcs .donne,.cx .grp.fus>.calcs .ct{width:auto;min-width:0}
+.cx .deux .calcs input.ec,.cx .deux .calcs .case,.cx .grp.fus>.calcs input.ec,.cx .grp.fus>.calcs .case{width:100%;min-width:0}}
+@media screen{.cx .dbl>*,.cx .q4>*{min-width:0}
+.cx .dbl svg,.cx .q4 svg,.cx .docu svg{max-width:100%;height:auto}}
+.cx .rep,.cx .rep:not(.on){background:none;border:0;padding:0;margin:0 0 12px}
+.cx .rep:last-child{margin-bottom:0}
+.cx .rep .rc,.cx .rep:not(.on) .rc{display:block!important;animation:none}
+.cx .rep.qcm-r .rq,.cx .rep.qcm-r:not(.on) .rq{display:flex!important}
+.cx [data-k]{opacity:1!important;visibility:visible!important}
+.cx .vr,.cx .rep.tab .vr{opacity:1!important}
+.cx .rep.tab .tz{display:none}
+.cx .rep>.lb,.cx .rep>.rh>.lb{pointer-events:none;cursor:default;display:inline-block;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:800;color:#1D7A33;background:none;border:0;
+  padding:0;margin:0 0 3px;border-radius:0}
+.cx .rep>.lb::before,.cx .rep>.rh>.lb::before{content:none}
+.cx .rep>.lb:hover{background:none}
+.cx .rep.qcm-r .rh{gap:12px}
+.cx .rep p,.cx .rep .rc{color:#137A3A}
+.cx .aidec{display:none}
+/* rien ne se clique : ni curseur, ni survol. Les cases et les boutons ne
+   captent plus rien ; le cadre d'un tableau large, lui, défile toujours. */
+.cx *{cursor:default!important}
+.cx button,.cx th,.cx td,.cx li,.cx .vv,.cx .vr,.cx .cpt,.cx .zh,.cx mark,
+.cx svg text{pointer-events:none!important}
+.cx .tprog .tw th.cpt,.cx .tprog .tw th.cpt:hover{background:#EDF1F5;color:#0d1a22}
+.cx .tprog.compteur .rlv .vv:hover{background:none}
+.cx .tprog .tw td.v,.cx .rep.tab .tw td.v,.cx .tprog .tw td.v:has(.vr.on),
+.cx .rep.tab.on .tw td.v{background:#fff;border:1px solid #9ec89e;border-radius:0;
+  box-shadow:none;color:#137A3A;font-weight:700;white-space:nowrap}
+.cx mark.sur{background:#ffe9a8;box-shadow:0 0 0 2px #ffe9a8}
+/* le QCM : la bonne proposition allumée, les autres en retrait */
+.cx .qcm li:not(.bon){opacity:.45}
+.cx .qcm li.bon{background:#EAF6EC;border:2.5px solid #1D7A33;transform:none;
+  box-shadow:none}
+.cx .qcm li.bon .l{background:#1D7A33;color:#fff}
+.cx .qcm li.bon .t{color:#137A3A;padding-right:26px}
+.cx .qcm li.bon:after{content:"\2713";position:absolute;right:16px;
+  color:#1D7A33;font-size:22px;font-weight:800;line-height:1}
+.cx .rep.qcm-r .rl{background:#1D7A33}
+.cx .rep.qcm-r .rv{color:#137A3A}
+.cx .rep.qcm-r .rr{border-color:#b7dcbf}
+/* l'association : le nom juste sous chaque figure */
+.cx .asr{display:inline-block;margin:8px 0 0;padding:4px 12px;border-radius:10px;
+  background:#EAF6EC;border:2px solid #1D7A33;color:#137A3A}
+/* le barème est celui de la fiche du professeur, jamais de l'élève */
+.cx .q-b{display:none}
+/* le titre du bloc est déjà dans la carte de l'exercice */
+.cx .exo{border:0;margin:0;box-shadow:none;background:none;padding:0}
+.cx .exo>.exo-h{display:none}
+.cx .exo>.exo-c,.cx .exo.seule>.exo-c{padding:0}
+/* un graphique se lit à sa taille de fiche : sur un grand écran, il ne
+   s'étire pas sur toute la largeur de l'encadré */
+.cx svg{max-width:min(100%,600px)!important;height:auto}
+.cx svg.gr{max-width:min(100%,460px)!important}          /* la taille de la fiche */
+.cx .qdoc svg,.cx svg.gr{display:block;margin-left:auto;margin-right:auto}
+.cx .tw{overflow-x:auto;max-width:100%}
+.cx img{max-width:100%;height:auto}
 
-@media print{
-  /* Sur le papier, les pages redeviennent un document qui se lit d'une traite. */
-  body.ecrans{overflow:visible;height:auto}
-  body.ecrans .tete,body.ecrans .prop-pied{display:block}
-  .ecs{position:static;inset:auto}
-  .ec{display:block;position:static;padding:0;break-before:page}
-  .ec:first-child{break-before:auto}
-  .ec-in{transform:none!important}
-  .ecnav{display:none}
-  body{padding-bottom:0;background:#fff}
-  .tete{background:#fff}
-  .exo,.rep,.aide{break-inside:avoid}
-  .q{break-inside:avoid}
-  /* Sur le papier, tout est ouvert : un corrigé imprimé ne se clique pas. */
-  .rep:not(.on){background:#f4fbf4;border-color:#9ec89e;border-left-color:#5da65d;
-    padding:12px 16px 10px}
-  .rep:not(.on) .rc{display:block}
-  .rep>.lb::before,.rep>.rh>.lb::before{content:""}
-  .pilote{display:none}
-}
+/* la couverture du document élève */
+.cv{display:block;margin:0 0 16px;border:3.5px solid #12202a;border-radius:18px;
+  overflow:hidden;background:#fff;text-decoration:none;
+  box-shadow:0 14px 30px -24px rgba(13,26,34,.75)}
+.cv:hover{border-color:var(--c)}
+.cv h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;
+  margin:0;padding:18px 22px 14px;color:var(--c)}
+.cv .vg{display:flex;justify-content:center;align-items:center;gap:26px;
+  flex-wrap:wrap;padding:0 22px 20px}
+.cv .vg img{width:230px;max-width:100%;height:auto;display:block;
+  border:2.5px solid #12202a;border-radius:10px}
+.cv .bt{margin:0;padding:9px 15px;border-radius:10px}
 
-.doc.pdf{border-left:10px solid var(--c)}
-h2.st{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:24px;
-  margin:34px 0 4px}
+/* l'encadré titre */
+.ttm{margin:34px 0 8px;padding:16px 24px;border:3.5px solid #12202a;
+  border-radius:18px;color:#fff;
+  background:linear-gradient(105deg,#0b3d45 0%,#00778a 45%,#5b3fa8 100%);
+  box-shadow:0 14px 30px -24px rgba(13,26,34,.75)}
+.ttm .l1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+  font-size:23px;line-height:1.2;margin:0;text-transform:uppercase}
+.ttm .l2{margin:3px 0 0;font-size:16px}
+
+/* les séances */
 p.seqt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
-  text-transform:uppercase;font-weight:700;color:#5a6b74;margin:24px 0 12px}
-.carte.sc{padding:14px 14px 16px;text-align:left;font:inherit;cursor:pointer;
-  width:100%}
-.carte.sc .ill{display:block;width:100%;height:auto;border:2.5px solid #22323b;
-  border-radius:12px;margin:0 0 11px}
-.carte.sc .no{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
-  text-transform:uppercase;font-weight:700;color:#5a6b74;margin:0 0 2px}
-.carte.sc h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:18px;
-  line-height:1.2;margin:0 0 4px;color:var(--c)}
-.carte.sc p{margin:0;font-size:14.5px;color:#0d1a22}
-.s-ret{display:inline-flex;align-items:center;gap:8px;font-family:"Bricolage Grotesque",sans-serif;
-  font-weight:800;font-size:15px;text-decoration:none;color:#5b3fa8;margin:0 0 18px;
-  background:none;border:0;cursor:pointer;padding:0}
-.s-ex{background:#fff;border:2.5px solid #22323b;border-radius:18px;margin:0 0 18px;
-  overflow:hidden}
-.s-ex>.s-eh{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 20px;
-  border-bottom:2.5px solid #22323b;background:var(--c)}
-.s-ex>.s-eh h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:18px;
-  margin:0;color:#fff}
-.s-ex>.s-ec{padding:18px 20px}
-.attente{font-size:15.5px;color:#5a6b74;margin:0}
-/* Le corrigé est celui du professeur. Sur le site il n'y a personne pour
-   cliquer les pas : tout ce qui se dévoile au clic est montré d'emblée. */
-.s-ec .rep.qcm-r .rq{display:flex!important}
-.s-ec [data-k]{opacity:1!important;visibility:visible!important}
-.s-ec .rep .lb,.s-ec .tprog .cpt{pointer-events:none}
-.s-ec .aidec{display:none}
-.s-ec .exo{border:0;margin:0;box-shadow:none;background:none}
-.s-ec .exo>.exo-h{display:none}
-.s-ec .exo>.exo-c{padding:0}
-@media (max-width:760px){ .s-ex>.s-ec{padding:14px 12px} }
+  text-transform:uppercase;font-weight:700;color:#5a6b74;margin:28px 0 12px}
+.carte.sc{display:block;width:100%;text-align:left;font:inherit;cursor:pointer;
+  background:var(--f);border:3.5px solid #12202a;border-radius:18px;
+  padding:0 16px 16px;overflow:hidden;color:#0d1a22;
+  box-shadow:0 14px 30px -26px rgba(13,26,34,.7)}
+.carte.sc:hover{border-color:var(--c)}
+.carte.sc .ba{display:block;height:14px;background:var(--c);
+  margin:0 -16px 14px;border-bottom:3.5px solid #12202a}
+.carte.sc .ill{display:block;width:100%;height:auto;border:2.5px solid #12202a;
+  border-radius:12px;margin:0 0 12px}
+.carte.sc .no{font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--c);
+  margin:0 0 3px}
+.carte.sc h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+  font-size:19px;line-height:1.2;margin:0 0 8px;color:#0d1a22}
+.carte.sc .nb{margin:0;font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:800;font-size:14.5px;color:var(--c)}
+
+/* une séance ouverte */
+.s-ret{display:inline-flex;align-items:center;gap:8px;
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:16px;
+  background:none;border:0;cursor:pointer;padding:0;margin:0 0 14px}
+.sban{display:flex;align-items:stretch;border:3.5px solid #12202a;border-radius:18px;
+  overflow:hidden;background:var(--c);color:#fff;
+  box-shadow:0 14px 30px -24px rgba(13,26,34,.75)}
+.sban .n{flex:none;width:104px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;background:rgba(255,255,255,.2);line-height:1.05;padding:10px 0}
+.sban .n .lib{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:800;
+  letter-spacing:.14em}
+.sban .n .chiffre{font-family:"Bricolage Grotesque",sans-serif;font-size:32px;
+  font-weight:800}
+.sban .t{flex:1;min-width:0;padding:12px 18px}
+.sban .t1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:21px;
+  line-height:1.2;margin:0;text-transform:uppercase}
+.sban .t2{margin:3px 0 0;font-size:15.5px}
+
+/* un exercice */
+.ex{background:#fff;border:3.5px solid #12202a;border-radius:18px;margin:16px 0 0;
+  overflow:hidden;box-shadow:0 14px 30px -26px rgba(13,26,34,.7)}
+.ex>.ex-h{display:flex;align-items:baseline;gap:12px;padding:14px 20px;
+  border-bottom:3.5px solid #12202a;background:var(--f)}
+.ex>.ex-h .ex-n{flex:none;display:inline-block;font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:800;font-size:15px;color:#fff;background:var(--c);border-radius:9px;
+  padding:3px 10px;white-space:nowrap}
+.ex>.ex-h .ex-t{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+  font-size:18px;line-height:1.25;color:#0d1a22;min-width:0;overflow-wrap:anywhere}
+.ex>.ex-c{padding:18px 20px}
+.attente{margin:0;font-size:15.5px;font-weight:600}
+
+/* la correction */
+.cx .crr{margin:14px 0 4px;padding:14px 18px 12px;border-radius:14px;
+  background:#EAF6EC;border:2.5px solid #1D7A33;color:#137A3A;
+  font-size:16.5px;line-height:1.65}
+.cx .crr>.lb{display:inline-flex;font-family:"IBM Plex Mono",monospace;
+  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;
+  color:#fff;background:#1D7A33;border-radius:7px;padding:3px 10px;margin:0 0 10px}
+.cx .crr .ops,.cx .crr .cnt>div,.cx .crr p.phr,.cx .crr p.verif,.cx .crr .flit,
+.cx .crr .rep.qcm-r .rr{background:#fff}
+
+@media (max-width:760px){
+  .ex>.ex-c{padding:14px 13px}
+  .ex>.ex-h{padding:12px 13px;flex-wrap:wrap;gap:6px 10px}
+  .sban .n{width:78px}
+  .sban .t1{font-size:18px}
+  .cx .crr{padding:12px 12px 10px}
+  /* une ligne de calcul = cinq cases : « f1 = 12/50 = 0,24 ». En trois
+     colonnes, les lignes se mélangeaient. Elle tient en 390 px. */
+  .cx .ops{grid-template-columns:repeat(5,max-content)!important;max-width:100%;
+    overflow-x:auto;padding:12px 12px;gap:8px 8px;font-size:15px}}
 </style>
 </head>
 <body>
 <header class="bar"><div class="in"><a class="lg" href="../../index.html">2de bac pro</a><nav class="fil"><span class="sep">&rsaquo;</span><a href="../index.html">Mathématiques</a><span class="sep">&rsaquo;</span><span>Statistiques à une variable</span></nav><span class="qui">Mme Talbaut</span></div></header>
 <main>
-<div id="vch"><p class="kick">Mathématiques &middot; Chapitre 1</p><h1>Statistiques à une variable</h1><p class="sub">Recueillir, organiser et représenter des données.</p><div class="doc" style="--c:#00778a"><h2>Le document élève</h2><p>Sept pages. Le plan du chapitre, les deux séquences et leurs treize séances.</p><a class="bt" href="statistiques-a-une-variable-eleve.pdf" target="_blank" rel="noopener">Ouvrir le document</a></div><h2 class="st">Les séances</h2><p class="sub">Cliquer sur une séance pour voir ses exercices et leur corrigé.</p><p class="seqt">Séquence 1 &middot; Recueillir et organiser des données statistiques</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#00778a" data-i="0"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><rect x="28" y="20" width="104" height="70" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 38 V60"/><path d="M54 38 V60"/><path d="M64 38 V60"/><path d="M74 38 V60"/><path d="M40 56 L78 42"/></g><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"><path d="M92 38 V60"/><path d="M102 38 V60"/><path d="M112 38 V60"/></g><path d="M44 76 H116" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"/></svg><p class="no">Séance 1</p><h3>Vocabulaire et premiers relevés</h3><p>3 exercices</p></button><button class="carte sc" type="button" style="--c:#5b3fa8" data-i="1"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e8e4f3"/><rect x="24" y="22" width="112" height="66" rx="9" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 42 H136" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 22 V88"/><path d="M99 22 V88"/><g stroke="#22323b" stroke-width="5.5"><path d="M62 22 V88"/><path d="M99 22 V88"/></g><rect x="24" y="22" width="112" height="20" fill="#5b3fa8" opacity=".85"/><rect x="24" y="22" width="112" height="66" rx="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Effectifs et fréquences</h3><p>2 exercices</p></button><button class="carte sc" type="button" style="--c:#2f7d32" data-i="2"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2ede2"/><path d="M80 92 C 80 60, 84 36, 118 24 C 124 62, 106 88, 80 92 Z" fill="#2f7d32" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 92 C 88 68, 98 50, 114 34" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#22323b"/><path d="M80 92 C 74 66, 58 46, 40 40 C 38 70, 56 88, 80 92 Z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Exercices 5 et 6</h3><p>2 exercices</p></button></div><p class="seqt">Séquence 2 &middot; Choisir un mode de représentation adapté</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#b5541a" data-i="3"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f5e7df"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="20" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="20" y="62" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="62" width="56" height="38" rx="7" fill="#fff"/></g><g fill="#b5541a"><rect x="30" y="34" width="8" height="14"/><rect x="42" y="26" width="8" height="22"/><rect x="54" y="30" width="8" height="18"/></g><circle cx="112" cy="35" r="14" fill="#fff" stroke="#22323b" stroke-width="4"/><path d="M112 35 L112 21 A14 14 0 0 1 124 42 Z" fill="#b5541a"/><path d="M28 92 L40 76 L52 86 L68 70" fill="none" stroke="#b5541a" stroke-width="5" stroke-linecap="round"/><g fill="#b5541a"><circle cx="96" cy="90" r="5"/><circle cx="110" cy="80" r="5"/><circle cx="124" cy="86" r="5"/></g></svg><p class="no">Séance 1</p><h3>Les quatre diagrammes</h3><p>2 exercices</p></button><button class="carte sc" type="button" style="--c:#a8185b" data-i="4"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M26 88 H136"/><path d="M26 88 V22"/></g><path d="M34 78 L58 62 L82 70 L108 38" fill="none" stroke="#a8185b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 22 l5 11 12 2 -9 9 2 12 -10 -6 -10 6 2 -12 -9 -9 12 -2 z" fill="#a8185b" stroke="#22323b" stroke-width="4" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Cote de popularité</h3><p>1 exercice</p></button><button class="carte sc" type="button" style="--c:#6d28d9" data-i="5"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ebe1fa"/><circle cx="80" cy="26" r="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 35 V46 L26 74 H134 L80 46" fill="#6d28d9" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 74 H134" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Activité A - Une boutique de mode</h3><p>1 exercice</p></button><button class="carte sc" type="button" style="--c:#0b5cab" data-i="6"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dde8f3"/><rect x="42" y="14" width="52" height="82" rx="12" fill="#0b5cab" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="26" width="32" height="52" rx="5" fill="#fff" stroke="#22323b" stroke-width="4"/><circle cx="68" cy="87" r="5" fill="#fff"/><rect x="102" y="26" width="34" height="58" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 4</p><h3>Exercices 10 et 11</h3><p>2 exercices</p></button><button class="carte sc" type="button" style="--c:#7a6100" data-i="7"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ece9db"/><g fill="#7a6100" stroke="#22323b" stroke-width="5"><ellipse cx="80" cy="74" rx="26" ry="20"/><ellipse cx="50" cy="52" rx="11" ry="14"/><ellipse cx="68" cy="36" rx="11" ry="14"/><ellipse cx="92" cy="36" rx="11" ry="14"/><ellipse cx="110" cy="52" rx="11" ry="14"/></g></svg><p class="no">Séance 5</p><h3>Exercice 12 - Les adoptions à la SPA</h3><p>1 exercice</p></button><button class="carte sc" type="button" style="--c:#007a5e" data-i="8"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbece8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M24 88 H138"/><path d="M24 88 V22"/></g><g stroke="#22323b" stroke-width="4.5"><rect x="32" y="66" width="26" height="22" fill="#007a5e" opacity=".55"/><rect x="58" y="44" width="26" height="44" fill="#007a5e" opacity=".75"/><rect x="84" y="30" width="26" height="58" fill="#007a5e"/><rect x="110" y="58" width="26" height="30" fill="#007a5e" opacity=".65"/></g></svg><p class="no">Séance 6</p><h3>Regrouper par classes</h3><p>2 exercices</p></button><button class="carte sc" type="button" style="--c:#9a3412" data-i="9"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f1e3de"/><path d="M44 34 H116 a26 26 0 0 1 22 40 l-8 14 a14 14 0 0 1 -24 -2 l-6 -12 H76 l-6 12 a14 14 0 0 1 -24 2 l-8 -14 a26 26 0 0 1 22 -40 z" fill="#9a3412" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><path d="M56 56 H72"/><path d="M64 48 V64"/></g><g fill="#fff"><circle cx="110" cy="50" r="5"/><circle cx="122" cy="60" r="5"/></g></svg><p class="no">Séance 7</p><h3>Activité B - Les jeux vidéo</h3><p>1 exercice</p></button><button class="carte sc" type="button" style="--c:#00778a" data-i="10"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><path d="M40 70 a36 34 0 0 1 72 0 Z" fill="#00778a" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M110 70 H136 a11 11 0 0 1 -11 11 H98 a22 22 0 0 0 12 -11 z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M76 36 V70" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="76" cy="36" r="6" fill="#fff" stroke="#22323b" stroke-width="4"/></svg><p class="no">Séance 8</p><h3>Exercice 13 - Les casquettes</h3><p>1 exercice</p></button><button class="carte sc" type="button" style="--c:#334155" data-i="11"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2e4e7"/><rect x="22" y="20" width="116" height="60" rx="11" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 38 L96 50 L68 62 Z" fill="#334155" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 92 H138" stroke="#e2e2ea" stroke-width="8" stroke-linecap="round"/><path d="M22 92 H98" stroke="#334155" stroke-width="8" stroke-linecap="round"/></svg><p class="no">Séance 9</p><h3>Exercice 14 - Le profil des vues d’une vidéo</h3><p>1 exercice</p></button><button class="carte sc" type="button" style="--c:#a8185b" data-i="12"><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><path d="M52 20 H108 v22 a28 28 0 0 1 -56 0 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 26 H38 a14 14 0 0 0 14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 26 h14 a14 14 0 0 1 -14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 70 V82" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M58 92 H102 a6 6 0 0 0 -6 -10 H64 a6 6 0 0 0 -6 10 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 10</p><h3>Cap vers le CCF - Les subventions du club</h3><p>1 exercice</p></button></div></div><div id="vsc" hidden></div>
+<div id="vch"><p class="kick">Mathématiques &middot; Chapitre 1</p><h1>Statistiques à une variable</h1><p class="sub">Recueillir, organiser et représenter des données.</p><a class="cv" style="--c:#00778a" href="statistiques-a-une-variable-eleve.pdf" target="_blank" rel="noopener"><h2>Le document élève</h2><div class="vg"><img src="statistiques-a-une-variable-couverture.png" alt="Première page du document élève"><span class="bt">Ouvrir le document</span></div></a><div class="ttm"><p class="l1">Chapitre 1 Statistiques à une variable</p><p class="l2">Correction</p></div><p class="seqt">Séquence 1 &middot; Recueillir et organiser des données statistiques</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#00778a;--f:#e6f1f3" data-i="0"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><rect x="28" y="20" width="104" height="70" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 38 V60"/><path d="M54 38 V60"/><path d="M64 38 V60"/><path d="M74 38 V60"/><path d="M40 56 L78 42"/></g><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"><path d="M92 38 V60"/><path d="M102 38 V60"/><path d="M112 38 V60"/></g><path d="M44 76 H116" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"/></svg><p class="no">Séance 1</p><h3>Vocabulaire et premiers relevés</h3><p class="nb">3 exercices</p></button><button class="carte sc" type="button" style="--c:#5b3fa8;--f:#efecf6" data-i="1"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e8e4f3"/><rect x="24" y="22" width="112" height="66" rx="9" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 42 H136" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 22 V88"/><path d="M99 22 V88"/><g stroke="#22323b" stroke-width="5.5"><path d="M62 22 V88"/><path d="M99 22 V88"/></g><rect x="24" y="22" width="112" height="20" fill="#5b3fa8" opacity=".85"/><rect x="24" y="22" width="112" height="66" rx="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Effectifs et fréquences</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#2f7d32;--f:#eaf2ea" data-i="2"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2ede2"/><path d="M80 92 C 80 60, 84 36, 118 24 C 124 62, 106 88, 80 92 Z" fill="#2f7d32" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 92 C 88 68, 98 50, 114 34" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#22323b"/><path d="M80 92 C 74 66, 58 46, 40 40 C 38 70, 56 88, 80 92 Z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Exercices 5 et 6</h3><p class="nb">2 exercices</p></button></div><p class="seqt">Séquence 2 &middot; Choisir un mode de représentation adapté</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#b5541a;--f:#f8eee8" data-i="3"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f5e7df"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="20" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="20" y="62" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="62" width="56" height="38" rx="7" fill="#fff"/></g><g fill="#b5541a"><rect x="30" y="34" width="8" height="14"/><rect x="42" y="26" width="8" height="22"/><rect x="54" y="30" width="8" height="18"/></g><circle cx="112" cy="35" r="14" fill="#fff" stroke="#22323b" stroke-width="4"/><path d="M112 35 L112 21 A14 14 0 0 1 124 42 Z" fill="#b5541a"/><path d="M28 92 L40 76 L52 86 L68 70" fill="none" stroke="#b5541a" stroke-width="5" stroke-linecap="round"/><g fill="#b5541a"><circle cx="96" cy="90" r="5"/><circle cx="110" cy="80" r="5"/><circle cx="124" cy="86" r="5"/></g></svg><p class="no">Séance 1</p><h3>Les quatre diagrammes</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#a8185b;--f:#f6e8ef" data-i="4"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M26 88 H136"/><path d="M26 88 V22"/></g><path d="M34 78 L58 62 L82 70 L108 38" fill="none" stroke="#a8185b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 22 l5 11 12 2 -9 9 2 12 -10 -6 -10 6 2 -12 -9 -9 12 -2 z" fill="#a8185b" stroke="#22323b" stroke-width="4" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Cote de popularité</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#6d28d9;--f:#f0eafb" data-i="5"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ebe1fa"/><circle cx="80" cy="26" r="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 35 V46 L26 74 H134 L80 46" fill="#6d28d9" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 74 H134" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Activité A - Une boutique de mode</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#0b5cab;--f:#e7eff7" data-i="6"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dde8f3"/><rect x="42" y="14" width="52" height="82" rx="12" fill="#0b5cab" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="26" width="32" height="52" rx="5" fill="#fff" stroke="#22323b" stroke-width="4"/><circle cx="68" cy="87" r="5" fill="#fff"/><rect x="102" y="26" width="34" height="58" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 4</p><h3>Exercices 10 et 11</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#7a6100;--f:#f2efe6" data-i="7"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ece9db"/><g fill="#7a6100" stroke="#22323b" stroke-width="5"><ellipse cx="80" cy="74" rx="26" ry="20"/><ellipse cx="50" cy="52" rx="11" ry="14"/><ellipse cx="68" cy="36" rx="11" ry="14"/><ellipse cx="92" cy="36" rx="11" ry="14"/><ellipse cx="110" cy="52" rx="11" ry="14"/></g></svg><p class="no">Séance 5</p><h3>Exercice 12 - Les adoptions à la SPA</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#007a5e;--f:#e6f2ef" data-i="8"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbece8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M24 88 H138"/><path d="M24 88 V22"/></g><g stroke="#22323b" stroke-width="4.5"><rect x="32" y="66" width="26" height="22" fill="#007a5e" opacity=".55"/><rect x="58" y="44" width="26" height="44" fill="#007a5e" opacity=".75"/><rect x="84" y="30" width="26" height="58" fill="#007a5e"/><rect x="110" y="58" width="26" height="30" fill="#007a5e" opacity=".65"/></g></svg><p class="no">Séance 6</p><h3>Regrouper par classes</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#9a3412;--f:#f5ebe7" data-i="9"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f1e3de"/><path d="M44 34 H116 a26 26 0 0 1 22 40 l-8 14 a14 14 0 0 1 -24 -2 l-6 -12 H76 l-6 12 a14 14 0 0 1 -24 2 l-8 -14 a26 26 0 0 1 22 -40 z" fill="#9a3412" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><path d="M56 56 H72"/><path d="M64 48 V64"/></g><g fill="#fff"><circle cx="110" cy="50" r="5"/><circle cx="122" cy="60" r="5"/></g></svg><p class="no">Séance 7</p><h3>Activité B - Les jeux vidéo</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#00778a;--f:#e6f1f3" data-i="10"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><path d="M40 70 a36 34 0 0 1 72 0 Z" fill="#00778a" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M110 70 H136 a11 11 0 0 1 -11 11 H98 a22 22 0 0 0 12 -11 z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M76 36 V70" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="76" cy="36" r="6" fill="#fff" stroke="#22323b" stroke-width="4"/></svg><p class="no">Séance 8</p><h3>Exercice 13 - Les casquettes</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#334155;--f:#ebecee" data-i="11"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2e4e7"/><rect x="22" y="20" width="116" height="60" rx="11" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 38 L96 50 L68 62 Z" fill="#334155" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 92 H138" stroke="#e2e2ea" stroke-width="8" stroke-linecap="round"/><path d="M22 92 H98" stroke="#334155" stroke-width="8" stroke-linecap="round"/></svg><p class="no">Séance 9</p><h3>Exercice 14 - Le profil des vues d’une vidéo</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#a8185b;--f:#f6e8ef" data-i="12"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><path d="M52 20 H108 v22 a28 28 0 0 1 -56 0 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 26 H38 a14 14 0 0 0 14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 26 h14 a14 14 0 0 1 -14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 70 V82" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M58 92 H102 a6 6 0 0 0 -6 -10 H64 a6 6 0 0 0 -6 10 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 10</p><h3>Cap vers le CCF - Les subventions du club</h3><p class="nb">1 exercice</p></button></div></div><div id="vsc" hidden></div>
 </main>
 <footer class="pied"><div class="in"><span>Mathématiques 2de bac pro</span><span class="sep">&middot;</span><b>Mme Talbaut</b><span class="sep">&middot;</span><span>LP Max Joséphine, Cayenne</span></div></footer>
 
 <script>
-var SC = [{"sq": 1, "n": 1, "titre": "Vocabulaire et premiers relevés", "sqt": "Recueillir et organiser des données statistiques", "c": "#00778a", "exos": [{"id": "s1-1/QCM", "t": "Évaluation diagnostique", "h": "<section class=\"exo\" data-exo=\"diag\"><div class=\"exo-h\"><span class=\"exo-t\">Évaluation diagnostique</span><span class=\"etat cor\">corrigé</span></div><div class=\"exo-c\"><p class=\"en-i\">Trois questions.<br>Une seule bonne réponse par question.<br>Cliquer sur la réponse choisie.</p><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">1.</span> <span class=\"cmp\">S’approprier</span> <b>Indiquer</b> le type de ce diagramme.</span></div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0</text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2</text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4</text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6</text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8</text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10</text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe</text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot</text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket</text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand</text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley</text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse</text></svg></div><ul class=\"qcm\"><li><span class=\"l\">a</span><span class=\"t\">un diagramme en secteurs</span></li><li class=\"bon\"><span class=\"l\">b</span><span class=\"t\">un diagramme en bâtons</span></li><li><span class=\"l\">c</span><span class=\"t\">un diagramme en colonnes</span></li><li><span class=\"l\">d</span><span class=\"t\">un diagramme à lignes brisées</span></li></ul><div class=\"rep\" data-k=\"diag_q1_e1\"><button type=\"button\" class=\"lb\">Étape 1</button><div class=\"rc\"><p>Je regarde la <b>forme</b> : ce sont des barres verticales.</p></div></div><div class=\"rep\" data-k=\"diag_q1_e2\"><button type=\"button\" class=\"lb\">Étape 2</button><div class=\"rc\"><p>Je regarde si elles se touchent : ici elles sont <b>séparées</b>.</p></div></div><div class=\"rep\" data-k=\"diag_q1_e3\"><button type=\"button\" class=\"lb\">Étape 3</button><div class=\"rc\"><p>Barres séparées = <b>diagramme en bâtons</b>. Collées, ce serait un diagramme en colonnes.</p></div></div><div class=\"rep\" data-k=\"diag_q1\"><button type=\"button\" class=\"lb\">Réponse</button><div class=\"rc\"><p><b>Réponse b</b> - Les bâtons sont <b>séparés</b> les uns des autres : c’est un diagramme en bâtons. S’ils étaient collés, ce serait un diagramme en colonnes, réservé aux valeurs regroupées par classes.</p></div></div></div><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">2.</span> <span class=\"cmp\">S’approprier</span> <b>Relever</b> le nombre d’élèves qui pratiquent le basket.</span></div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0</text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2</text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4</text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6</text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8</text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10</text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe</text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot</text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket</text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand</text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley</text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse</text></svg></div><ul class=\"qcm\"><li><span class=\"l\">a</span><span class=\"t\">2 élèves</span></li><li><span class=\"l\">b</span><span class=\"t\">3 élèves</span></li><li class=\"bon\"><span class=\"l\">c</span><span class=\"t\">6 élèves</span></li><li><span class=\"l\">d</span><span class=\"t\">8 élèves</span></li></ul><div class=\"rep\" data-k=\"diag_q2_e1\"><button type=\"button\" class=\"lb\">Étape 1</button><div class=\"rc\"><p>Je repère le bâton « Basket » sur l’axe horizontal.</p></div></div><div class=\"rep\" data-k=\"diag_q2_e2\"><button type=\"button\" class=\"lb\">Étape 2</button><div class=\"rc\"><p>Je remonte jusqu’en haut du bâton.</p></div></div><div class=\"rep\" data-k=\"diag_q2_e3\"><button type=\"button\" class=\"lb\">Étape 3</button><div class=\"rc\"><p>Je lis la valeur en face sur l’axe vertical : <b>6 élèves</b>.</p></div></div><div class=\"rep\" data-k=\"diag_q2\"><button type=\"button\" class=\"lb\">Réponse</button><div class=\"rc\"><p><b>Réponse c</b> - On lit la hauteur du bâton « Basket » sur l’axe vertical : <b>6 élèves</b>.</p></div></div></div><div class=\"q zh\" data-qcap=\"C2\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">3.</span> <span class=\"cmp\">Analyser</span> <b>Choisir</b> le diagramme le plus adapté pour représenter la marque de smartphone préférée des élèves.</span></div><ul class=\"qcm\"><li class=\"bon\"><span class=\"l\">a</span><span class=\"t\">un diagramme en secteurs</span></li><li><span class=\"l\">b</span><span class=\"t\">un diagramme en colonnes</span></li><li><span class=\"l\">c</span><span class=\"t\">un diagramme à lignes brisées</span></li></ul><div class=\"rep\" data-k=\"diag_q3_e1\"><button type=\"button\" class=\"lb\">Étape 1</button><div class=\"rc\"><p>Quelle est la <b>nature du caractère</b> ? Une marque n’est pas un nombre : il est <b>qualitatif</b>.</p></div></div><div class=\"rep\" data-k=\"diag_q3_e2\"><button type=\"button\" class=\"lb\">Étape 2</button><div class=\"rc\"><p>Pour un caractère qualitatif on montre des <b>parts d’un tout</b>.</p></div></div><div class=\"rep\" data-k=\"diag_q3_e3\"><button type=\"button\" class=\"lb\">Étape 3</button><div class=\"rc\"><p>C’est le <b>diagramme en secteurs</b> (le camembert). Les colonnes servent aux classes, les lignes brisées à une évolution dans le temps.</p></div></div><div class=\"rep\" data-k=\"diag_q3\"><button type=\"button\" class=\"lb\">Réponse</button><div class=\"rc\"><p><b>Réponse a</b> - La marque est un caractère <b>qualitatif</b> : le diagramme en secteurs (ou en bâtons) convient. Les colonnes sont pour les classes, les lignes brisées pour une évolution dans le temps.</p></div></div></div></div></section>"}, {"id": "s1-1/Ex. 1", "t": "Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.", "h": "<section class=\"exo\" data-exo=\"ex01\"><div class=\"exo-h\"><span class=\"exo-t\">Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.</span><span class=\"etat cor\">corrigé</span></div><div class=\"exo-c\"><p class=\"en-i\">Diagramme en bâtons · diagramme en secteurs · diagramme à lignes brisées · diagramme en colonnes.</p><div class=\"asg\"><div class=\"asi\"><span class=\"asl\">a.</span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"157.0\" x2=\"314\" y2=\"157.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"161.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0</text><line x1=\"42\" y1=\"125.2\" x2=\"314\" y2=\"125.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"129.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">3</text><line x1=\"42\" y1=\"93.5\" x2=\"314\" y2=\"93.5\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"97.5\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6</text><line x1=\"42\" y1=\"61.8\" x2=\"314\" y2=\"61.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"65.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">9</text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">12</text><line x1=\"42\" y1=\"157\" x2=\"314\" y2=\"157\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Temps de trajet des élèves (en min)</text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"42.5\" y=\"114.7\" width=\"53.4\" height=\"42.3\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"69.2\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 69.2 168.0)\" text-anchor=\"end\">[0 ; 10[</text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"96.9\" y=\"40.6\" width=\"53.4\" height=\"116.4\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"123.6\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 123.6 168.0)\" text-anchor=\"end\">[10 ; 20[</text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"151.3\" y=\"72.3\" width=\"53.4\" height=\"84.7\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"178.0\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 178.0 168.0)\" text-anchor=\"end\">[20 ; 30[</text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"205.7\" y=\"104.1\" width=\"53.4\" height=\"52.9\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"232.4\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 232.4 168.0)\" text-anchor=\"end\">[30 ; 40[</text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"260.1\" y=\"135.8\" width=\"53.4\" height=\"21.2\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"286.8\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 286.8 168.0)\" text-anchor=\"end\">[40 ; 50[</text></svg><p class=\"asr\">Diagramme en colonnes</p></div><div class=\"asi\"><span class=\"asl\">b.</span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0</text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">5</text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10</text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">15</text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">20</text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">25</text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Température moyenne du mois (en °C)</text><path class=\"gl\" pathLength=\"1\" d=\"M 80.9 146.3 L 119.7 140.2 L 158.6 115.7 L 197.4 91.2 L 236.3 66.7 L 275.1 48.4\" fill=\"none\" stroke=\"#7C4BD8\" stroke-width=\"2.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle class=\"gd\" style=\"animation-delay:600ms\" cx=\"80.9\" cy=\"146.3\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:660ms\" cx=\"119.7\" cy=\"140.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:720ms\" cx=\"158.6\" cy=\"115.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:780ms\" cx=\"197.4\" cy=\"91.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:840ms\" cx=\"236.3\" cy=\"66.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:900ms\" cx=\"275.1\" cy=\"48.4\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><text x=\"80.9\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Jan</text><text x=\"119.7\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Fév</text><text x=\"158.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mars</text><text x=\"197.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Avr</text><text x=\"236.3\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mai</text><text x=\"275.1\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Juin</text></svg><p class=\"asr\">Diagramme à lignes brisées</p></div><div class=\"asi\"><span class=\"asl\">c.</span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0</text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2</text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4</text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6</text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8</text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10</text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Nombre de frères et sœurs</text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"57.8\" y=\"75.9\" width=\"22.8\" height=\"107.1\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"69.2\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">0</text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"112.2\" y=\"45.3\" width=\"22.8\" height=\"137.7\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"123.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">1</text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"166.6\" y=\"106.5\" width=\"22.8\" height=\"76.5\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"178.0\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">2</text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"221.0\" y=\"152.4\" width=\"22.8\" height=\"30.6\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"232.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">3</text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"275.4\" y=\"167.7\" width=\"22.8\" height=\"15.3\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"286.8\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">4</text></svg><p class=\"asr\">Diagramme en bâtons</p></div><div class=\"asi\"><span class=\"asl\">d.</span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><text class=\"gt\" x=\"165\" y=\"16\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Moyen de transport pour venir au lycée</text><g class=\"gp\" style=\"transform-origin:94.9px 120.5px\"><path class=\"sl\" d=\"M 94.9 120.5 L 94.9 33.6 A 86.9 86.9 0 0 1 156.4 182.0 Z\" fill=\"#00A5BF\"/><text x=\"144.7\" y=\"99.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">38 %</text><path class=\"sl\" d=\"M 94.9 120.5 L 156.4 182.0 A 86.9 86.9 0 0 1 19.6 164.0 Z\" fill=\"#8FBE1F\"/><text x=\"87.9\" y=\"173.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">29 %</text><path class=\"sl\" d=\"M 94.9 120.5 L 19.6 164.0 A 86.9 86.9 0 0 1 33.5 59.0 Z\" fill=\"#FFB627\"/><text x=\"41.5\" y=\"113.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">21 %</text><path class=\"sl\" d=\"M 94.9 120.5 L 33.5 59.0 A 86.9 86.9 0 0 1 94.9 33.6 Z\" fill=\"#7C4BD8\"/><text x=\"74.3\" y=\"70.7\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">12 %</text></g><rect x=\"207.88\" y=\"82\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#00A5BF\"/><text x=\"225.88\" y=\"92\" font-size=\"12\" fill=\"#0d1a22\">Bus</text><rect x=\"207.88\" y=\"102\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#8FBE1F\"/><text x=\"225.88\" y=\"112\" font-size=\"12\" fill=\"#0d1a22\">À pied</text><rect x=\"207.88\" y=\"122\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#FFB627\"/><text x=\"225.88\" y=\"132\" font-size=\"12\" fill=\"#0d1a22\">Voiture</text><rect x=\"207.88\" y=\"142\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#7C4BD8\"/><text x=\"225.88\" y=\"152\" font-size=\"12\" fill=\"#0d1a22\">Vélo</text></svg><p class=\"asr\">Diagramme en secteurs</p></div></div></div></section>"}, {"id": "s1-1/Ex. 2", "t": "Ex. 2 - Les notes de mathématiques de 20 élèves sont les suivantes :", "h": null}]}, {"sq": 1, "n": 2, "titre": "Effectifs et fréquences", "sqt": "Recueillir et organiser des données statistiques", "c": "#5b3fa8", "exos": [{"id": "s1-2/Ex. 3", "t": "Ex. 3 - On recense dans un immeuble les différents types de logements occupés par les locataires.", "h": null}, {"id": "s1-2/Ex. 4", "t": "Ex. 4 - Compléter le tableau suivant :", "h": null}]}, {"sq": 1, "n": 3, "titre": "Exercices 5 et 6", "sqt": "Recueillir et organiser des données statistiques", "c": "#2f7d32", "exos": [{"id": "s1-3/Ex. 5", "t": "Ex. 5 - Nature, jardin, paysage, forêt", "h": null}, {"id": "s1-3/Ex. 6", "t": "Ex. 6 - Développement durable", "h": null}]}, {"sq": 2, "n": 1, "titre": "Les quatre diagrammes", "sqt": "Choisir un mode de représentation adapté", "c": "#b5541a", "exos": [{"id": "s2-1/Ex. 7", "t": "Ex. 7 - Pour chacun des caractères suivants, donner sa nature et le type de diagramme qui peut le représenter.", "h": null}, {"id": "s2-1/Ex. 8", "t": "Ex. 8 - On interroge les 28 élèves d’une classe de 2<sup>de</sup> sur le nombre de SMS qu’ils envoient par jour.", "h": null}]}, {"sq": 2, "n": 2, "titre": "Cote de popularité", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "exos": [{"id": "s2-2/Ex. 9", "t": "Ex. 9 - Chaque fin de mois, un institut de sondages publie la cote de popularité d’un champion sportif.", "h": null}]}, {"sq": 2, "n": 3, "titre": "Activité A - Une boutique de mode", "sqt": "Choisir un mode de représentation adapté", "c": "#6d28d9", "exos": [{"id": "s2-3/Activité A", "t": "Activité A - Une boutique de mode", "h": null}]}, {"sq": 2, "n": 4, "titre": "Exercices 10 et 11", "sqt": "Choisir un mode de représentation adapté", "c": "#0b5cab", "exos": [{"id": "s2-4/Ex. 10", "t": "Ex. 10 - On étudie la couleur préférée des coques de smartphone des élèves d’une classe.", "h": null}, {"id": "s2-4/Ex. 11", "t": "Ex. 11 - On étudie le nombre d’entrées mensuelles que réalise une salle de cinéma.", "h": null}]}, {"sq": 2, "n": 5, "titre": "Exercice 12 - Les adoptions à la SPA", "sqt": "Choisir un mode de représentation adapté", "c": "#7a6100", "exos": [{"id": "s2-5/Ex. 12", "t": "Ex. 12 - Les adoptions d’animaux dans les refuges SPA", "h": null}]}, {"sq": 2, "n": 6, "titre": "Regrouper par classes", "sqt": "Choisir un mode de représentation adapté", "c": "#007a5e", "exos": [{"id": "s2-6/App. 1", "t": "App. 1 - L’âge des 30 participants à une compétition sportive est le suivant :", "h": null}, {"id": "s2-6/App. 2", "t": "App. 2 - Compléter le tableau ci-dessous :", "h": null}]}, {"sq": 2, "n": 7, "titre": "Activité B - Les jeux vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#9a3412", "exos": [{"id": "s2-7/Activité B", "t": "Activité B - Les habitudes et les préférences dans les jeux vidéo", "h": null}]}, {"sq": 2, "n": 8, "titre": "Exercice 13 - Les casquettes", "sqt": "Choisir un mode de représentation adapté", "c": "#00778a", "exos": [{"id": "s2-8/Ex. 13", "t": "Ex. 13 - David, collectionneur de casquettes, a relevé le prix, en euro, de vingt casquettes dans différents magasins.", "h": null}]}, {"sq": 2, "n": 9, "titre": "Exercice 14 - Le profil des vues d’une vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#334155", "exos": [{"id": "s2-9/Ex. 14", "t": "Ex. 14 - Le profil des utilisateurs ayant visionné la vidéo la plus vue de l’année", "h": null}]}, {"sq": 2, "n": 10, "titre": "Cap vers le CCF - Les subventions du club", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "exos": [{"id": "s2-10/Cap vers le CCF", "t": "Cap vers le CCF - Partie A - Demande de subventions liées aux licenciés du club", "h": null}]}];
+var SC = [{"sq": 1, "n": 1, "titre": "Vocabulaire et premiers relevés", "sqt": "Recueillir et organiser des données statistiques", "c": "#00778a", "f": "#e6f1f3", "exos": [{"id": "s1-1/QCM", "t": "Évaluation diagnostique", "num": "", "tt": "Évaluation diagnostique", "h": "<section class=\"exo\" data-exo=\"diag\"><div class=\"exo-h\"><span class=\"exo-t\">Évaluation diagnostique<\/span><span class=\"etat cor\">corrigé<\/span><\/div><div class=\"exo-c\"><p class=\"en-i\">Trois questions.<br>Une seule bonne réponse par question.<br>Cliquer sur la réponse choisie.<\/p><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">1.<\/span> <span class=\"cmp\">S’approprier<\/span> <b>Indiquer<\/b> le type de ce diagramme.<\/span><\/div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse<\/text><\/svg><\/div><ul class=\"qcm\"><li><span class=\"l\">a<\/span><span class=\"t\">un diagramme en secteurs<\/span><\/li><li class=\"bon\"><span class=\"l\">b<\/span><span class=\"t\">un diagramme en bâtons<\/span><\/li><li><span class=\"l\">c<\/span><span class=\"t\">un diagramme en colonnes<\/span><\/li><li><span class=\"l\">d<\/span><span class=\"t\">un diagramme à lignes brisées<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q1_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Je regarde la <b>forme<\/b> : ce sont des barres verticales.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Je regarde si elles se touchent : ici elles sont <b>séparées<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>Barres séparées = <b>diagramme en bâtons<\/b>. Collées, ce serait un diagramme en colonnes.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse b<\/b> - Les bâtons sont <b>séparés<\/b> les uns des autres : c’est un diagramme en bâtons. S’ils étaient collés, ce serait un diagramme en colonnes, réservé aux valeurs regroupées par classes.<\/p><\/div><\/div><\/div><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">2.<\/span> <span class=\"cmp\">S’approprier<\/span> <b>Relever<\/b> le nombre d’élèves qui pratiquent le basket.<\/span><\/div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse<\/text><\/svg><\/div><ul class=\"qcm\"><li><span class=\"l\">a<\/span><span class=\"t\">2 élèves<\/span><\/li><li><span class=\"l\">b<\/span><span class=\"t\">3 élèves<\/span><\/li><li class=\"bon\"><span class=\"l\">c<\/span><span class=\"t\">6 élèves<\/span><\/li><li><span class=\"l\">d<\/span><span class=\"t\">8 élèves<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q2_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Je repère le bâton « Basket » sur l’axe horizontal.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Je remonte jusqu’en haut du bâton.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>Je lis la valeur en face sur l’axe vertical : <b>6 élèves<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse c<\/b> - On lit la hauteur du bâton « Basket » sur l’axe vertical : <b>6 élèves<\/b>.<\/p><\/div><\/div><\/div><div class=\"q zh\" data-qcap=\"C2\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">3.<\/span> <span class=\"cmp\">Analyser<\/span> <b>Choisir<\/b> le diagramme le plus adapté pour représenter la marque de smartphone préférée des élèves.<\/span><\/div><ul class=\"qcm\"><li class=\"bon\"><span class=\"l\">a<\/span><span class=\"t\">un diagramme en secteurs<\/span><\/li><li><span class=\"l\">b<\/span><span class=\"t\">un diagramme en colonnes<\/span><\/li><li><span class=\"l\">c<\/span><span class=\"t\">un diagramme à lignes brisées<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q3_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Quelle est la <b>nature du caractère<\/b> ? Une marque n’est pas un nombre : il est <b>qualitatif<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Pour un caractère qualitatif on montre des <b>parts d’un tout<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>C’est le <b>diagramme en secteurs<\/b> (le camembert). Les colonnes servent aux classes, les lignes brisées à une évolution dans le temps.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse a<\/b> - La marque est un caractère <b>qualitatif<\/b> : le diagramme en secteurs (ou en bâtons) convient. Les colonnes sont pour les classes, les lignes brisées pour une évolution dans le temps.<\/p><\/div><\/div><\/div><\/div><\/section>"}, {"id": "s1-1/Ex. 1", "t": "Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.", "num": "Ex. 1", "tt": "Associer chaque type de diagramme à la représentation graphique correspondante.", "h": "<section class=\"exo\" data-exo=\"ex01\"><div class=\"exo-h\"><span class=\"exo-t\">Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.<\/span><span class=\"etat cor\">corrigé<\/span><\/div><div class=\"exo-c\"><p class=\"en-i\">Diagramme en bâtons · diagramme en secteurs · diagramme à lignes brisées · diagramme en colonnes.<\/p><div class=\"asg\"><div class=\"asi\"><span class=\"asl\">a.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"157.0\" x2=\"314\" y2=\"157.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"161.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"125.2\" x2=\"314\" y2=\"125.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"129.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">3<\/text><line x1=\"42\" y1=\"93.5\" x2=\"314\" y2=\"93.5\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"97.5\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"61.8\" x2=\"314\" y2=\"61.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"65.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">9<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">12<\/text><line x1=\"42\" y1=\"157\" x2=\"314\" y2=\"157\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Temps de trajet des élèves (en min)<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"42.5\" y=\"114.7\" width=\"53.4\" height=\"42.3\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"69.2\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 69.2 168.0)\" text-anchor=\"end\">[0 ; 10[<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"96.9\" y=\"40.6\" width=\"53.4\" height=\"116.4\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"123.6\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 123.6 168.0)\" text-anchor=\"end\">[10 ; 20[<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"151.3\" y=\"72.3\" width=\"53.4\" height=\"84.7\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"178.0\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 178.0 168.0)\" text-anchor=\"end\">[20 ; 30[<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"205.7\" y=\"104.1\" width=\"53.4\" height=\"52.9\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"232.4\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 232.4 168.0)\" text-anchor=\"end\">[30 ; 40[<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"260.1\" y=\"135.8\" width=\"53.4\" height=\"21.2\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"286.8\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 286.8 168.0)\" text-anchor=\"end\">[40 ; 50[<\/text><\/svg><p class=\"asr\">Diagramme en colonnes<\/p><\/div><div class=\"asi\"><span class=\"asl\">b.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">5<\/text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">15<\/text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">20<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">25<\/text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Température moyenne du mois (en °C)<\/text><path class=\"gl\" pathLength=\"1\" d=\"M 80.9 146.3 L 119.7 140.2 L 158.6 115.7 L 197.4 91.2 L 236.3 66.7 L 275.1 48.4\" fill=\"none\" stroke=\"#7C4BD8\" stroke-width=\"2.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle class=\"gd\" style=\"animation-delay:600ms\" cx=\"80.9\" cy=\"146.3\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:660ms\" cx=\"119.7\" cy=\"140.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:720ms\" cx=\"158.6\" cy=\"115.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:780ms\" cx=\"197.4\" cy=\"91.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:840ms\" cx=\"236.3\" cy=\"66.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:900ms\" cx=\"275.1\" cy=\"48.4\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><text x=\"80.9\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Jan<\/text><text x=\"119.7\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Fév<\/text><text x=\"158.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mars<\/text><text x=\"197.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Avr<\/text><text x=\"236.3\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mai<\/text><text x=\"275.1\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Juin<\/text><\/svg><p class=\"asr\">Diagramme à lignes brisées<\/p><\/div><div class=\"asi\"><span class=\"asl\">c.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Nombre de frères et sœurs<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"57.8\" y=\"75.9\" width=\"22.8\" height=\"107.1\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"69.2\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">0<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"112.2\" y=\"45.3\" width=\"22.8\" height=\"137.7\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"123.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">1<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"166.6\" y=\"106.5\" width=\"22.8\" height=\"76.5\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"178.0\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">2<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"221.0\" y=\"152.4\" width=\"22.8\" height=\"30.6\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"232.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">3<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"275.4\" y=\"167.7\" width=\"22.8\" height=\"15.3\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"286.8\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">4<\/text><\/svg><p class=\"asr\">Diagramme en bâtons<\/p><\/div><div class=\"asi\"><span class=\"asl\">d.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><text class=\"gt\" x=\"165\" y=\"16\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Moyen de transport pour venir au lycée<\/text><g class=\"gp\" style=\"transform-origin:94.9px 120.5px\"><path class=\"sl\" d=\"M 94.9 120.5 L 94.9 33.6 A 86.9 86.9 0 0 1 156.4 182.0 Z\" fill=\"#00A5BF\"/><text x=\"144.7\" y=\"99.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">38 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 156.4 182.0 A 86.9 86.9 0 0 1 19.6 164.0 Z\" fill=\"#8FBE1F\"/><text x=\"87.9\" y=\"173.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">29 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 19.6 164.0 A 86.9 86.9 0 0 1 33.5 59.0 Z\" fill=\"#FFB627\"/><text x=\"41.5\" y=\"113.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">21 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 33.5 59.0 A 86.9 86.9 0 0 1 94.9 33.6 Z\" fill=\"#7C4BD8\"/><text x=\"74.3\" y=\"70.7\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">12 %<\/text><\/g><rect x=\"207.88\" y=\"82\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#00A5BF\"/><text x=\"225.88\" y=\"92\" font-size=\"12\" fill=\"#0d1a22\">Bus<\/text><rect x=\"207.88\" y=\"102\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#8FBE1F\"/><text x=\"225.88\" y=\"112\" font-size=\"12\" fill=\"#0d1a22\">À pied<\/text><rect x=\"207.88\" y=\"122\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#FFB627\"/><text x=\"225.88\" y=\"132\" font-size=\"12\" fill=\"#0d1a22\">Voiture<\/text><rect x=\"207.88\" y=\"142\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#7C4BD8\"/><text x=\"225.88\" y=\"152\" font-size=\"12\" fill=\"#0d1a22\">Vélo<\/text><\/svg><p class=\"asr\">Diagramme en secteurs<\/p><\/div><\/div><\/div><\/section>"}, {"id": "s1-1/Ex. 2", "t": "Ex. 2 - Les notes de mathématiques de 20 élèves sont les suivantes :", "num": "Ex. 2", "tt": "Les notes de mathématiques de 20 élèves sont les suivantes :", "h": null}]}, {"sq": 1, "n": 2, "titre": "Effectifs et fréquences", "sqt": "Recueillir et organiser des données statistiques", "c": "#5b3fa8", "f": "#efecf6", "exos": [{"id": "s1-2/Ex. 3", "t": "Ex. 3 - On recense dans un immeuble les différents types de logements occupés par les locataires.", "num": "Ex. 3", "tt": "On recense dans un immeuble les différents types de logements occupés par les locataires.", "h": null}, {"id": "s1-2/Ex. 4", "t": "Ex. 4 - Compléter le tableau suivant :", "num": "Ex. 4", "tt": "Compléter le tableau suivant :", "h": null}]}, {"sq": 1, "n": 3, "titre": "Exercices 5 et 6", "sqt": "Recueillir et organiser des données statistiques", "c": "#2f7d32", "f": "#eaf2ea", "exos": [{"id": "s1-3/Ex. 5", "t": "Ex. 5 - Nature, jardin, paysage, forêt", "num": "Ex. 5", "tt": "Nature, jardin, paysage, forêt", "h": null}, {"id": "s1-3/Ex. 6", "t": "Ex. 6 - Développement durable", "num": "Ex. 6", "tt": "Développement durable", "h": null}]}, {"sq": 2, "n": 1, "titre": "Les quatre diagrammes", "sqt": "Choisir un mode de représentation adapté", "c": "#b5541a", "f": "#f8eee8", "exos": [{"id": "s2-1/Ex. 7", "t": "Ex. 7 - Pour chacun des caractères suivants, donner sa nature et le type de diagramme qui peut le représenter.", "num": "Ex. 7", "tt": "Pour chacun des caractères suivants, donner sa nature et le type de diagramme qui peut le représenter.", "h": null}, {"id": "s2-1/Ex. 8", "t": "Ex. 8 - On interroge les 28 élèves d’une classe de 2<sup>de<\/sup> sur le nombre de SMS qu’ils envoient par jour.", "num": "Ex. 8", "tt": "On interroge les 28 élèves d’une classe de 2<sup>de<\/sup> sur le nombre de SMS qu’ils envoient par jour.", "h": null}]}, {"sq": 2, "n": 2, "titre": "Cote de popularité", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "f": "#f6e8ef", "exos": [{"id": "s2-2/Ex. 9", "t": "Ex. 9 - Chaque fin de mois, un institut de sondages publie la cote de popularité d’un champion sportif.", "num": "Ex. 9", "tt": "Chaque fin de mois, un institut de sondages publie la cote de popularité d’un champion sportif.", "h": null}]}, {"sq": 2, "n": 3, "titre": "Activité A - Une boutique de mode", "sqt": "Choisir un mode de représentation adapté", "c": "#6d28d9", "f": "#f0eafb", "exos": [{"id": "s2-3/Activité A", "t": "Activité A - Une boutique de mode", "num": "Activité A", "tt": "Une boutique de mode", "h": null}]}, {"sq": 2, "n": 4, "titre": "Exercices 10 et 11", "sqt": "Choisir un mode de représentation adapté", "c": "#0b5cab", "f": "#e7eff7", "exos": [{"id": "s2-4/Ex. 10", "t": "Ex. 10 - On étudie la couleur préférée des coques de smartphone des élèves d’une classe.", "num": "Ex. 10", "tt": "On étudie la couleur préférée des coques de smartphone des élèves d’une classe.", "h": null}, {"id": "s2-4/Ex. 11", "t": "Ex. 11 - On étudie le nombre d’entrées mensuelles que réalise une salle de cinéma.", "num": "Ex. 11", "tt": "On étudie le nombre d’entrées mensuelles que réalise une salle de cinéma.", "h": null}]}, {"sq": 2, "n": 5, "titre": "Exercice 12 - Les adoptions à la SPA", "sqt": "Choisir un mode de représentation adapté", "c": "#7a6100", "f": "#f2efe6", "exos": [{"id": "s2-5/Ex. 12", "t": "Ex. 12 - Les adoptions d’animaux dans les refuges SPA", "num": "Ex. 12", "tt": "Les adoptions d’animaux dans les refuges SPA", "h": null}]}, {"sq": 2, "n": 6, "titre": "Regrouper par classes", "sqt": "Choisir un mode de représentation adapté", "c": "#007a5e", "f": "#e6f2ef", "exos": [{"id": "s2-6/App. 1", "t": "App. 1 - L’âge des 30 participants à une compétition sportive est le suivant :", "num": "App. 1", "tt": "L’âge des 30 participants à une compétition sportive est le suivant :", "h": null}, {"id": "s2-6/App. 2", "t": "App. 2 - Compléter le tableau ci-dessous :", "num": "App. 2", "tt": "Compléter le tableau ci-dessous :", "h": null}]}, {"sq": 2, "n": 7, "titre": "Activité B - Les jeux vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#9a3412", "f": "#f5ebe7", "exos": [{"id": "s2-7/Activité B", "t": "Activité B - Les habitudes et les préférences dans les jeux vidéo", "num": "Activité B", "tt": "Les habitudes et les préférences dans les jeux vidéo", "h": null}]}, {"sq": 2, "n": 8, "titre": "Exercice 13 - Les casquettes", "sqt": "Choisir un mode de représentation adapté", "c": "#00778a", "f": "#e6f1f3", "exos": [{"id": "s2-8/Ex. 13", "t": "Ex. 13 - David, collectionneur de casquettes, a relevé le prix, en euro, de vingt casquettes dans différents magasins.", "num": "Ex. 13", "tt": "David, collectionneur de casquettes, a relevé le prix, en euro, de vingt casquettes dans différents magasins.", "h": null}]}, {"sq": 2, "n": 9, "titre": "Exercice 14 - Le profil des vues d’une vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#334155", "f": "#ebecee", "exos": [{"id": "s2-9/Ex. 14", "t": "Ex. 14 - Le profil des utilisateurs ayant visionné la vidéo la plus vue de l’année", "num": "Ex. 14", "tt": "Le profil des utilisateurs ayant visionné la vidéo la plus vue de l’année", "h": null}]}, {"sq": 2, "n": 10, "titre": "Cap vers le CCF - Les subventions du club", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "f": "#f6e8ef", "exos": [{"id": "s2-10/Cap vers le CCF", "t": "Cap vers le CCF - Partie A - Demande de subventions liées aux licenciés du club", "num": "Cap vers le CCF", "tt": "Partie A - Demande de subventions liées aux licenciés du club", "h": null}]}];
 var vch = document.getElementById("vch"), vsc = document.getElementById("vsc");
+
+/* Le corrigé du professeur pose chaque réponse sous sa question. Sur le site,
+   les réponses d'une même question sont rangées ensemble dans un seul encadré
+   vert, sous l'énoncé. Rien n'est réécrit : les blocs sont déplacés tels quels. */
+function ranger(racine){
+  var parents = [];
+  racine.querySelectorAll(".rep, .tprog").forEach(function(r){
+    if (r.parentNode.closest(".crr")) return;
+    if (parents.indexOf(r.parentNode) < 0) parents.push(r.parentNode);
+  });
+  parents.forEach(function(p){
+    var lot = Array.prototype.filter.call(p.children, function(k){
+      return k.classList.contains("rep") || k.classList.contains("tprog"); });
+    if (!lot.length) return;
+    var c = document.createElement("div");
+    c.className = "crr";
+    c.innerHTML = '<span class="lb">Correction</span>';
+    p.insertBefore(c, lot[0]);
+    lot.forEach(function(k){ c.appendChild(k); });
+  });
+}
 
 function ecranSeance(i){
   var s = SC[i];
-  var o = ['<button class="s-ret" type="button" id="retour">&larr; Les séances</button>',
-    '<p class="kick">Séquence ', s.sq, ' &middot; Séance ', s.n, '</p>',
-    '<h1>', s.titre, '</h1>'];
+  var o = ['<button class="s-ret" type="button" id="retour" style="color:', s.c,
+    '">&larr; Les séances</button>',
+    '<div class="sban" style="--c:', s.c, '"><div class="n"><span class="lib">SÉANCE</span>',
+    '<span class="chiffre">', s.n, '</span></div><div class="t"><p class="t1">', s.titre,
+    '</p><p class="t2">Séquence ', s.sq, ' &middot; ', s.sqt, '</p></div></div>'];
   s.exos.forEach(function(e){
-    o.push('<section class="s-ex" style="--c:', s.c, '">',
-      '<div class="s-eh"><h3>', e.t, '</h3></div><div class="s-ec">',
-      e.h ? e.h : '<p class="attente">La correction sera mise en ligne après la séance.</p>',
+    o.push('<section class="ex" style="--c:', s.c, ';--f:', s.f, '"><div class="ex-h">',
+      e.num ? '<span class="ex-n">' + e.num + '</span>' : '',
+      '<span class="ex-t">', e.tt, '</span></div><div class="ex-c">',
+      e.h ? '<div class="cx">' + e.h + '</div>'
+          : '<p class="attente" style="color:#00778a">La correction sera mise en ligne après la séance.</p>',
       '</div></section>');
   });
   vsc.innerHTML = o.join("");
+  ranger(vsc);
   vch.hidden = true; vsc.hidden = false;
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   document.getElementById("retour").addEventListener("click", function(){
-    vsc.hidden = true; vch.hidden = false; window.scrollTo(0,0); });
+    vsc.hidden = true; vch.hidden = false; window.scrollTo(0, 0); });
 }
 
 document.querySelectorAll(".carte.sc").forEach(function(b){
