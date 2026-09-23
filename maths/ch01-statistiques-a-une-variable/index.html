@@ -74,6 +74,693 @@ footer.pied b{font-weight:800}
   .hero{grid-template-columns:1fr}
   h1{font-size:27px}
   .bar .qui{margin-left:0;width:100%}}
+:root{--bg:#eef1f4; --card:#ffffff; --ink:#0d1a22; --ink2:#3b4d58; --mut:#3b4d58;
+  --line:#9fb0bb; --line2:#5d707b;
+  --cy:#00A5BF; --cy-d:#00778a; --cy-l:#e2f6fa;
+  --vi:#7C4BD8; --li:#8FBE1F; --co:#FF6B5B; --or:#FFB627; --ar:#2E5266;
+  --nuit:#0d1a22; --nuit2:#132734;
+  --r:18px; --r2:12px;
+  --om:0 1px 2px rgba(13,26,34,.04),0 10px 30px -14px rgba(13,26,34,.22);
+  --oh:0 2px 6px rgba(13,26,34,.06),0 22px 50px -20px rgba(13,26,34,.35);}
+.cx *{box-sizing:border-box}
+.cx h1,.cx h2,.cx h3,.cx h4,.cx .dsp{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;font-weight:700;
+  letter-spacing:-.022em;font-variation-settings:"wdth" 100,"opsz" 32}
+.cx a{color:var(--cy-d)}
+.cx .shell{display:grid;grid-template-columns:286px minmax(0,1fr);gap:0;max-width:1264px;margin:0 auto}
+.cx nav.somm{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:14px 10px 24px 14px}
+.cx nav.somm .in{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);
+  box-shadow:0 10px 30px rgba(13,26,34,.10),0 2px 6px rgba(13,26,34,.06);padding:20px 16px 24px}
+.cx main{min-width:0;padding:0 30px 120px}
+.cx nav .lg{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cy-d);font-weight:700;margin:0 0 14px;padding-bottom:11px;border-bottom:2px solid var(--cy)}
+.cx nav .sq{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;letter-spacing:.01em;
+  color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px;
+  text-decoration:none;padding:5px 8px;border-radius:10px;transition:.16s;cursor:pointer}
+.cx nav .sq:hover{background:var(--cy-l)}
+.cx nav .sq:hover span{text-decoration:underline;text-underline-offset:3px}
+.cx nav .sq b{flex:none}
+.cx nav a.sq.on{background:var(--cy-l);box-shadow:inset 0 0 0 1.5px var(--line2)}
+.cx nav .sq:first-of-type{margin-top:6px}
+.cx nav .sq b{width:21px;height:21px;border-radius:7px;display:grid;place-items:center;color:#fff;font-size:11.5px}
+.cx nav ul{list-style:none;margin:0;padding:0 0 0 9px;border-left:3px solid var(--line2)}
+.cx nav li a{display:flex;align-items:center;gap:9px;padding:6px 10px;margin-left:-9px;
+  border-left:3px solid transparent;border-radius:9px;
+  text-decoration:none;color:var(--ink);font-size:14px;font-weight:500;transition:.16s}
+.cx nav li a:hover{color:var(--cy-d);background:var(--cy-l);border-left-color:var(--line2)}
+.cx nav li a.on{color:#fff;font-weight:700;background:var(--cy-d);border-left-color:var(--cy-d)}
+.cx nav li a .pt{width:8px;height:8px;border-radius:50%;background:#93a7b2;flex:none;
+  box-shadow:0 0 0 2px #fff}
+.cx nav li a.pc .pt{background:var(--or)}
+.cx nav li a.on .pt{background:#fff;box-shadow:0 0 0 2px var(--cy-d)}
+.cx .topbar{display:none}
+.cx .hero{background:linear-gradient(150deg,#dcf2f8 0%,#e8e3fb 55%,#fdeee6 100%);color:var(--ink);
+  border-radius:0 0 var(--r) var(--r);margin:0 0 26px;padding:52px 44px 0;position:relative;overflow:hidden}
+.cx .hero:before{content:"";position:absolute;inset:auto -90px -150px auto;width:440px;height:440px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,182,39,.30),transparent 64%);pointer-events:none}
+.cx .hero .kick{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--mut);margin:0 0 14px}
+.cx .hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.02;margin:0 0 10px;max-width:14ch}
+.cx .hero .sub{font-size:19px;color:var(--cy-d);margin:0 0 26px;font-weight:600}
+.cx .hero .figs{display:flex;align-items:flex-end;gap:18px;margin:0 -6px;position:relative}
+.cx .hero .figs svg{flex:1 1 auto;max-width:560px}
+.cx .hero .stats{display:flex;gap:30px;flex-wrap:wrap;padding:20px 0 26px;border-top:1px solid rgba(13,26,34,.13);
+  margin-top:12px}
+.cx .hero .st b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:26px;line-height:1;color:var(--ink)}
+.cx .hero .st span{font-size:12.5px;color:var(--mut)}
+.cx .sec-t{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mut);margin:38px 0 14px}
+.cx .caps{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cx .cap{background:var(--card);border-radius:var(--r);padding:22px 24px;box-shadow:var(--om);
+  border-top:4px solid var(--c);transition:.2s}
+.cx .cap:hover{box-shadow:var(--oh);transform:translateY(-2px)}
+.cx .cap .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;color:var(--c);
+  display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.cx .cap .n em{width:22px;height:22px;border-radius:7px;background:var(--c);color:#fff;display:grid;place-items:center;
+  font-style:normal;font-size:12px}
+.cx .cap h3{font-size:17px;margin:0 0 10px;line-height:1.3}
+.cx .cap p{margin:0;font-size:14px;color:var(--mut);line-height:1.5}
+.cx .sqb{scroll-margin-top:84px;background:var(--bgp);color:var(--ink);border-radius:var(--r);padding:34px 40px;margin:52px 0 8px;
+  display:flex;align-items:center;gap:26px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cx .sqb:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(760px 220px at 100% 0%,rgba(255,255,255,.7),transparent 72%);pointer-events:none}
+.cx .sqb .big{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:60px;line-height:.85;
+  color:var(--c);flex:none}
+.cx .sqb .tt{flex:1 1 260px;min-width:0}
+.cx .sqb .lb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mut);display:block;margin-bottom:5px}
+.cx .sqb h2{font-size:26px;line-height:1.12;margin:0;text-wrap:balance}
+.cx .sqb p{margin:9px 0 0;font-size:13.5px;color:var(--ink2);max-width:60ch}
+.cx .sqb .cnt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink2);background:rgba(255,255,255,.65);
+  border:1px solid rgba(13,26,34,.12);border-radius:20px;padding:6px 14px;white-space:nowrap}
+.cx .sce{background:var(--card);border-radius:var(--r);box-shadow:var(--om);margin:18px 0;overflow:hidden;
+  border-left:5px solid var(--c)}
+.cx .sce>header{display:flex;align-items:center;gap:14px;padding:16px 26px;background:#fbfdfe;
+  border-bottom:1px solid var(--line);flex-wrap:wrap}
+.cx .sce>header .h{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15.5px;flex:1 1 auto}
+.cx .sce>header .h em{font-style:normal;color:var(--mut);font-weight:400;font-size:14px}
+.cx .badge{display:inline-flex;align-items:center;gap:7px;border-radius:20px;padding:5px 13px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.cx .badge svg{width:13px;height:13px}
+.cx .b-cl{background:var(--cy-l);color:var(--cy-d)}
+.cx .b-pc{background:#fff3dd;color:#8a5c05}
+.cx .sce>.body{padding:24px 26px 26px}
+.cx .exo{margin:0 0 8px}
+.cx .exo+.exo{margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}
+.cx .exo .ttl{display:flex;align-items:baseline;gap:11px;margin-bottom:9px}
+.cx .exo .ttl b{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;color:#fff;
+  background:var(--cy-d);border-radius:7px;padding:3px 9px;white-space:nowrap;flex:none}
+.cx .exo .ttl span{font-weight:600;font-size:16.5px;line-height:1.35}
+.cx .exo p{margin:0 0 10px}
+.cx .serie{font-family:"IBM Plex Mono",monospace;font-size:13.5px;background:#f5f8fa;border-radius:var(--r2);
+  padding:12px 16px;color:var(--ink2);line-height:1.8;word-spacing:.1em}
+.cx .q{margin:16px 0 0}
+.cx .q>p{margin:0 0 6px}
+.cx .q .n{font-weight:700;color:var(--cy-d)}
+.cx .cs{font-weight:600}
+.cx .rep{margin:8px 0 2px;background:#f7fafb;border:1px dashed var(--line2);border-radius:var(--r2);padding:12px 14px 8px;
+  position:relative}
+.cx .nb{white-space:nowrap}
+.cx .zlb{margin:12px 0 3px;font-size:13px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--cy-d)}
+.cx .rep i{display:block;height:26px;border-bottom:1px solid #dde6eb}
+.cx .rep i:last-of-type{border-bottom:0}
+.cx .rep span{position:absolute;right:12px;top:6px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:#55666f}
+.cx .ret{background:linear-gradient(180deg,#effafc,#ffffff 62%);border:1px solid #7fb8c8;border-radius:var(--r);
+  padding:18px 20px;margin:16px 0}
+.cx .ret>.et{display:inline-flex;align-items:center;gap:8px;background:var(--cy);color:#fff;border-radius:20px;
+  padding:5px 14px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.cx .ret h4{font-size:21px;margin:10px 0 10px;line-height:1.2}
+.cx .ret p{margin:0 0 9px}
+.cx .voc{display:flex;flex-direction:column;gap:8px;margin:0}
+.cx .voc .it{background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:9px 14px}
+.cx .voc .it>b{display:inline;color:var(--cy-d);font-family:"Bricolage Grotesque",sans-serif;font-size:15.6px}
+.cx .voc .it>b::after{content:"\00a0"}
+.cx .voc .it>p{display:inline;margin:0;font-size:15.4px;color:var(--ink2)}
+.cx .voc .it .nat b,.cx .voc .it>p b{color:var(--ink);font-weight:700}
+.cx .voc .it>p.ex{display:block;margin:6px 0 0;font-size:15px;color:var(--ink);
+  border-left:4px solid #5f9fb4;border-radius:10px;padding:6px 11px 6px 12px;
+  background:#f4fafc}
+.cx .voc .it>p.ex b{color:var(--cy-d)}
+.cx .voc .it.bl>b{display:block;margin-bottom:5px}
+.cx .voc .it.bl>b::after{content:none}
+.cx .voc .it.bl>p{display:block}
+.cx p.cal{margin:10px 0;font-size:19px;font-weight:800;color:var(--ink);
+  letter-spacing:.01em;text-align:center}
+.cx p.cal .lec{display:block;font-size:14.5px;font-weight:600;color:var(--ink2);
+  margin-top:4px;letter-spacing:0}
+.cx .nat{display:grid;gap:6px;margin-top:8px}
+.cx .nat div{background:#f5fbfc;border-left:4px solid var(--c);border-radius:var(--r2);padding:7px 12px;font-size:15px}
+.cx .nat div .ex{color:var(--mut);font-style:italic;font-size:14px}
+.cx .nat div .qq2{display:block;margin:5px 0 3px;font-weight:600;color:var(--c);font-size:14px}
+.cx .nat div .qq2 i{font-style:italic}
+.cx .nat div .ex{display:block;margin-top:2px}
+.cx .vocm{margin:0 0 10px;font-size:14.5px;color:var(--ink2)}
+.cx .qx{margin-top:6px;background:none;border:0;border-left:3px solid #7fb8c8;
+  border-radius:0;padding:1px 0 1px 11px}
+.cx .qx .qq{display:block;font-weight:700;color:var(--cy-d);font-size:14.5px;margin-bottom:3px}
+.cx .qx .qq:before{content:"?";display:inline-grid;place-items:center;width:19px;height:19px;
+  border-radius:50%;background:var(--cy-d);color:#fff;font-size:12px;margin-right:8px;
+  vertical-align:-3px;font-family:"IBM Plex Mono",monospace}
+.cx .qx .ex{display:block;font-size:14.5px;color:var(--ink2)}
+.cx .qx .ex:before{content:"Exemple";display:inline-block;font-family:"IBM Plex Mono",monospace;
+  font-size:9px;letter-spacing:.13em;text-transform:uppercase;background:#e2f6fa;color:#0c4a58;
+  border-radius:20px;padding:2px 8px;margin-right:8px;font-weight:700;vertical-align:1px}
+.cx .fml{display:flex;align-items:center;justify-content:center;gap:12px;margin:11px 0 4px;font-size:20px;font-style:italic;
+  background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:10px}
+.cx .fr{display:inline-flex;flex-direction:column;align-items:center;font-size:15px;line-height:1.28}
+.cx .fr .h{border-bottom:1.6px solid var(--ink);padding:0 8px 3px}
+.cx .fr .b{padding:3px 8px 0}
+.cx .rmq{margin-top:16px;background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:14px 18px;font-size:15px}
+.cx .rmq b{color:var(--cy-d)}
+.cx .rmq ul{margin:6px 0 0;padding-left:18px}
+.cx .dgs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.cx .dg{background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:16px 18px}
+.cx .dg>p{font-size:14.5px;margin:0 0 10px}
+.cx .dg .fig{background:#fafcfd;border-radius:10px;padding:8px 6px 4px}
+.cx .exm{background:#fff;border:2px solid #2E5266;border-radius:var(--r);padding:22px 24px;margin:20px 0;
+  box-shadow:var(--om)}
+.cx .exm>.et{display:inline-flex;align-items:center;gap:7px;background:#2E5266;color:#fff;border-radius:20px;
+  padding:6px 16px;font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;margin-bottom:14px}
+.cx .exm ul{margin:12px 0 0;padding-left:18px}
+.cx .exm li{margin-bottom:6px;color:var(--ink2)}
+.cx .sol{background:#f2fbf4;border-left:4px solid var(--li);border-radius:var(--r2);padding:11px 16px;
+  margin:8px 0;color:#2c5c1a}
+.cx .sol ul{margin:6px 0 0;padding-left:18px}
+.cx .prop{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cx .prop li{background:#f4f8fa;border:1px solid var(--line2);border-radius:10px;padding:8px 12px;font-size:15px}
+.cx .prop li b{color:var(--cy-d);margin-right:6px}
+@media(max-width:640px){.cx .prop{grid-template-columns:1fr}}
+.cx .tw th i,.cx .tw th sub{text-transform:none;font-size:1.12em;letter-spacing:0}
+.cx .tw th i{font-style:italic}
+.cx .tw thead th i,.cx .tw thead th sub{font-size:16.2px;text-transform:none;letter-spacing:0}
+.cx .tw thead tr:has(>th:first-child i) th{font-family:inherit;font-size:inherit;
+  letter-spacing:0;text-transform:none;font-weight:700}
+.cx .outn{margin:14px 0 0;background:#fbfdfe;border:1px solid #5f9fb4;border-radius:14px;padding:12px 18px 14px}
+.cx .outn>.et{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;font-weight:700;color:#00778a;margin-bottom:6px}
+.cx .outn ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cx .outn li{margin:0}
+.cx .outn a{display:inline-block;text-decoration:none;font-size:14.5px;font-weight:600;color:#00778a;
+  background:#e2f6fa;border:1px solid #7fc9d9;border-radius:20px;padding:6px 14px}
+.cx .outn a:hover{background:#00778a;color:#fff;border-color:#00778a}
+.cx .codes-b{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:22px 26px 26px}
+.cx .codes-i{margin:0 0 16px;color:var(--ink2);font-size:15.5px}
+.cx table.codes{width:100%;border-collapse:collapse;border:1.5px solid #5d9db6;border-radius:10px;overflow:hidden}
+.cx table.codes th{background:linear-gradient(180deg,#e3f4fa,#d2ecf5);color:#0c4a58;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:center;
+  vertical-align:middle;border-bottom:2.5px solid #5d9db6;border-right:1.5px solid #5f9fb4}
+.cx table.codes td{padding:9px 12px;border-bottom:1.5px solid #5f9fb4;border-right:1.5px solid #5f9fb4;
+  vertical-align:middle;font-size:15px}
+.cx table.codes tr:last-child td{border-bottom:0}
+.cx table.codes th:last-child,.cx table.codes td:last-child{border-right:0}
+.cx table.codes td.sq{text-align:center;font-weight:700;color:#123a46;background:#eef6fa;width:74px}
+.cx table.codes td.cd{text-align:center;font-family:"IBM Plex Mono",monospace;font-size:17px;
+  letter-spacing:.16em;font-weight:600;color:#00778a;background:#f4fbfd;width:130px}
+.cx table.codes td.ex b{color:#0d1a22;margin-right:6px}
+.cx .cslg{margin:14px 0 0;background:#f2f8fb;border:1px solid #5f9fb4;border-left:5px solid #00A5BF;border-radius:12px;padding:12px 18px;font-size:15.5px;color:#0d1a22}
+.cx .cslg b{color:#00778a}
+.cx .cslg ul{margin:6px 0 0;padding-left:20px}
+.cx .cslg li{margin:3px 0}
+.cx .q4{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px}
+.cx .q4 .it{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:14px 16px;transition:.2s}
+.cx .q4 .it:hover{box-shadow:var(--oh);transform:translateY(-2px)}
+.cx .q4 .hd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cx .q4 .l{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;color:var(--cy-d);font-size:15px}
+.cx .q4 .z{flex:1 1 auto;height:28px;border:1px dashed var(--line2);border-radius:8px;background:#f9fbfc}
+.cx .enl{display:flex;align-items:center;gap:16px;background:linear-gradient(100deg,#fff6e5,#fffdf8);
+  border:1px solid #d9a441;border-radius:var(--r);padding:18px 24px;margin:6px 0}
+.cx .enl .ic{width:42px;height:42px;border-radius:12px;background:var(--or);color:#0d1a22;display:grid;place-items:center;flex:none}
+.cx .enl .ic svg{width:22px;height:22px}
+.cx .enl b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:16.5px}
+.cx .enl span{font-size:13.5px;color:#8a5c05}
+.cx .tw{overflow-x:auto;overflow-y:hidden;margin:16px 0 8px;border-radius:18px;
+  border:2px solid #5d9db6;background:#fff;box-shadow:0 3px 14px -8px rgba(13,26,34,.35)}
+.cx .tw table{border-collapse:separate;border-spacing:0;width:100%;font-size:14.5px}
+.cx .tw th,.cx .tw td{padding:11px 15px;text-align:left;vertical-align:middle;
+  border-bottom:1.5px solid #5f9fb4;border-right:1.5px solid #5f9fb4}
+.cx .tw th:last-child,.cx .tw td:last-child{border-right:0}
+.cx .tw thead th{background:linear-gradient(180deg,#e3f4fa,#d2ecf5);color:#0c4a58;vertical-align:middle;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  font-weight:700;white-space:nowrap;text-align:center;border-bottom:2.5px solid #5d9db6;
+  border-right-color:#5f9fb4}
+.cx .tw tbody tr:last-child th,.cx .tw tbody tr:last-child td{border-bottom:0}
+.cx .tw tbody tr:nth-child(even){background:#f5fbfd}
+.cx .tw tbody tr:hover{background:#eef8fc}
+.cx .tw tbody th{font-weight:700;color:#123a46;background:#eef6fa;border-right-color:#5f9fb4;
+  text-align:center;vertical-align:middle}
+.cx .tw tbody tr:nth-child(even) th{background:#e8f2f7}
+.cx .tw td.v{background:#fff8e6;border:1px dashed #c79320;border-radius:8px;
+  box-shadow:inset 0 0 0 3px #fff}
+.cx .tw table.num td,.cx .tw table.num th:not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
+.cx .tw table.fill td.v{min-width:92px;height:42px}
+.cx .tw.vi{border-color:#8f77cf}
+.cx .tw.vi thead th{background:linear-gradient(180deg,#efe8fd,#e3d8fb);color:#43277f;border-bottom-color:#bda6ef;
+  border-right-color:#d4c6f3}
+.cx .tw.vi th,.cx .tw.vi td{border-bottom-color:#b9a6e6;border-right-color:#c9bbee}
+.cx .tw.vi tbody tr:nth-child(even){background:#faf7ff}
+.cx .tw.vi tbody th{background:#f3eefe;color:#3d2374}
+.cx .tw.ve{border-color:#8fae55}
+.cx .tw.ve thead th{background:linear-gradient(180deg,#eef7d9,#e3f1c4);color:#3c5410;border-bottom-color:#b3d178;
+  border-right-color:#d4e6b2}
+.cx .tw.ve th,.cx .tw.ve td{border-bottom-color:#bcd490;border-right-color:#cbdea8}
+.cx .tw.ve tbody tr:nth-child(even){background:#fafdf3}
+.cx .tw.ve tbody th{background:#f2f8e5;color:#3c5410}
+.cx .tw.ro{border-color:#d79086}
+.cx .tw.ro thead th{background:linear-gradient(180deg,#fdeceb,#fbdfdc);color:#7d2a1e;border-bottom-color:#eeb0a6;
+  border-right-color:#f4d3cd}
+.cx .tw.ro th,.cx .tw.ro td{border-bottom-color:#eab9b0;border-right-color:#f2cec7}
+.cx .tw.ro tbody tr:nth-child(even){background:#fffaf9}
+.cx .tw.ro tbody th{background:#fdf1ef;color:#7d2a1e}
+.cx .suivi{background:linear-gradient(155deg,#e7f6fa 0%,#eee9fd 58%,#fdeef0 100%);
+  border-radius:calc(var(--r) + 6px);padding:26px 26px 30px;position:relative;overflow:hidden}
+.cx .suivi:before{content:"";position:absolute;inset:-120px -80px auto auto;width:340px;height:340px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,182,39,.28),transparent 65%);pointer-events:none}
+.cx .sv-hd{display:flex;align-items:center;gap:20px;position:relative;margin:0 0 22px}
+.cx .sv-ring{position:relative;width:84px;height:84px;flex:none}
+.cx .sv-ring svg{width:84px;height:84px;display:block}
+.cx .sv-arc{transition:stroke-dasharray .7s cubic-bezier(.2,.75,.3,1)}
+.cx .sv-n{position:absolute;inset:0;display:grid;place-content:center;text-align:center;line-height:1}
+.cx .sv-n b{font-family:"Bricolage Grotesque",sans-serif;font-size:25px;color:var(--ink)}
+.cx .sv-n i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:11.5px;color:var(--mut)}
+.cx .sv-ti{flex:1 1 auto;min-width:0}
+.cx .sv-ti>b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:20px;color:var(--ink)}
+.cx .sv-ti p{margin:3px 0 0;font-size:14.5px;color:var(--ink2)}
+.cx .sv-lg{display:flex;flex-direction:column;gap:6px;flex:none}
+.cx .sv-lg span{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink2);font-weight:600}
+.cx .sv-lg span:before{content:"";width:11px;height:11px;border-radius:4px}
+.cx .sv-lg .q1:before{background:var(--cy)}
+.cx .sv-lg .q2:before{background:var(--vi)}
+.cx .sv-lg .q3:before{background:var(--co)}
+.cx .sv-lg .q4:before{background:var(--or)}
+.cx .sv-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;position:relative}
+.cx .sv-i{display:flex;align-items:center;gap:16px;background:var(--card);border-radius:16px;padding:13px 16px 13px 22px;
+  position:relative;box-shadow:0 1px 2px rgba(13,26,34,.06);transition:box-shadow .22s,transform .22s}
+.cx .sv-i:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(13,26,34,.13)}
+.cx .sv-rail{position:absolute;left:0;top:10px;bottom:10px;width:6px;border-radius:6px;background:var(--qc)}
+.cx .sv-i.q1{--qc:var(--cy);--qs:#e2f6fa;--qd:var(--cy-d)}
+.cx .sv-i.q2{--qc:var(--vi);--qs:#efe8fd;--qd:#5b32ab}
+.cx .sv-i.q3{--qc:var(--co);--qs:#ffece9;--qd:#b93c17}
+.cx .sv-i.q4{--qc:var(--or);--qs:#fff3dd;--qd:#8a5c05}
+.cx .sv-b{flex:none;width:70px;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:5px;
+  background:var(--qs);border-radius:12px;padding:8px 6px 6px}
+.cx .sv-b b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;color:var(--qd);line-height:1}
+.cx .sv-b i{font-style:normal;color:var(--qd);opacity:.5;font-size:14px}
+.cx .sv-b span{flex:1 0 100%;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+.cx .sv-t{flex:1 1 auto;min-width:0}
+.cx .sv-tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--qd);background:var(--qs);border-radius:20px;padding:3px 9px}
+.cx .sv-t p{margin:5px 0 1px;font-weight:600;font-size:15.5px;color:var(--ink);line-height:1.25}
+.cx .sv-s{font-size:13px;color:var(--mut)}
+.cx .sv-f{display:flex;gap:9px;flex:none}
+.cx .sv-l1{display:block}
+.cx .sv-l1 span{display:block;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);margin:0 0 4px 10px}
+.cx .sv-l1 b{display:block;min-width:112px;font-family:"IBM Plex Mono",monospace;font-size:14px;
+  color:#55666f;text-align:center;padding:8px 6px;border:2px dashed var(--line2);border-radius:11px;
+  background:#fbfdfe;transition:.2s;letter-spacing:.04em;font-weight:600}
+.cx .sv-i.recu .sv-l1 b{border-style:solid;border-color:var(--qc);background:var(--qs);color:var(--qd)}
+.cx .sv-ok{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;width:62px;padding:9px 0 7px;
+  border:2px solid var(--line2);border-radius:13px;background:#fbfdfe;color:#55666f;cursor:pointer;
+  transition:.24s;font:inherit}
+.cx .sv-ok svg{width:24px;height:24px}
+.cx .sv-ok svg path{stroke-dasharray:1;stroke-dashoffset:1}
+.cx .sv-ok em{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:8.5px;letter-spacing:.09em;
+  text-transform:uppercase;opacity:.62;transition:.24s}
+.cx .sv-ok:hover svg path{stroke-dashoffset:0;transition:stroke-dashoffset .32s}
+.cx .sv-ok:hover{border-color:var(--qc);color:var(--qd);background:var(--qs)}
+.cx .sv-ok[aria-pressed="true"]{border-color:#3f9d3f;background:#eaf8ea;color:#2f7f2f}
+.cx .sv-ok[aria-pressed="true"] svg path{animation:coche .45s cubic-bezier(.4,0,.25,1) forwards}
+.cx .sv-ok[aria-pressed="true"] em{opacity:1}
+@keyframes coche{to{stroke-dashoffset:0}}
+.cx .sv-i.fini{background:linear-gradient(90deg,#f3fbf3,#fff 46%)}
+@media(max-width:900px){.cx .sv-i{flex-wrap:wrap}
+.cx .sv-t{flex:1 1 200px}
+.cx .sv-f{flex:1 1 100%;order:5}
+.cx .sv-l1 b{min-width:0;width:100%}
+.cx .sv-l1{flex:1 1 0}}
+.cx .rv{opacity:0;transform:translateY(14px)}
+.cx .rv.vu{opacity:1;transform:none;transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.3,1)}
+.cx svg.gr{width:100%;height:auto;display:block}
+.cx svg .gb{transform-box:fill-box;transform-origin:50% 100%}
+.cx .rv svg .gb,.cx .hero svg .gb,.cx .proj-in svg .gb{transform:scaleY(0)}
+.cx .vu svg .gb,.cx .hero svg .gb{animation:pousse .75s cubic-bezier(.18,.72,.3,1) forwards}
+@keyframes pousse{to{transform:scaleY(1)}}
+.cx .rv svg .gl,.cx .hero svg .gl,.cx .proj-in svg .gl{stroke-dasharray:1;stroke-dashoffset:1}
+.cx .vu svg .gl,.cx .hero svg .gl{animation:trace 1.05s .12s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.cx .rv svg .gd,.cx .hero svg .gd,.cx .proj-in svg .gd{opacity:0}
+.cx .vu svg .gd,.cx .hero svg .gd{animation:pop .3s forwards}
+@keyframes pop{to{opacity:1}}
+.cx .rv svg .gp,.cx .hero svg .gp,.cx .proj-in svg .gp{transform:scale(.6);opacity:0}
+.cx .vu svg .gp,.cx .hero svg .gp{animation:eclot .7s cubic-bezier(.2,.8,.3,1) forwards}
+@keyframes eclot{to{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.cx .rv,.cx .rv.vu{opacity:1;transform:none}
+.cx svg .gb{transform:none}
+.cx svg .gl{stroke-dashoffset:0}
+.cx svg .gd{opacity:1}
+.cx svg .gp{transform:none;opacity:1}
+.cx *{animation:none!important;transition:none!important}}
+.cx .bar{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(12px);
+  border:1px solid var(--line2);border-radius:0 0 var(--r) var(--r);border-top:0;
+  padding:9px 14px;margin:0 0 0;box-shadow:0 6px 22px -18px rgba(13,26,34,.5)}
+.cx .bar .ttl{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:14px;flex:1 1 auto;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.cx .bar .ttl em{font-style:normal;color:var(--mut);font-weight:400}
+.cx .grp{display:flex;align-items:center;gap:2px;background:#eef3f6;border-radius:12px;padding:3px}
+.cx .btn{width:34px;height:34px;border:0;background:transparent;border-radius:9px;cursor:pointer;color:var(--ink2);
+  display:grid;place-items:center;transition:.15s;flex:none}
+.cx .btn:hover{background:#fff;color:var(--cy-d);box-shadow:0 1px 3px rgba(13,26,34,.12)}
+.cx .btn.act{background:var(--cy);color:#fff}
+.cx .btn svg{width:19px;height:19px;pointer-events:none}
+.cx .btn.lg{width:auto;padding:0 13px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+  letter-spacing:.02em}
+.cx .zval{min-width:52px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;
+  color:var(--ink2);cursor:pointer;user-select:none;padding:0 4px}
+.cx .zval:hover{color:var(--cy-d)}
+.cx .prg{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent;border-radius:0 0 4px 4px;overflow:hidden}
+.cx .prg i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cy),var(--vi));transition:width .1s linear}
+.cx .rch{display:none;align-items:center;gap:8px;flex:1 1 220px;min-width:170px;background:#eef3f6;border-radius:12px;
+  padding:3px 6px 3px 12px}
+.cx .rch.on{display:flex}
+.cx .rch input{border:0;background:transparent;font:inherit;font-size:14px;padding:6px 0;flex:1 1 auto;min-width:0;outline:0;color:var(--ink)}
+.cx .rch .cnt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--mut);white-space:nowrap}
+.cx mark{background:#ffe89a;color:var(--ink);border-radius:3px;padding:0 2px}
+.cx mark.cur{background:var(--or);box-shadow:0 0 0 3px rgba(255,182,39,.35)}
+.cx .shell.sansomm{grid-template-columns:1fr;max-width:1080px}
+.cx .shell.sansomm nav.somm{display:none}
+.cx main{position:relative}
+.cx section[id]{scroll-margin-top:74px}
+.cx mark{scroll-margin-top:110px}
+@media(max-width:980px){.cx .bar .ttl{display:none}}
+@media(max-width:980px){.cx .shell{grid-template-columns:1fr}
+.cx nav.somm{display:none}
+.cx main{padding:0 16px 90px}
+.cx .hero{padding:38px 22px 0;border-radius:0 0 var(--r) var(--r)}
+.cx .caps,.cx .dgs,.cx .q4{grid-template-columns:1fr}
+.cx .sqb{padding:26px 22px}
+.cx .sce>.body{padding:20px 18px 22px}}
+:root{--bg:#eef1f4; --card:#ffffff; --ink:#0d1a22; --ink2:#3b4d58; --mut:#6b7d88;
+  --line:#9fb0bb; --line2:#5d707b;
+  --cy:#00A5BF; --cy-d:#00778a; --cy-l:#e2f6fa;
+  --vi:#7C4BD8; --li:#8FBE1F; --co:#FF6B5B; --or:#FFB627; --ar:#2E5266;
+  --nuit:#0d1a22; --nuit2:#132734;
+  --r:18px; --r2:12px;
+  --om:0 1px 2px rgba(13,26,34,.04),0 10px 30px -14px rgba(13,26,34,.22);
+  --oh:0 2px 6px rgba(13,26,34,.06),0 22px 50px -20px rgba(13,26,34,.35);}
+.cx *{box-sizing:border-box}
+.cx h1,.cx h2,.cx h3,.cx h4,.cx .dsp{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;font-weight:700;
+  letter-spacing:-.022em;font-variation-settings:"wdth" 100,"opsz" 32}
+.cx a{color:var(--cy-d)}
+.cx .shell{display:grid;grid-template-columns:286px minmax(0,1fr);gap:0;max-width:1264px;margin:0 auto}
+.cx nav.somm{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:14px 10px 24px 14px}
+.cx nav.somm .in{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);
+  box-shadow:0 10px 30px rgba(13,26,34,.10),0 2px 6px rgba(13,26,34,.06);padding:20px 16px 24px}
+.cx main{min-width:0;padding:0 30px 120px}
+.cx nav .lg{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cy-d);font-weight:700;margin:0 0 14px;padding-bottom:11px;border-bottom:2px solid var(--cy)}
+.cx nav .sq{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;letter-spacing:.01em;
+  color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px;
+  text-decoration:none;padding:5px 8px;border-radius:10px;transition:.16s;cursor:pointer}
+.cx nav .sq:hover{background:var(--cy-l)}
+.cx nav .sq:hover span{text-decoration:underline;text-underline-offset:3px}
+.cx nav .sq b{flex:none}
+.cx nav a.sq.on{background:var(--cy-l);box-shadow:inset 0 0 0 1.5px var(--line2)}
+.cx nav .sq:first-of-type{margin-top:6px}
+.cx nav .sq b{width:21px;height:21px;border-radius:7px;display:grid;place-items:center;color:#fff;font-size:11.5px}
+.cx nav ul{list-style:none;margin:0;padding:0 0 0 9px;border-left:3px solid var(--line2)}
+.cx nav li a{display:flex;align-items:center;gap:9px;padding:6px 10px;margin-left:-9px;
+  border-left:3px solid transparent;border-radius:9px;
+  text-decoration:none;color:var(--ink);font-size:14px;font-weight:500;transition:.16s}
+.cx nav li a:hover{color:var(--cy-d);background:var(--cy-l);border-left-color:var(--line2)}
+.cx nav li a.on{color:#fff;font-weight:700;background:var(--cy-d);border-left-color:var(--cy-d)}
+.cx nav li a .pt{width:8px;height:8px;border-radius:50%;background:#93a7b2;flex:none;
+  box-shadow:0 0 0 2px #fff}
+.cx nav li a.pc .pt{background:var(--or)}
+.cx nav li a.on .pt{background:#fff;box-shadow:0 0 0 2px var(--cy-d)}
+.cx .topbar{display:none}
+.cx .hero{background:linear-gradient(150deg,#dcf2f8 0%,#e8e3fb 55%,#fdeee6 100%);color:var(--ink);
+  border-radius:0 0 var(--r) var(--r);margin:0 0 26px;padding:52px 44px 0;position:relative;overflow:hidden}
+.cx .hero:before{content:"";position:absolute;inset:auto -90px -150px auto;width:440px;height:440px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,182,39,.30),transparent 64%);pointer-events:none}
+.cx .hero .kick{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--mut);margin:0 0 14px}
+.cx .hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.02;margin:0 0 10px;max-width:14ch}
+.cx .hero .sub{font-size:19px;color:var(--cy-d);margin:0 0 26px;font-weight:600}
+.cx .hero .figs{display:flex;align-items:flex-end;gap:18px;margin:0 -6px;position:relative}
+.cx .hero .figs svg{flex:1 1 auto;max-width:560px}
+.cx .hero .stats{display:flex;gap:30px;flex-wrap:wrap;padding:20px 0 26px;border-top:1px solid rgba(13,26,34,.13);
+  margin-top:12px}
+.cx .hero .st b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:26px;line-height:1;color:var(--ink)}
+.cx .hero .st span{font-size:12.5px;color:var(--mut)}
+.cx .sec-t{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mut);margin:38px 0 14px}
+.cx .caps{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cx .cap{background:var(--card);border-radius:var(--r);padding:22px 24px;box-shadow:var(--om);
+  border-top:4px solid var(--c);transition:.2s}
+.cx .cap:hover{box-shadow:var(--oh);transform:translateY(-2px)}
+.cx .cap .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;color:var(--c);
+  display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.cx .cap .n em{width:22px;height:22px;border-radius:7px;background:var(--c);color:#fff;display:grid;place-items:center;
+  font-style:normal;font-size:12px}
+.cx .cap h3{font-size:17px;margin:0 0 10px;line-height:1.3}
+.cx .cap p{margin:0;font-size:14px;color:var(--mut);line-height:1.5}
+.cx .sqb{scroll-margin-top:84px;background:var(--bgp);color:var(--ink);border-radius:var(--r);padding:34px 40px;margin:52px 0 8px;
+  display:flex;align-items:center;gap:26px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cx .sqb:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(760px 220px at 100% 0%,rgba(255,255,255,.7),transparent 72%);pointer-events:none}
+.cx .sqb .big{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:60px;line-height:.85;
+  color:var(--c);flex:none}
+.cx .sqb .tt{flex:1 1 260px;min-width:0}
+.cx .sqb .lb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mut);display:block;margin-bottom:5px}
+.cx .sqb h2{font-size:26px;line-height:1.12;margin:0;text-wrap:balance}
+.cx .sqb p{margin:9px 0 0;font-size:13.5px;color:var(--ink2);max-width:60ch}
+.cx .sqb .cnt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink2);background:rgba(255,255,255,.65);
+  border:1px solid rgba(13,26,34,.12);border-radius:20px;padding:6px 14px;white-space:nowrap}
+.cx .sce{background:var(--card);border-radius:var(--r);box-shadow:var(--om);margin:18px 0;overflow:hidden;
+  border-left:5px solid var(--c)}
+.cx .sce>header{display:flex;align-items:center;gap:14px;padding:16px 26px;background:#fbfdfe;
+  border-bottom:1px solid var(--line);flex-wrap:wrap}
+.cx .sce>header .h{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15.5px;flex:1 1 auto}
+.cx .sce>header .h em{font-style:normal;color:var(--mut);font-weight:400;font-size:14px}
+.cx .badge{display:inline-flex;align-items:center;gap:7px;border-radius:20px;padding:5px 13px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.cx .badge svg{width:13px;height:13px}
+.cx .b-cl{background:var(--cy-l);color:var(--cy-d)}
+.cx .b-pc{background:#fff3dd;color:#8a5c05}
+.cx .sce>.body{padding:24px 26px 26px}
+.cx .exo{margin:0 0 8px}
+.cx .exo+.exo{margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}
+.cx .exo .ttl{display:flex;align-items:baseline;gap:11px;margin-bottom:9px}
+.cx .exo .ttl b{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;color:#fff;
+  background:var(--cy-d);border-radius:7px;padding:3px 9px;white-space:nowrap;flex:none}
+.cx .exo .ttl span{font-weight:600;font-size:16.5px;line-height:1.35}
+.cx .exo p{margin:0 0 10px}
+.cx .serie{font-family:"IBM Plex Mono",monospace;font-size:13.5px;background:#f5f8fa;border-radius:var(--r2);
+  padding:12px 16px;color:var(--ink2);line-height:1.8;word-spacing:.1em}
+.cx .q{margin:16px 0 0}
+.cx .q>p{margin:0 0 6px}
+.cx .q .n{font-weight:700;color:var(--cy-d)}
+.cx .cs{font-weight:600}
+.cx .rep{margin:8px 0 2px;background:#f7fafb;border:1px dashed var(--line2);border-radius:var(--r2);padding:12px 14px 8px;
+  position:relative}
+.cx .rep i{display:block;height:26px;border-bottom:1px solid #dde6eb}
+.cx .rep i:last-of-type{border-bottom:0}
+.cx .rep span{position:absolute;right:12px;top:6px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:#9fb0ba}
+.cx .ret{background:linear-gradient(180deg,#effafc,#ffffff 62%);border:1px solid #7fb8c8;border-radius:var(--r);
+  padding:26px 28px;margin:22px 0}
+.cx .ret>.et{display:inline-flex;align-items:center;gap:8px;background:var(--cy);color:#fff;border-radius:20px;
+  padding:5px 14px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.cx .ret h4{font-size:21px;margin:14px 0 14px;line-height:1.2}
+.cx .ret p{margin:0 0 12px}
+.cx .voc{display:flex;flex-direction:column;gap:12px;margin:0}
+.cx .voc .it{background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:14px 18px}
+.cx .voc .it>b{display:inline;color:var(--cy-d);font-family:"Bricolage Grotesque",sans-serif;font-size:15.6px}
+.cx .voc .it>b::after{content:"\00a0"}
+.cx .voc .it>p{display:inline;margin:0;font-size:15.4px;color:var(--ink2)}
+.cx .voc .it .nat b,.cx .voc .it>p b{color:var(--ink);font-weight:700}
+.cx .nat{display:grid;gap:9px;margin-top:11px}
+.cx .nat div{background:#f5fbfc;border-left:3px solid var(--c);border-radius:var(--r2);padding:9px 14px;font-size:15px}
+.cx .nat div .ex{color:var(--mut);font-style:italic;font-size:14px}
+.cx .fml{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px 0 4px;font-size:20px;font-style:italic;
+  background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:14px}
+.cx .fr{display:inline-flex;flex-direction:column;align-items:center;font-size:15px;line-height:1.28}
+.cx .fr .h{border-bottom:1.6px solid var(--ink);padding:0 8px 3px}
+.cx .fr .b{padding:3px 8px 0}
+.cx .rmq{margin-top:16px;background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:14px 18px;font-size:15px}
+.cx .rmq b{color:var(--cy-d)}
+.cx .rmq ul{margin:6px 0 0;padding-left:18px}
+.cx .dgs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.cx .dg{background:#fff;border:1px solid #7fb8c8;border-radius:var(--r2);padding:16px 18px}
+.cx .dg>p{font-size:14.5px;margin:0 0 10px}
+.cx .dg .fig{background:#fafcfd;border-radius:10px;padding:8px 6px 4px}
+.cx .exm{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;margin:20px 0;
+  box-shadow:var(--om)}
+.cx .exm>.et{display:inline-flex;align-items:center;gap:7px;background:#f0f4f7;color:var(--ar);border-radius:20px;
+  padding:4px 12px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:12px}
+.cx .exm ul{margin:12px 0 0;padding-left:18px}
+.cx .exm li{margin-bottom:6px;color:var(--ink2)}
+.cx .sol{background:#f2fbf4;border-left:3px solid var(--li);border-radius:var(--r2);padding:11px 16px;
+  margin:8px 0;color:#2c5c1a}
+.cx .sol ul{margin:6px 0 0;padding-left:18px}
+.cx .q4{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px}
+.cx .q4 .it{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:14px 16px;transition:.2s}
+.cx .q4 .it:hover{box-shadow:var(--oh);transform:translateY(-2px)}
+.cx .q4 .hd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cx .q4 .l{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;color:var(--cy-d);font-size:15px}
+.cx .q4 .z{flex:1 1 auto;height:28px;border:1px dashed var(--line2);border-radius:8px;background:#f9fbfc}
+.cx .enl{display:flex;align-items:center;gap:16px;background:linear-gradient(100deg,#fff6e5,#fffdf8);
+  border:1px solid #d9a441;border-radius:var(--r);padding:18px 24px;margin:6px 0}
+.cx .enl .ic{width:42px;height:42px;border-radius:12px;background:var(--or);color:#0d1a22;display:grid;place-items:center;flex:none}
+.cx .enl .ic svg{width:22px;height:22px}
+.cx .enl b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:16.5px}
+.cx .enl span{font-size:13.5px;color:#8a5c05}
+.cx .tw{overflow-x:auto;margin:14px 0 6px;border-radius:var(--r2);border:1px solid var(--line);background:#fff}
+.cx .tw table{border-collapse:separate;border-spacing:0;width:100%;font-size:14.5px}
+.cx .tw th,.cx .tw td{padding:11px 15px;text-align:left;border-bottom:1px solid var(--line)}
+.cx .tw thead th{background:#f6f9fb;color:var(--ar);font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.11em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.cx .tw tbody tr:last-child th,.cx .tw tbody tr:last-child td{border-bottom:0}
+.cx .tw tbody tr:nth-child(even){background:#fbfdfe}
+.cx .tw tbody th{font-weight:600;color:var(--ink)}
+.cx .tw td.v{background:#f4f8fa}
+.cx .tw table.num td,.cx .tw table.num th:not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
+.cx .tw table.fill td.v{min-width:92px;height:40px}
+.cx .suivi{background:linear-gradient(155deg,#e7f6fa 0%,#eee9fd 58%,#fdeef0 100%);
+  border-radius:calc(var(--r) + 6px);padding:26px 26px 30px;position:relative;overflow:hidden}
+.cx .suivi:before{content:"";position:absolute;inset:-120px -80px auto auto;width:340px;height:340px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,182,39,.28),transparent 65%);pointer-events:none}
+.cx .sv-hd{display:flex;align-items:center;gap:20px;position:relative;margin:0 0 22px}
+.cx .sv-ring{position:relative;width:84px;height:84px;flex:none}
+.cx .sv-ring svg{width:84px;height:84px;display:block}
+.cx .sv-arc{transition:stroke-dasharray .7s cubic-bezier(.2,.75,.3,1)}
+.cx .sv-n{position:absolute;inset:0;display:grid;place-content:center;text-align:center;line-height:1}
+.cx .sv-n b{font-family:"Bricolage Grotesque",sans-serif;font-size:25px;color:var(--ink)}
+.cx .sv-n i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:11.5px;color:var(--mut)}
+.cx .sv-ti{flex:1 1 auto;min-width:0}
+.cx .sv-ti b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:20px;color:var(--ink)}
+.cx .sv-ti p{margin:3px 0 0;font-size:14.5px;color:var(--ink2)}
+.cx .sv-lg{display:flex;flex-direction:column;gap:6px;flex:none}
+.cx .sv-lg span{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink2);font-weight:600}
+.cx .sv-lg span:before{content:"";width:11px;height:11px;border-radius:4px}
+.cx .sv-lg .q1:before{background:var(--cy)}
+.cx .sv-lg .q2:before{background:var(--vi)}
+.cx .sv-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;position:relative}
+.cx .sv-i{display:flex;align-items:center;gap:16px;background:var(--card);border-radius:16px;padding:13px 16px 13px 22px;
+  position:relative;box-shadow:0 1px 2px rgba(13,26,34,.06);transition:box-shadow .22s,transform .22s}
+.cx .sv-i:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(13,26,34,.13)}
+.cx .sv-rail{position:absolute;left:0;top:10px;bottom:10px;width:6px;border-radius:0 6px 6px 0;background:var(--qc)}
+.cx .sv-i.q1{--qc:var(--cy);--qs:#e2f6fa;--qd:var(--cy-d)}
+.cx .sv-i.q2{--qc:var(--vi);--qs:#efe8fd;--qd:#5b32ab}
+.cx .sv-b{flex:none;width:70px;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:5px;
+  background:var(--qs);border-radius:12px;padding:8px 6px 6px}
+.cx .sv-b b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;color:var(--qd);line-height:1}
+.cx .sv-b i{font-style:normal;color:var(--qd);opacity:.5;font-size:14px}
+.cx .sv-b span{flex:1 0 100%;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+.cx .sv-t{flex:1 1 auto;min-width:0}
+.cx .sv-tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--qd);background:var(--qs);border-radius:20px;padding:3px 9px}
+.cx .sv-t p{margin:5px 0 1px;font-weight:600;font-size:15.5px;color:var(--ink);line-height:1.25}
+.cx .sv-s{font-size:13px;color:var(--mut)}
+.cx .sv-f{display:flex;gap:9px;flex:none}
+.cx .sv-l1{display:block}
+.cx .sv-l1 span{display:block;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);margin:0 0 4px 10px}
+.cx .sv-l1 input{width:112px;font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink);
+  text-align:center;padding:8px 6px;border:2px dashed var(--line2);border-radius:11px;background:#fbfdfe;
+  transition:.2s;letter-spacing:.06em}
+.cx .sv-l1 input::placeholder{color:#b6c4cd}
+.cx .sv-l1 input:hover{border-color:var(--qc)}
+.cx .sv-l1 input:focus{outline:none;border-style:solid;border-color:var(--qc);background:#fff;
+  box-shadow:0 0 0 4px var(--qs)}
+.cx .sv-l1 input.plein{border-style:solid;border-color:var(--qc);background:var(--qs);font-weight:600}
+.cx .sv-ok{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;width:62px;padding:9px 0 7px;
+  border:2px solid var(--line2);border-radius:13px;background:#fbfdfe;color:#9fb0ba;cursor:pointer;
+  transition:.24s;font:inherit}
+.cx .sv-ok svg{width:24px;height:24px}
+.cx .sv-ok svg path{stroke-dasharray:1;stroke-dashoffset:1}
+.cx .sv-ok em{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:8.5px;letter-spacing:.09em;
+  text-transform:uppercase;opacity:.62;transition:.24s}
+.cx .sv-ok:hover svg path{stroke-dashoffset:0;transition:stroke-dashoffset .32s}
+.cx .sv-ok:hover{border-color:var(--qc);color:var(--qd);background:var(--qs)}
+.cx .sv-ok[aria-pressed="true"]{border-color:#3f9d3f;background:#eaf8ea;color:#2f7f2f}
+.cx .sv-ok[aria-pressed="true"] svg path{animation:coche .45s cubic-bezier(.4,0,.25,1) forwards}
+.cx .sv-ok[aria-pressed="true"] em{opacity:1}
+@keyframes coche{to{stroke-dashoffset:0}}
+.cx .sv-i.fini{background:linear-gradient(90deg,#f3fbf3,#fff 46%)}
+@media(max-width:900px){.cx .sv-i{flex-wrap:wrap}
+.cx .sv-t{flex:1 1 200px}
+.cx .sv-f{flex:1 1 100%;order:5}
+.cx .sv-l1 input{width:100%}
+.cx .sv-l1{flex:1 1 0}}
+.cx .rv{opacity:0;transform:translateY(14px)}
+.cx .rv.vu{opacity:1;transform:none;transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.3,1)}
+.cx svg.gr{width:100%;height:auto;display:block}
+.cx svg .gb{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0)}
+.cx .vu svg .gb,.cx .hero svg .gb{animation:pousse .75s cubic-bezier(.18,.72,.3,1) forwards}
+@keyframes pousse{to{transform:scaleY(1)}}
+.cx svg .gl{stroke-dasharray:1;stroke-dashoffset:1}
+.cx .vu svg .gl,.cx .hero svg .gl{animation:trace 1.05s .12s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.cx svg .gd{opacity:0}
+.cx .vu svg .gd,.cx .hero svg .gd{animation:pop .3s forwards}
+@keyframes pop{to{opacity:1}}
+.cx svg .gp{transform:scale(.6);opacity:0}
+.cx .vu svg .gp,.cx .hero svg .gp{animation:eclot .7s cubic-bezier(.2,.8,.3,1) forwards}
+@keyframes eclot{to{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.cx .rv,.cx .rv.vu{opacity:1;transform:none}
+.cx svg .gb{transform:none}
+.cx svg .gl{stroke-dashoffset:0}
+.cx svg .gd{opacity:1}
+.cx svg .gp{transform:none;opacity:1}
+.cx *{animation:none!important;transition:none!important}}
+.cx .bar{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(12px);
+  border:1px solid var(--line);border-radius:0 0 var(--r) var(--r);border-top:0;
+  padding:9px 14px;margin:0 0 0;box-shadow:0 6px 22px -18px rgba(13,26,34,.5)}
+.cx .bar .ttl{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:14px;flex:1 1 auto;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.cx .bar .ttl em{font-style:normal;color:var(--mut);font-weight:400}
+.cx .grp{display:flex;align-items:center;gap:2px;background:#eef3f6;border-radius:12px;padding:3px}
+.cx .btn{width:34px;height:34px;border:0;background:transparent;border-radius:9px;cursor:pointer;color:var(--ink2);
+  display:grid;place-items:center;transition:.15s;flex:none}
+.cx .btn:hover{background:#fff;color:var(--cy-d);box-shadow:0 1px 3px rgba(13,26,34,.12)}
+.cx .btn.act{background:var(--cy);color:#fff}
+.cx .btn svg{width:19px;height:19px;pointer-events:none}
+.cx .btn.lg{width:auto;padding:0 13px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+  letter-spacing:.02em}
+.cx .zval{min-width:52px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;
+  color:var(--ink2);cursor:pointer;user-select:none;padding:0 4px}
+.cx .zval:hover{color:var(--cy-d)}
+.cx .prg{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent;border-radius:0 0 4px 4px;overflow:hidden}
+.cx .prg i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cy),var(--vi));transition:width .1s linear}
+.cx .rch{display:none;align-items:center;gap:8px;flex:1 1 220px;min-width:170px;background:#eef3f6;border-radius:12px;
+  padding:3px 6px 3px 12px}
+.cx .rch.on{display:flex}
+.cx .rch input{border:0;background:transparent;font:inherit;font-size:14px;padding:6px 0;flex:1 1 auto;min-width:0;outline:0;color:var(--ink)}
+.cx .rch .cnt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--mut);white-space:nowrap}
+.cx mark{background:#ffe89a;color:var(--ink);border-radius:3px;padding:0 2px}
+.cx mark.cur{background:var(--or);box-shadow:0 0 0 3px rgba(255,182,39,.35)}
+.cx .shell.sansomm{grid-template-columns:1fr;max-width:1080px}
+.cx .shell.sansomm nav.somm{display:none}
+.cx main{position:relative}
+.cx section[id]{scroll-margin-top:74px}
+.cx mark{scroll-margin-top:110px}
+@media(max-width:980px){.cx .bar .ttl{display:none}}
+@media(max-width:980px){.cx .shell{grid-template-columns:1fr}
+.cx nav.somm{display:none}
+.cx main{padding:0 16px 90px}
+.cx .hero{padding:38px 22px 0;border-radius:0 0 var(--r) var(--r)}
+.cx .caps,.cx .dgs,.cx .q4{grid-template-columns:1fr}
+.cx .sqb{padding:26px 22px}
+.cx .sce>.body{padding:20px 18px 22px}}
 :root{--bg:#eef1f4;--card:#fff;--ink:#0d1a22;--ink2:#0d1a22;--mut:#0d1a22;
   --line:#9fb0bb;--line2:#5d707b;--cy:#00A5BF;--cy-d:#00778a;--cy-l:#e2f6fa;
   --vi:#7C4BD8;--or:#FFB627;--ve:#2f7f2f;--r:16px}
@@ -700,6 +1387,13 @@ footer.pied b{font-weight:800}
 .cx .rep .rc,.cx .rep:not(.on) .rc{display:block!important;animation:none}
 .cx .rep.qcm-r .rq,.cx .rep.qcm-r:not(.on) .rq{display:flex!important}
 .cx [data-k]{opacity:1!important;visibility:visible!important}
+/* Un graphique du moteur se dessine en s'animant : les barres partent à
+   `scaleY(0)`, les droites à `stroke-dashoffset` plein, et c'est un signal
+   JavaScript qui les déploie. Sur le site il n'y a personne pour le donner :
+   le diagramme sortait avec ses axes et ses étiquettes, sans ses barres. */
+.cx svg .gb,.cx svg .gp,.cx svg .gd,.cx svg .gl,.cx svg .gs{
+  transform:none!important;opacity:1!important;stroke-dashoffset:0!important;
+  animation:none!important}
 .cx .vr,.cx .rep.tab .vr{opacity:1!important}
 .cx .rep.tab .tz{display:none}
 .cx .rep>.lb,.cx .rep>.rh>.lb{pointer-events:none;cursor:default;display:inline-block;
@@ -707,6 +1401,14 @@ footer.pied b{font-weight:800}
   text-transform:uppercase;font-weight:800;color:#1D7A33;background:none;border:0;
   padding:0;margin:0 0 3px;border-radius:0}
 .cx .rep>.lb::before,.cx .rep>.rh>.lb::before{content:none}
+/* « Étape 1 » et sa phrase tiennent sur une ligne : le repère seul sur sa
+   ligne ne servait qu'à prendre de la hauteur. Vaut pour un pas qui n'a
+   qu'un paragraphe ; un pas qui porte un tableau ou un calcul garde sa
+   disposition. */
+.cx .rep>.lb{display:inline;margin:0}
+.cx .rep>.lb::after{content:" : "}
+.cx .rep:has(>.rc>p:only-child)>.rc{display:inline!important}
+.cx .rep:has(>.rc>p:only-child)>.rc>p{display:inline;margin:0}
 .cx .rep>.lb:hover{background:none}
 .cx .rep.qcm-r .rh{gap:12px}
 .cx .rep p,.cx .rep .rc{color:#137A3A}
@@ -738,9 +1440,19 @@ footer.pied b{font-weight:800}
   background:#EAF6EC;border:2px solid #1D7A33;color:#137A3A}
 /* le barème est celui de la fiche du professeur, jamais de l'élève */
 .cx .q-b{display:none}
+/* la consigne d'entrée d'un exercice - « Trois questions. Une seule bonne
+   réponse. Cliquer sur… » - est faite pour la classe, au tableau. Sur le site
+   on vient lire une correction : elle ne fait que repousser la première
+   question. */
+.cx .en-i{display:none}
 /* le titre du bloc est déjà dans la carte de l'exercice */
 .cx .exo{border:0;margin:0;box-shadow:none;background:none;padding:0}
 .cx .exo>.exo-h{display:none}
+/* un encadré « À retenir » : la carte de l'exercice porte déjà son étiquette
+   et son titre. Le moteur les réécrivait deux fois de plus - une fois dans
+   l'enveloppe `.aide`, une fois dans l'encadré lui-même. */
+.cx .aide{border:0;margin:0;padding:0;background:none;box-shadow:none}
+.cx .aide>.lb,.cx .aide>h3,.cx .ret>h4{display:none}
 .cx .exo>.exo-c,.cx .exo.seule>.exo-c{padding:0}
 /* un graphique se lit à sa taille de fiche : sur un grand écran, il ne
    s'étire pas sur toute la largeur de l'encadré */
@@ -796,6 +1508,10 @@ p.seqt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16
 .s-ret{display:inline-flex;align-items:center;gap:8px;
   font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:16px;
   background:none;border:0;cursor:pointer;padding:0;margin:0 0 14px}
+/* les encadrés d'exercice, dans une séance ouverte */
+.exg{margin:18px 0 0}
+.carte.sc.xc h3{font-size:17px;margin:0 0 8px}
+.carte.sc.xc .nb{font-size:13.5px}
 .sban{display:flex;align-items:stretch;border:3.5px solid #12202a;border-radius:18px;
   overflow:hidden;background:var(--c);color:#fff;
   box-shadow:0 14px 30px -24px rgba(13,26,34,.75)}
@@ -848,13 +1564,14 @@ p.seqt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16
 <body>
 <header class="bar"><div class="in"><a class="lg" href="../../index.html">2de bac pro</a><nav class="fil"><span class="sep">&rsaquo;</span><a href="../index.html">Mathématiques</a><span class="sep">&rsaquo;</span><span>Statistiques à une variable</span></nav><span class="qui">Mme Talbaut</span></div></header>
 <main>
-<div id="vch"><p class="kick">Mathématiques &middot; Chapitre 1</p><h1>Statistiques à une variable</h1><p class="sub">Recueillir, organiser et représenter des données.</p><a class="cv" style="--c:#00778a" href="statistiques-a-une-variable-eleve.pdf" target="_blank" rel="noopener"><h2>Le document élève</h2><div class="vg"><img src="statistiques-a-une-variable-couverture.png" alt="Première page du document élève"><span class="bt">Ouvrir le document</span></div></a><div class="ttm"><p class="l1">Chapitre 1 Statistiques à une variable</p><p class="l2">Correction</p></div><p class="seqt">Séquence 1 &middot; Recueillir et organiser des données statistiques</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#00778a;--f:#e6f1f3" data-i="0"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><rect x="28" y="20" width="104" height="70" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 38 V60"/><path d="M54 38 V60"/><path d="M64 38 V60"/><path d="M74 38 V60"/><path d="M40 56 L78 42"/></g><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"><path d="M92 38 V60"/><path d="M102 38 V60"/><path d="M112 38 V60"/></g><path d="M44 76 H116" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"/></svg><p class="no">Séance 1</p><h3>Vocabulaire et premiers relevés</h3><p class="nb">3 exercices</p></button><button class="carte sc" type="button" style="--c:#5b3fa8;--f:#efecf6" data-i="1"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e8e4f3"/><rect x="24" y="22" width="112" height="66" rx="9" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 42 H136" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 22 V88"/><path d="M99 22 V88"/><g stroke="#22323b" stroke-width="5.5"><path d="M62 22 V88"/><path d="M99 22 V88"/></g><rect x="24" y="22" width="112" height="20" fill="#5b3fa8" opacity=".85"/><rect x="24" y="22" width="112" height="66" rx="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Effectifs et fréquences</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#2f7d32;--f:#eaf2ea" data-i="2"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2ede2"/><path d="M80 92 C 80 60, 84 36, 118 24 C 124 62, 106 88, 80 92 Z" fill="#2f7d32" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 92 C 88 68, 98 50, 114 34" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#22323b"/><path d="M80 92 C 74 66, 58 46, 40 40 C 38 70, 56 88, 80 92 Z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Exercices 5 et 6</h3><p class="nb">2 exercices</p></button></div><p class="seqt">Séquence 2 &middot; Choisir un mode de représentation adapté</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#b5541a;--f:#f8eee8" data-i="3"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f5e7df"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="20" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="20" y="62" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="62" width="56" height="38" rx="7" fill="#fff"/></g><g fill="#b5541a"><rect x="30" y="34" width="8" height="14"/><rect x="42" y="26" width="8" height="22"/><rect x="54" y="30" width="8" height="18"/></g><circle cx="112" cy="35" r="14" fill="#fff" stroke="#22323b" stroke-width="4"/><path d="M112 35 L112 21 A14 14 0 0 1 124 42 Z" fill="#b5541a"/><path d="M28 92 L40 76 L52 86 L68 70" fill="none" stroke="#b5541a" stroke-width="5" stroke-linecap="round"/><g fill="#b5541a"><circle cx="96" cy="90" r="5"/><circle cx="110" cy="80" r="5"/><circle cx="124" cy="86" r="5"/></g></svg><p class="no">Séance 1</p><h3>Les quatre diagrammes</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#a8185b;--f:#f6e8ef" data-i="4"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M26 88 H136"/><path d="M26 88 V22"/></g><path d="M34 78 L58 62 L82 70 L108 38" fill="none" stroke="#a8185b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 22 l5 11 12 2 -9 9 2 12 -10 -6 -10 6 2 -12 -9 -9 12 -2 z" fill="#a8185b" stroke="#22323b" stroke-width="4" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Cote de popularité</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#6d28d9;--f:#f0eafb" data-i="5"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ebe1fa"/><circle cx="80" cy="26" r="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 35 V46 L26 74 H134 L80 46" fill="#6d28d9" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 74 H134" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Activité A - Une boutique de mode</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#0b5cab;--f:#e7eff7" data-i="6"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dde8f3"/><rect x="42" y="14" width="52" height="82" rx="12" fill="#0b5cab" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="26" width="32" height="52" rx="5" fill="#fff" stroke="#22323b" stroke-width="4"/><circle cx="68" cy="87" r="5" fill="#fff"/><rect x="102" y="26" width="34" height="58" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 4</p><h3>Exercices 10 et 11</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#7a6100;--f:#f2efe6" data-i="7"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ece9db"/><g fill="#7a6100" stroke="#22323b" stroke-width="5"><ellipse cx="80" cy="74" rx="26" ry="20"/><ellipse cx="50" cy="52" rx="11" ry="14"/><ellipse cx="68" cy="36" rx="11" ry="14"/><ellipse cx="92" cy="36" rx="11" ry="14"/><ellipse cx="110" cy="52" rx="11" ry="14"/></g></svg><p class="no">Séance 5</p><h3>Exercice 12 - Les adoptions à la SPA</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#007a5e;--f:#e6f2ef" data-i="8"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbece8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M24 88 H138"/><path d="M24 88 V22"/></g><g stroke="#22323b" stroke-width="4.5"><rect x="32" y="66" width="26" height="22" fill="#007a5e" opacity=".55"/><rect x="58" y="44" width="26" height="44" fill="#007a5e" opacity=".75"/><rect x="84" y="30" width="26" height="58" fill="#007a5e"/><rect x="110" y="58" width="26" height="30" fill="#007a5e" opacity=".65"/></g></svg><p class="no">Séance 6</p><h3>Regrouper par classes</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#9a3412;--f:#f5ebe7" data-i="9"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f1e3de"/><path d="M44 34 H116 a26 26 0 0 1 22 40 l-8 14 a14 14 0 0 1 -24 -2 l-6 -12 H76 l-6 12 a14 14 0 0 1 -24 2 l-8 -14 a26 26 0 0 1 22 -40 z" fill="#9a3412" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><path d="M56 56 H72"/><path d="M64 48 V64"/></g><g fill="#fff"><circle cx="110" cy="50" r="5"/><circle cx="122" cy="60" r="5"/></g></svg><p class="no">Séance 7</p><h3>Activité B - Les jeux vidéo</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#00778a;--f:#e6f1f3" data-i="10"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><path d="M40 70 a36 34 0 0 1 72 0 Z" fill="#00778a" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M110 70 H136 a11 11 0 0 1 -11 11 H98 a22 22 0 0 0 12 -11 z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M76 36 V70" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="76" cy="36" r="6" fill="#fff" stroke="#22323b" stroke-width="4"/></svg><p class="no">Séance 8</p><h3>Exercice 13 - Les casquettes</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#334155;--f:#ebecee" data-i="11"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2e4e7"/><rect x="22" y="20" width="116" height="60" rx="11" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 38 L96 50 L68 62 Z" fill="#334155" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 92 H138" stroke="#e2e2ea" stroke-width="8" stroke-linecap="round"/><path d="M22 92 H98" stroke="#334155" stroke-width="8" stroke-linecap="round"/></svg><p class="no">Séance 9</p><h3>Exercice 14 - Le profil des vues d’une vidéo</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#a8185b;--f:#f6e8ef" data-i="12"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><path d="M52 20 H108 v22 a28 28 0 0 1 -56 0 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 26 H38 a14 14 0 0 0 14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 26 h14 a14 14 0 0 1 -14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 70 V82" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M58 92 H102 a6 6 0 0 0 -6 -10 H64 a6 6 0 0 0 -6 10 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 10</p><h3>Cap vers le CCF - Les subventions du club</h3><p class="nb">1 exercice</p></button></div></div><div id="vsc" hidden></div>
+<div id="vch"><p class="kick">Mathématiques &middot; Chapitre 1</p><h1>Statistiques à une variable</h1><p class="sub">Recueillir, organiser et représenter des données.</p><a class="cv" style="--c:#00778a" href="statistiques-a-une-variable-eleve.pdf" target="_blank" rel="noopener"><h2>Le document élève</h2><div class="vg"><img src="statistiques-a-une-variable-couverture.png" alt="Première page du document élève"><span class="bt">Ouvrir le document</span></div></a><div class="ttm"><p class="l1">Chapitre 1 Statistiques à une variable</p><p class="l2">Correction</p></div><p class="seqt">Séquence 1 &middot; Recueillir et organiser des données statistiques</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#00778a;--f:#e6f1f3" data-i="0"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><rect x="28" y="20" width="104" height="70" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 38 V60"/><path d="M54 38 V60"/><path d="M64 38 V60"/><path d="M74 38 V60"/><path d="M40 56 L78 42"/></g><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"><path d="M92 38 V60"/><path d="M102 38 V60"/><path d="M112 38 V60"/></g><path d="M44 76 H116" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#00778a"/></svg><p class="no">Séance 1</p><h3>Vocabulaire et premiers relevés</h3><p class="nb">4 exercices</p></button><button class="carte sc" type="button" style="--c:#5b3fa8;--f:#efecf6" data-i="1"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e8e4f3"/><rect x="24" y="22" width="112" height="66" rx="9" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 42 H136" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 22 V88"/><path d="M99 22 V88"/><g stroke="#22323b" stroke-width="5.5"><path d="M62 22 V88"/><path d="M99 22 V88"/></g><rect x="24" y="22" width="112" height="20" fill="#5b3fa8" opacity=".85"/><rect x="24" y="22" width="112" height="66" rx="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Effectifs et fréquences</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#2f7d32;--f:#eaf2ea" data-i="2"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2ede2"/><path d="M80 92 C 80 60, 84 36, 118 24 C 124 62, 106 88, 80 92 Z" fill="#2f7d32" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 92 C 88 68, 98 50, 114 34" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke="#22323b"/><path d="M80 92 C 74 66, 58 46, 40 40 C 38 70, 56 88, 80 92 Z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Exercices 5 et 6</h3><p class="nb">2 exercices</p></button></div><p class="seqt">Séquence 2 &middot; Choisir un mode de représentation adapté</p><div class="gr ch3"><button class="carte sc" type="button" style="--c:#b5541a;--f:#f8eee8" data-i="3"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f5e7df"/><g stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="20" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="16" width="56" height="38" rx="7" fill="#fff"/><rect x="20" y="62" width="56" height="38" rx="7" fill="#fff"/><rect x="84" y="62" width="56" height="38" rx="7" fill="#fff"/></g><g fill="#b5541a"><rect x="30" y="34" width="8" height="14"/><rect x="42" y="26" width="8" height="22"/><rect x="54" y="30" width="8" height="18"/></g><circle cx="112" cy="35" r="14" fill="#fff" stroke="#22323b" stroke-width="4"/><path d="M112 35 L112 21 A14 14 0 0 1 124 42 Z" fill="#b5541a"/><path d="M28 92 L40 76 L52 86 L68 70" fill="none" stroke="#b5541a" stroke-width="5" stroke-linecap="round"/><g fill="#b5541a"><circle cx="96" cy="90" r="5"/><circle cx="110" cy="80" r="5"/><circle cx="124" cy="86" r="5"/></g></svg><p class="no">Séance 1</p><h3>Les quatre diagrammes</h3><p class="nb">3 exercices</p></button><button class="carte sc" type="button" style="--c:#a8185b;--f:#f6e8ef" data-i="4"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M26 88 H136"/><path d="M26 88 V22"/></g><path d="M34 78 L58 62 L82 70 L108 38" fill="none" stroke="#a8185b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 22 l5 11 12 2 -9 9 2 12 -10 -6 -10 6 2 -12 -9 -9 12 -2 z" fill="#a8185b" stroke="#22323b" stroke-width="4" stroke-linejoin="round"/></svg><p class="no">Séance 2</p><h3>Cote de popularité</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#6d28d9;--f:#f0eafb" data-i="5"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ebe1fa"/><circle cx="80" cy="26" r="9" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 35 V46 L26 74 H134 L80 46" fill="#6d28d9" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 74 H134" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 3</p><h3>Activité A - Une boutique de mode</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#0b5cab;--f:#e7eff7" data-i="6"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dde8f3"/><rect x="42" y="14" width="52" height="82" rx="12" fill="#0b5cab" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="26" width="32" height="52" rx="5" fill="#fff" stroke="#22323b" stroke-width="4"/><circle cx="68" cy="87" r="5" fill="#fff"/><rect x="102" y="26" width="34" height="58" rx="10" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 4</p><h3>Exercices 10 et 11</h3><p class="nb">2 exercices</p></button><button class="carte sc" type="button" style="--c:#7a6100;--f:#f2efe6" data-i="7"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#ece9db"/><g fill="#7a6100" stroke="#22323b" stroke-width="5"><ellipse cx="80" cy="74" rx="26" ry="20"/><ellipse cx="50" cy="52" rx="11" ry="14"/><ellipse cx="68" cy="36" rx="11" ry="14"/><ellipse cx="92" cy="36" rx="11" ry="14"/><ellipse cx="110" cy="52" rx="11" ry="14"/></g></svg><p class="no">Séance 5</p><h3>Exercice 12 - Les adoptions à la SPA</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#007a5e;--f:#e6f2ef" data-i="8"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbece8"/><g stroke="#22323b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M24 88 H138"/><path d="M24 88 V22"/></g><g stroke="#22323b" stroke-width="4.5"><rect x="32" y="66" width="26" height="22" fill="#007a5e" opacity=".55"/><rect x="58" y="44" width="26" height="44" fill="#007a5e" opacity=".75"/><rect x="84" y="30" width="26" height="58" fill="#007a5e"/><rect x="110" y="58" width="26" height="30" fill="#007a5e" opacity=".65"/></g></svg><p class="no">Séance 6</p><h3>Regrouper par classes</h3><p class="nb">3 exercices</p></button><button class="carte sc" type="button" style="--c:#9a3412;--f:#f5ebe7" data-i="9"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f1e3de"/><path d="M44 34 H116 a26 26 0 0 1 22 40 l-8 14 a14 14 0 0 1 -24 -2 l-6 -12 H76 l-6 12 a14 14 0 0 1 -24 2 l-8 -14 a26 26 0 0 1 22 -40 z" fill="#9a3412" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><path d="M56 56 H72"/><path d="M64 48 V64"/></g><g fill="#fff"><circle cx="110" cy="50" r="5"/><circle cx="122" cy="60" r="5"/></g></svg><p class="no">Séance 7</p><h3>Activité B - Les jeux vidéo</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#00778a;--f:#e6f1f3" data-i="10"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#dbecef"/><path d="M40 70 a36 34 0 0 1 72 0 Z" fill="#00778a" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M110 70 H136 a11 11 0 0 1 -11 11 H98 a22 22 0 0 0 12 -11 z" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M76 36 V70" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="76" cy="36" r="6" fill="#fff" stroke="#22323b" stroke-width="4"/></svg><p class="no">Séance 8</p><h3>Exercice 13 - Les casquettes</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#334155;--f:#ebecee" data-i="11"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#e2e4e7"/><rect x="22" y="20" width="116" height="60" rx="11" fill="#fff" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 38 L96 50 L68 62 Z" fill="#334155" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 92 H138" stroke="#e2e2ea" stroke-width="8" stroke-linecap="round"/><path d="M22 92 H98" stroke="#334155" stroke-width="8" stroke-linecap="round"/></svg><p class="no">Séance 9</p><h3>Exercice 14 - Le profil des vues d’une vidéo</h3><p class="nb">1 exercice</p></button><button class="carte sc" type="button" style="--c:#a8185b;--f:#f6e8ef" data-i="12"><span class="ba"></span><svg class="ill" viewBox="0 0 160 110" role="presentation"><rect width="160" height="110" rx="14" fill="#f3dfe8"/><path d="M52 20 H108 v22 a28 28 0 0 1 -56 0 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 26 H38 a14 14 0 0 0 14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 26 h14 a14 14 0 0 1 -14 18" fill="none" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 70 V82" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M58 92 H102 a6 6 0 0 0 -6 -10 H64 a6 6 0 0 0 -6 10 z" fill="#a8185b" stroke="#22323b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="no">Séance 10</p><h3>Cap vers le CCF - Les subventions du club</h3><p class="nb">1 exercice</p></button></div></div><div id="vsc" hidden></div><div id="vex" hidden></div>
 </main>
 <footer class="pied"><div class="in"><span>Mathématiques 2de bac pro</span><span class="sep">&middot;</span><b>Mme Talbaut</b><span class="sep">&middot;</span><span>LP Max Joséphine, Cayenne</span></div></footer>
 
 <script>
-var SC = [{"sq": 1, "n": 1, "titre": "Vocabulaire et premiers relevés", "sqt": "Recueillir et organiser des données statistiques", "c": "#00778a", "f": "#e6f1f3", "exos": [{"id": "s1-1/QCM", "t": "Évaluation diagnostique", "num": "", "tt": "Évaluation diagnostique", "h": "<section class=\"exo\" data-exo=\"diag\"><div class=\"exo-h\"><span class=\"exo-t\">Évaluation diagnostique<\/span><span class=\"etat cor\">corrigé<\/span><\/div><div class=\"exo-c\"><p class=\"en-i\">Trois questions.<br>Une seule bonne réponse par question.<br>Cliquer sur la réponse choisie.<\/p><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">1.<\/span> <span class=\"cmp\">S’approprier<\/span> <b>Indiquer<\/b> le type de ce diagramme.<\/span><\/div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse<\/text><\/svg><\/div><ul class=\"qcm\"><li><span class=\"l\">a<\/span><span class=\"t\">un diagramme en secteurs<\/span><\/li><li class=\"bon\"><span class=\"l\">b<\/span><span class=\"t\">un diagramme en bâtons<\/span><\/li><li><span class=\"l\">c<\/span><span class=\"t\">un diagramme en colonnes<\/span><\/li><li><span class=\"l\">d<\/span><span class=\"t\">un diagramme à lignes brisées<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q1_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Je regarde la <b>forme<\/b> : ce sont des barres verticales.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Je regarde si elles se touchent : ici elles sont <b>séparées<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>Barres séparées = <b>diagramme en bâtons<\/b>. Collées, ce serait un diagramme en colonnes.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse b<\/b> - Les bâtons sont <b>séparés<\/b> les uns des autres : c’est un diagramme en bâtons. S’ils étaient collés, ce serait un diagramme en colonnes, réservé aux valeurs regroupées par classes.<\/p><\/div><\/div><\/div><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">2.<\/span> <span class=\"cmp\">S’approprier<\/span> <b>Relever<\/b> le nombre d’élèves qui pratiquent le basket.<\/span><\/div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse<\/text><\/svg><\/div><ul class=\"qcm\"><li><span class=\"l\">a<\/span><span class=\"t\">2 élèves<\/span><\/li><li><span class=\"l\">b<\/span><span class=\"t\">3 élèves<\/span><\/li><li class=\"bon\"><span class=\"l\">c<\/span><span class=\"t\">6 élèves<\/span><\/li><li><span class=\"l\">d<\/span><span class=\"t\">8 élèves<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q2_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Je repère le bâton « Basket » sur l’axe horizontal.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Je remonte jusqu’en haut du bâton.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>Je lis la valeur en face sur l’axe vertical : <b>6 élèves<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse c<\/b> - On lit la hauteur du bâton « Basket » sur l’axe vertical : <b>6 élèves<\/b>.<\/p><\/div><\/div><\/div><div class=\"q zh\" data-qcap=\"C2\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">3.<\/span> <span class=\"cmp\">Analyser<\/span> <b>Choisir<\/b> le diagramme le plus adapté pour représenter la marque de smartphone préférée des élèves.<\/span><\/div><ul class=\"qcm\"><li class=\"bon\"><span class=\"l\">a<\/span><span class=\"t\">un diagramme en secteurs<\/span><\/li><li><span class=\"l\">b<\/span><span class=\"t\">un diagramme en colonnes<\/span><\/li><li><span class=\"l\">c<\/span><span class=\"t\">un diagramme à lignes brisées<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q3_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Quelle est la <b>nature du caractère<\/b> ? Une marque n’est pas un nombre : il est <b>qualitatif<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Pour un caractère qualitatif on montre des <b>parts d’un tout<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>C’est le <b>diagramme en secteurs<\/b> (le camembert). Les colonnes servent aux classes, les lignes brisées à une évolution dans le temps.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse a<\/b> - La marque est un caractère <b>qualitatif<\/b> : le diagramme en secteurs (ou en bâtons) convient. Les colonnes sont pour les classes, les lignes brisées pour une évolution dans le temps.<\/p><\/div><\/div><\/div><\/div><\/section>"}, {"id": "s1-1/Ex. 1", "t": "Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.", "num": "Ex. 1", "tt": "Associer chaque type de diagramme à la représentation graphique correspondante.", "h": "<section class=\"exo\" data-exo=\"ex01\"><div class=\"exo-h\"><span class=\"exo-t\">Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.<\/span><span class=\"etat cor\">corrigé<\/span><\/div><div class=\"exo-c\"><p class=\"en-i\">Diagramme en bâtons · diagramme en secteurs · diagramme à lignes brisées · diagramme en colonnes.<\/p><div class=\"asg\"><div class=\"asi\"><span class=\"asl\">a.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"157.0\" x2=\"314\" y2=\"157.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"161.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"125.2\" x2=\"314\" y2=\"125.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"129.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">3<\/text><line x1=\"42\" y1=\"93.5\" x2=\"314\" y2=\"93.5\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"97.5\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"61.8\" x2=\"314\" y2=\"61.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"65.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">9<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">12<\/text><line x1=\"42\" y1=\"157\" x2=\"314\" y2=\"157\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Temps de trajet des élèves (en min)<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"42.5\" y=\"114.7\" width=\"53.4\" height=\"42.3\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"69.2\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 69.2 168.0)\" text-anchor=\"end\">[0 ; 10[<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"96.9\" y=\"40.6\" width=\"53.4\" height=\"116.4\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"123.6\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 123.6 168.0)\" text-anchor=\"end\">[10 ; 20[<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"151.3\" y=\"72.3\" width=\"53.4\" height=\"84.7\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"178.0\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 178.0 168.0)\" text-anchor=\"end\">[20 ; 30[<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"205.7\" y=\"104.1\" width=\"53.4\" height=\"52.9\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"232.4\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 232.4 168.0)\" text-anchor=\"end\">[30 ; 40[<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"260.1\" y=\"135.8\" width=\"53.4\" height=\"21.2\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"286.8\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 286.8 168.0)\" text-anchor=\"end\">[40 ; 50[<\/text><\/svg><p class=\"asr\">Diagramme en colonnes<\/p><\/div><div class=\"asi\"><span class=\"asl\">b.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">5<\/text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">15<\/text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">20<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">25<\/text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Température moyenne du mois (en °C)<\/text><path class=\"gl\" pathLength=\"1\" d=\"M 80.9 146.3 L 119.7 140.2 L 158.6 115.7 L 197.4 91.2 L 236.3 66.7 L 275.1 48.4\" fill=\"none\" stroke=\"#7C4BD8\" stroke-width=\"2.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle class=\"gd\" style=\"animation-delay:600ms\" cx=\"80.9\" cy=\"146.3\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:660ms\" cx=\"119.7\" cy=\"140.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:720ms\" cx=\"158.6\" cy=\"115.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:780ms\" cx=\"197.4\" cy=\"91.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:840ms\" cx=\"236.3\" cy=\"66.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:900ms\" cx=\"275.1\" cy=\"48.4\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><text x=\"80.9\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Jan<\/text><text x=\"119.7\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Fév<\/text><text x=\"158.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mars<\/text><text x=\"197.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Avr<\/text><text x=\"236.3\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mai<\/text><text x=\"275.1\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Juin<\/text><\/svg><p class=\"asr\">Diagramme à lignes brisées<\/p><\/div><div class=\"asi\"><span class=\"asl\">c.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Nombre de frères et sœurs<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"57.8\" y=\"75.9\" width=\"22.8\" height=\"107.1\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"69.2\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">0<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"112.2\" y=\"45.3\" width=\"22.8\" height=\"137.7\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"123.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">1<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"166.6\" y=\"106.5\" width=\"22.8\" height=\"76.5\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"178.0\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">2<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"221.0\" y=\"152.4\" width=\"22.8\" height=\"30.6\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"232.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">3<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"275.4\" y=\"167.7\" width=\"22.8\" height=\"15.3\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"286.8\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">4<\/text><\/svg><p class=\"asr\">Diagramme en bâtons<\/p><\/div><div class=\"asi\"><span class=\"asl\">d.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><text class=\"gt\" x=\"165\" y=\"16\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Moyen de transport pour venir au lycée<\/text><g class=\"gp\" style=\"transform-origin:94.9px 120.5px\"><path class=\"sl\" d=\"M 94.9 120.5 L 94.9 33.6 A 86.9 86.9 0 0 1 156.4 182.0 Z\" fill=\"#00A5BF\"/><text x=\"144.7\" y=\"99.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">38 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 156.4 182.0 A 86.9 86.9 0 0 1 19.6 164.0 Z\" fill=\"#8FBE1F\"/><text x=\"87.9\" y=\"173.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">29 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 19.6 164.0 A 86.9 86.9 0 0 1 33.5 59.0 Z\" fill=\"#FFB627\"/><text x=\"41.5\" y=\"113.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">21 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 33.5 59.0 A 86.9 86.9 0 0 1 94.9 33.6 Z\" fill=\"#7C4BD8\"/><text x=\"74.3\" y=\"70.7\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">12 %<\/text><\/g><rect x=\"207.88\" y=\"82\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#00A5BF\"/><text x=\"225.88\" y=\"92\" font-size=\"12\" fill=\"#0d1a22\">Bus<\/text><rect x=\"207.88\" y=\"102\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#8FBE1F\"/><text x=\"225.88\" y=\"112\" font-size=\"12\" fill=\"#0d1a22\">À pied<\/text><rect x=\"207.88\" y=\"122\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#FFB627\"/><text x=\"225.88\" y=\"132\" font-size=\"12\" fill=\"#0d1a22\">Voiture<\/text><rect x=\"207.88\" y=\"142\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#7C4BD8\"/><text x=\"225.88\" y=\"152\" font-size=\"12\" fill=\"#0d1a22\">Vélo<\/text><\/svg><p class=\"asr\">Diagramme en secteurs<\/p><\/div><\/div><\/div><\/section>"}, {"id": "s1-1/Ex. 2", "t": "Ex. 2 - Les notes de mathématiques de 20 élèves sont les suivantes :", "num": "Ex. 2", "tt": "Les notes de mathématiques de 20 élèves sont les suivantes :", "h": null}]}, {"sq": 1, "n": 2, "titre": "Effectifs et fréquences", "sqt": "Recueillir et organiser des données statistiques", "c": "#5b3fa8", "f": "#efecf6", "exos": [{"id": "s1-2/Ex. 3", "t": "Ex. 3 - On recense dans un immeuble les différents types de logements occupés par les locataires.", "num": "Ex. 3", "tt": "On recense dans un immeuble les différents types de logements occupés par les locataires.", "h": null}, {"id": "s1-2/Ex. 4", "t": "Ex. 4 - Compléter le tableau suivant :", "num": "Ex. 4", "tt": "Compléter le tableau suivant :", "h": null}]}, {"sq": 1, "n": 3, "titre": "Exercices 5 et 6", "sqt": "Recueillir et organiser des données statistiques", "c": "#2f7d32", "f": "#eaf2ea", "exos": [{"id": "s1-3/Ex. 5", "t": "Ex. 5 - Nature, jardin, paysage, forêt", "num": "Ex. 5", "tt": "Nature, jardin, paysage, forêt", "h": null}, {"id": "s1-3/Ex. 6", "t": "Ex. 6 - Développement durable", "num": "Ex. 6", "tt": "Développement durable", "h": null}]}, {"sq": 2, "n": 1, "titre": "Les quatre diagrammes", "sqt": "Choisir un mode de représentation adapté", "c": "#b5541a", "f": "#f8eee8", "exos": [{"id": "s2-1/Ex. 7", "t": "Ex. 7 - Pour chacun des caractères suivants, donner sa nature et le type de diagramme qui peut le représenter.", "num": "Ex. 7", "tt": "Pour chacun des caractères suivants, donner sa nature et le type de diagramme qui peut le représenter.", "h": null}, {"id": "s2-1/Ex. 8", "t": "Ex. 8 - On interroge les 28 élèves d’une classe de 2<sup>de<\/sup> sur le nombre de SMS qu’ils envoient par jour.", "num": "Ex. 8", "tt": "On interroge les 28 élèves d’une classe de 2<sup>de<\/sup> sur le nombre de SMS qu’ils envoient par jour.", "h": null}]}, {"sq": 2, "n": 2, "titre": "Cote de popularité", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "f": "#f6e8ef", "exos": [{"id": "s2-2/Ex. 9", "t": "Ex. 9 - Chaque fin de mois, un institut de sondages publie la cote de popularité d’un champion sportif.", "num": "Ex. 9", "tt": "Chaque fin de mois, un institut de sondages publie la cote de popularité d’un champion sportif.", "h": null}]}, {"sq": 2, "n": 3, "titre": "Activité A - Une boutique de mode", "sqt": "Choisir un mode de représentation adapté", "c": "#6d28d9", "f": "#f0eafb", "exos": [{"id": "s2-3/Activité A", "t": "Activité A - Une boutique de mode", "num": "Activité A", "tt": "Une boutique de mode", "h": null}]}, {"sq": 2, "n": 4, "titre": "Exercices 10 et 11", "sqt": "Choisir un mode de représentation adapté", "c": "#0b5cab", "f": "#e7eff7", "exos": [{"id": "s2-4/Ex. 10", "t": "Ex. 10 - On étudie la couleur préférée des coques de smartphone des élèves d’une classe.", "num": "Ex. 10", "tt": "On étudie la couleur préférée des coques de smartphone des élèves d’une classe.", "h": null}, {"id": "s2-4/Ex. 11", "t": "Ex. 11 - On étudie le nombre d’entrées mensuelles que réalise une salle de cinéma.", "num": "Ex. 11", "tt": "On étudie le nombre d’entrées mensuelles que réalise une salle de cinéma.", "h": null}]}, {"sq": 2, "n": 5, "titre": "Exercice 12 - Les adoptions à la SPA", "sqt": "Choisir un mode de représentation adapté", "c": "#7a6100", "f": "#f2efe6", "exos": [{"id": "s2-5/Ex. 12", "t": "Ex. 12 - Les adoptions d’animaux dans les refuges SPA", "num": "Ex. 12", "tt": "Les adoptions d’animaux dans les refuges SPA", "h": null}]}, {"sq": 2, "n": 6, "titre": "Regrouper par classes", "sqt": "Choisir un mode de représentation adapté", "c": "#007a5e", "f": "#e6f2ef", "exos": [{"id": "s2-6/App. 1", "t": "App. 1 - L’âge des 30 participants à une compétition sportive est le suivant :", "num": "App. 1", "tt": "L’âge des 30 participants à une compétition sportive est le suivant :", "h": null}, {"id": "s2-6/App. 2", "t": "App. 2 - Compléter le tableau ci-dessous :", "num": "App. 2", "tt": "Compléter le tableau ci-dessous :", "h": null}]}, {"sq": 2, "n": 7, "titre": "Activité B - Les jeux vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#9a3412", "f": "#f5ebe7", "exos": [{"id": "s2-7/Activité B", "t": "Activité B - Les habitudes et les préférences dans les jeux vidéo", "num": "Activité B", "tt": "Les habitudes et les préférences dans les jeux vidéo", "h": null}]}, {"sq": 2, "n": 8, "titre": "Exercice 13 - Les casquettes", "sqt": "Choisir un mode de représentation adapté", "c": "#00778a", "f": "#e6f1f3", "exos": [{"id": "s2-8/Ex. 13", "t": "Ex. 13 - David, collectionneur de casquettes, a relevé le prix, en euro, de vingt casquettes dans différents magasins.", "num": "Ex. 13", "tt": "David, collectionneur de casquettes, a relevé le prix, en euro, de vingt casquettes dans différents magasins.", "h": null}]}, {"sq": 2, "n": 9, "titre": "Exercice 14 - Le profil des vues d’une vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#334155", "f": "#ebecee", "exos": [{"id": "s2-9/Ex. 14", "t": "Ex. 14 - Le profil des utilisateurs ayant visionné la vidéo la plus vue de l’année", "num": "Ex. 14", "tt": "Le profil des utilisateurs ayant visionné la vidéo la plus vue de l’année", "h": null}]}, {"sq": 2, "n": 10, "titre": "Cap vers le CCF - Les subventions du club", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "f": "#f6e8ef", "exos": [{"id": "s2-10/Cap vers le CCF", "t": "Cap vers le CCF - Partie A - Demande de subventions liées aux licenciés du club", "num": "Cap vers le CCF", "tt": "Partie A - Demande de subventions liées aux licenciés du club", "h": null}]}];
-var vch = document.getElementById("vch"), vsc = document.getElementById("vsc");
+var SC = [{"sq": 1, "n": 1, "titre": "Vocabulaire et premiers relevés", "sqt": "Recueillir et organiser des données statistiques", "c": "#00778a", "f": "#e6f1f3", "exos": [{"id": "s1-1/QCM", "num": "", "lb": "Avant de commencer", "tc": "Évaluation diagnostique", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbecef\"/><g fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"26\" y=\"20\" width=\"24\" height=\"24\" rx=\"6\"/><rect x=\"26\" y=\"52\" width=\"24\" height=\"24\" rx=\"6\"/><\/g><rect x=\"26\" y=\"84\" width=\"24\" height=\"24\" rx=\"6\" fill=\"#00778a\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 96 l6 7 12 -15\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#22323b\" opacity=\".55\"><path d=\"M64 32 H134\"/><path d=\"M64 64 H120\"/><\/g><path d=\"M64 96 H134\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#00778a\"/><\/svg>", "h": "<section class=\"exo\" data-exo=\"diag\"><div class=\"exo-h\"><span class=\"exo-t\">Évaluation diagnostique<\/span><span class=\"etat cor\">corrigé<\/span><\/div><div class=\"exo-c\"><p class=\"en-i\">Trois questions.<br>Une seule bonne réponse par question.<br>Cliquer sur la réponse choisie.<\/p><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">1.<\/span> <span class=\"cmp\">S’approprier<\/span> <b>Indiquer<\/b> le type de ce diagramme.<\/span><\/div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse<\/text><\/svg><\/div><ul class=\"qcm\"><li><span class=\"l\">a<\/span><span class=\"t\">un diagramme en secteurs<\/span><\/li><li class=\"bon\"><span class=\"l\">b<\/span><span class=\"t\">un diagramme en bâtons<\/span><\/li><li><span class=\"l\">c<\/span><span class=\"t\">un diagramme en colonnes<\/span><\/li><li><span class=\"l\">d<\/span><span class=\"t\">un diagramme à lignes brisées<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q1_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Je regarde la <b>forme<\/b> : ce sont des barres verticales.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Je regarde si elles se touchent : ici elles sont <b>séparées<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>Barres séparées = <b>diagramme en bâtons<\/b>. Collées, ce serait un diagramme en colonnes.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q1\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse b<\/b> - Les bâtons sont <b>séparés<\/b> les uns des autres : c’est un diagramme en bâtons. S’ils étaient collés, ce serait un diagramme en colonnes, réservé aux valeurs regroupées par classes.<\/p><\/div><\/div><\/div><div class=\"q zh\" data-qcap=\"C3\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">2.<\/span> <span class=\"cmp\">S’approprier<\/span> <b>Relever<\/b> le nombre d’élèves qui pratiquent le basket.<\/span><\/div><div class=\"qdoc\"><svg class=\"gr\" viewBox=\"0 0 340 190\" role=\"img\"><line x1=\"42\" y1=\"158.0\" x2=\"324\" y2=\"158.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"162.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"132.4\" x2=\"324\" y2=\"132.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"136.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"106.8\" x2=\"324\" y2=\"106.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"110.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"81.2\" x2=\"324\" y2=\"81.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"85.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"55.6\" x2=\"324\" y2=\"55.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"59.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"324\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"158\" x2=\"324\" y2=\"158\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"170\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Sport pratiqué par les élèves d’une classe<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"58.4\" y=\"55.6\" width=\"23.7\" height=\"102.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"70.2\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Foot<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"114.8\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"126.6\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Basket<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"171.2\" y=\"132.4\" width=\"23.7\" height=\"25.6\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"183.0\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Hand<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"227.6\" y=\"119.6\" width=\"23.7\" height=\"38.4\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"239.4\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Volley<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"284.0\" y=\"81.2\" width=\"23.7\" height=\"76.8\" fill=\"#00A5BF\" rx=\"3\"/><text x=\"295.8\" y=\"173.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Danse<\/text><\/svg><\/div><ul class=\"qcm\"><li><span class=\"l\">a<\/span><span class=\"t\">2 élèves<\/span><\/li><li><span class=\"l\">b<\/span><span class=\"t\">3 élèves<\/span><\/li><li class=\"bon\"><span class=\"l\">c<\/span><span class=\"t\">6 élèves<\/span><\/li><li><span class=\"l\">d<\/span><span class=\"t\">8 élèves<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q2_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Je repère le bâton « Basket » sur l’axe horizontal.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Je remonte jusqu’en haut du bâton.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>Je lis la valeur en face sur l’axe vertical : <b>6 élèves<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q2\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse c<\/b> - On lit la hauteur du bâton « Basket » sur l’axe vertical : <b>6 élèves<\/b>.<\/p><\/div><\/div><\/div><div class=\"q zh\" data-qcap=\"C2\"><div class=\"q-h\"><span class=\"q-n\"><span class=\"qn\">3.<\/span> <span class=\"cmp\">Analyser<\/span> <b>Choisir<\/b> le diagramme le plus adapté pour représenter la marque de smartphone préférée des élèves.<\/span><\/div><ul class=\"qcm\"><li class=\"bon\"><span class=\"l\">a<\/span><span class=\"t\">un diagramme en secteurs<\/span><\/li><li><span class=\"l\">b<\/span><span class=\"t\">un diagramme en colonnes<\/span><\/li><li><span class=\"l\">c<\/span><span class=\"t\">un diagramme à lignes brisées<\/span><\/li><\/ul><div class=\"rep\" data-k=\"diag_q3_e1\"><button type=\"button\" class=\"lb\">Étape 1<\/button><div class=\"rc\"><p>Quelle est la <b>nature du caractère<\/b> ? Une marque n’est pas un nombre : il est <b>qualitatif<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3_e2\"><button type=\"button\" class=\"lb\">Étape 2<\/button><div class=\"rc\"><p>Pour un caractère qualitatif on montre des <b>parts d’un tout<\/b>.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3_e3\"><button type=\"button\" class=\"lb\">Étape 3<\/button><div class=\"rc\"><p>C’est le <b>diagramme en secteurs<\/b> (le camembert). Les colonnes servent aux classes, les lignes brisées à une évolution dans le temps.<\/p><\/div><\/div><div class=\"rep\" data-k=\"diag_q3\"><button type=\"button\" class=\"lb\">Réponse<\/button><div class=\"rc\"><p><b>Réponse a<\/b> - La marque est un caractère <b>qualitatif<\/b> : le diagramme en secteurs (ou en bâtons) convient. Les colonnes sont pour les classes, les lignes brisées pour une évolution dans le temps.<\/p><\/div><\/div><\/div><\/div><\/section>"}, {"id": "s1-1/Ex. 1", "num": "Ex. 1", "lb": "Ex. 1", "tc": "Associer les diagrammes", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbecef\"/><g fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"18\" y=\"22\" width=\"40\" height=\"30\" rx=\"7\"/><rect x=\"18\" y=\"66\" width=\"40\" height=\"30\" rx=\"7\"/><rect x=\"102\" y=\"22\" width=\"40\" height=\"30\" rx=\"7\"/><rect x=\"102\" y=\"66\" width=\"40\" height=\"30\" rx=\"7\"/><\/g><g fill=\"none\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#00778a\"><path d=\"M58 37 H102\"/><path d=\"M58 81 H102\"/><\/g><g fill=\"#00778a\"><circle cx=\"58\" cy=\"37\" r=\"6\"/><circle cx=\"102\" cy=\"37\" r=\"6\"/><circle cx=\"58\" cy=\"81\" r=\"6\"/><circle cx=\"102\" cy=\"81\" r=\"6\"/><\/g><\/svg>", "h": "<section class=\"exo\" data-exo=\"ex01\"><div class=\"exo-h\"><span class=\"exo-t\">Ex. 1 - Associer chaque type de diagramme à la représentation graphique correspondante.<\/span><span class=\"etat cor\">corrigé<\/span><\/div><div class=\"exo-c\"><p class=\"en-i\">Diagramme en bâtons · diagramme en secteurs · diagramme à lignes brisées · diagramme en colonnes.<\/p><div class=\"asg\"><div class=\"asi\"><span class=\"asl\">a.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"157.0\" x2=\"314\" y2=\"157.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"161.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"125.2\" x2=\"314\" y2=\"125.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"129.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">3<\/text><line x1=\"42\" y1=\"93.5\" x2=\"314\" y2=\"93.5\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"97.5\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"61.8\" x2=\"314\" y2=\"61.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"65.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">9<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">12<\/text><line x1=\"42\" y1=\"157\" x2=\"314\" y2=\"157\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Temps de trajet des élèves (en min)<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"42.5\" y=\"114.7\" width=\"53.4\" height=\"42.3\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"69.2\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 69.2 168.0)\" text-anchor=\"end\">[0 ; 10[<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"96.9\" y=\"40.6\" width=\"53.4\" height=\"116.4\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"123.6\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 123.6 168.0)\" text-anchor=\"end\">[10 ; 20[<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"151.3\" y=\"72.3\" width=\"53.4\" height=\"84.7\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"178.0\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 178.0 168.0)\" text-anchor=\"end\">[20 ; 30[<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"205.7\" y=\"104.1\" width=\"53.4\" height=\"52.9\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"232.4\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 232.4 168.0)\" text-anchor=\"end\">[30 ; 40[<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"260.1\" y=\"135.8\" width=\"53.4\" height=\"21.2\" fill=\"#00A5BF\" rx=\"2\"/><text x=\"286.8\" y=\"168.0\" font-size=\"10\" fill=\"#5d707b\" transform=\"rotate(-36 286.8 168.0)\" text-anchor=\"end\">[40 ; 50[<\/text><\/svg><p class=\"asr\">Diagramme en colonnes<\/p><\/div><div class=\"asi\"><span class=\"asl\">b.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">5<\/text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">15<\/text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">20<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">25<\/text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Température moyenne du mois (en °C)<\/text><path class=\"gl\" pathLength=\"1\" d=\"M 80.9 146.3 L 119.7 140.2 L 158.6 115.7 L 197.4 91.2 L 236.3 66.7 L 275.1 48.4\" fill=\"none\" stroke=\"#7C4BD8\" stroke-width=\"2.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle class=\"gd\" style=\"animation-delay:600ms\" cx=\"80.9\" cy=\"146.3\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:660ms\" cx=\"119.7\" cy=\"140.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:720ms\" cx=\"158.6\" cy=\"115.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:780ms\" cx=\"197.4\" cy=\"91.2\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:840ms\" cx=\"236.3\" cy=\"66.7\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><circle class=\"gd\" style=\"animation-delay:900ms\" cx=\"275.1\" cy=\"48.4\" r=\"3.6\" fill=\"#fff\" stroke=\"#7C4BD8\" stroke-width=\"2.4\"/><text x=\"80.9\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Jan<\/text><text x=\"119.7\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Fév<\/text><text x=\"158.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mars<\/text><text x=\"197.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Avr<\/text><text x=\"236.3\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Mai<\/text><text x=\"275.1\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">Juin<\/text><\/svg><p class=\"asr\">Diagramme à lignes brisées<\/p><\/div><div class=\"asi\"><span class=\"asl\">c.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><line x1=\"42\" y1=\"183.0\" x2=\"314\" y2=\"183.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"187.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">0<\/text><line x1=\"42\" y1=\"152.4\" x2=\"314\" y2=\"152.4\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"156.4\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">2<\/text><line x1=\"42\" y1=\"121.8\" x2=\"314\" y2=\"121.8\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"125.8\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">4<\/text><line x1=\"42\" y1=\"91.2\" x2=\"314\" y2=\"91.2\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"95.2\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">6<\/text><line x1=\"42\" y1=\"60.6\" x2=\"314\" y2=\"60.6\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"64.6\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">8<\/text><line x1=\"42\" y1=\"30.0\" x2=\"314\" y2=\"30.0\" stroke=\"#dbe4e9\" stroke-width=\"1\"/><text x=\"33\" y=\"34.0\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5d707b\">10<\/text><line x1=\"42\" y1=\"183\" x2=\"314\" y2=\"183\" stroke=\"#5d707b\" stroke-width=\"1.5\"/><text class=\"gt\" x=\"165\" y=\"17\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Nombre de frères et sœurs<\/text><rect class=\"gb\" style=\"animation-delay:0ms\" x=\"57.8\" y=\"75.9\" width=\"22.8\" height=\"107.1\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"69.2\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">0<\/text><rect class=\"gb\" style=\"animation-delay:70ms\" x=\"112.2\" y=\"45.3\" width=\"22.8\" height=\"137.7\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"123.6\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">1<\/text><rect class=\"gb\" style=\"animation-delay:140ms\" x=\"166.6\" y=\"106.5\" width=\"22.8\" height=\"76.5\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"178.0\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">2<\/text><rect class=\"gb\" style=\"animation-delay:210ms\" x=\"221.0\" y=\"152.4\" width=\"22.8\" height=\"30.6\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"232.4\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">3<\/text><rect class=\"gb\" style=\"animation-delay:280ms\" x=\"275.4\" y=\"167.7\" width=\"22.8\" height=\"15.3\" fill=\"#FF6B5B\" rx=\"3\"/><text x=\"286.8\" y=\"198.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5d707b\">4<\/text><\/svg><p class=\"asr\">Diagramme en bâtons<\/p><\/div><div class=\"asi\"><span class=\"asl\">d.<\/span><svg class=\"gr\" viewBox=\"0 0 330 215\" role=\"img\"><text class=\"gt\" x=\"165\" y=\"16\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"600\" fill=\"#0d1a22\">Moyen de transport pour venir au lycée<\/text><g class=\"gp\" style=\"transform-origin:94.9px 120.5px\"><path class=\"sl\" d=\"M 94.9 120.5 L 94.9 33.6 A 86.9 86.9 0 0 1 156.4 182.0 Z\" fill=\"#00A5BF\"/><text x=\"144.7\" y=\"99.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">38 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 156.4 182.0 A 86.9 86.9 0 0 1 19.6 164.0 Z\" fill=\"#8FBE1F\"/><text x=\"87.9\" y=\"173.9\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">29 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 19.6 164.0 A 86.9 86.9 0 0 1 33.5 59.0 Z\" fill=\"#FFB627\"/><text x=\"41.5\" y=\"113.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0d1a22\">21 %<\/text><path class=\"sl\" d=\"M 94.9 120.5 L 33.5 59.0 A 86.9 86.9 0 0 1 94.9 33.6 Z\" fill=\"#7C4BD8\"/><text x=\"74.3\" y=\"70.7\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"13.5\" font-weight=\"700\" fill=\"#fff\">12 %<\/text><\/g><rect x=\"207.88\" y=\"82\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#00A5BF\"/><text x=\"225.88\" y=\"92\" font-size=\"12\" fill=\"#0d1a22\">Bus<\/text><rect x=\"207.88\" y=\"102\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#8FBE1F\"/><text x=\"225.88\" y=\"112\" font-size=\"12\" fill=\"#0d1a22\">À pied<\/text><rect x=\"207.88\" y=\"122\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#FFB627\"/><text x=\"225.88\" y=\"132\" font-size=\"12\" fill=\"#0d1a22\">Voiture<\/text><rect x=\"207.88\" y=\"142\" width=\"11\" height=\"11\" rx=\"3\" fill=\"#7C4BD8\"/><text x=\"225.88\" y=\"152\" font-size=\"12\" fill=\"#0d1a22\">Vélo<\/text><\/svg><p class=\"asr\">Diagramme en secteurs<\/p><\/div><\/div><\/div><\/section>"}, {"id": "s1-1/Vocabulaire", "num": "", "lb": "À retenir", "tc": "Vocabulaire", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbecef\"/><path d=\"M80 34 C 64 22, 42 22, 24 28 v62 c18 -6, 40 -6, 56 6 z\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 34 C 96 22, 118 22, 136 28 v62 c-18 -6, -40 -6, -56 6 z\" fill=\"#00778a\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 34 V96\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#22323b\" opacity=\".5\"><path d=\"M36 44 H66\"/><path d=\"M36 58 H66\"/><\/g><\/svg>", "h": null}, {"id": "s1-1/Ex. 2", "num": "Ex. 2", "lb": "Ex. 2", "tc": "Les notes de la classe", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbecef\"/><rect x=\"26\" y=\"16\" width=\"78\" height=\"88\" rx=\"9\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 36 H104\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#00778a\"><path d=\"M42 54 H88\"/><path d=\"M42 70 H88\"/><path d=\"M42 86 H72\"/><\/g><path d=\"M112 30 l18 18 -44 44 -24 6 6 -24 z\" fill=\"#00778a\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}]}, {"sq": 1, "n": 2, "titre": "Effectifs et fréquences", "sqt": "Recueillir et organiser des données statistiques", "c": "#5b3fa8", "f": "#efecf6", "exos": [{"id": "s1-2/Ex. 3", "num": "Ex. 3", "lb": "Ex. 3", "tc": "Les logements de l’immeuble", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#e8e4f3\"/><path d=\"M36 104 V30 h56 v74\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M92 104 V54 h34 v50\" fill=\"#5b3fa8\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#5b3fa8\"><rect x=\"48\" y=\"42\" width=\"14\" height=\"14\" rx=\"3\"/><rect x=\"68\" y=\"42\" width=\"14\" height=\"14\" rx=\"3\"/><rect x=\"48\" y=\"64\" width=\"14\" height=\"14\" rx=\"3\"/><rect x=\"68\" y=\"64\" width=\"14\" height=\"14\" rx=\"3\"/><\/g><g fill=\"#fff\"><rect x=\"102\" y=\"66\" width=\"14\" height=\"14\" rx=\"3\"/><\/g><path d=\"M22 104 H142\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}, {"id": "s1-2/Ex. 4", "num": "Ex. 4", "lb": "Ex. 4", "tc": "Effectifs et fréquences", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#e8e4f3\"/><rect x=\"20\" y=\"24\" width=\"120\" height=\"72\" rx=\"9\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"20\" y=\"24\" width=\"120\" height=\"20\" rx=\"9\" fill=\"#5b3fa8\"/><rect x=\"20\" y=\"34\" width=\"120\" height=\"10\" fill=\"#5b3fa8\"/><g stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 44 H140\"/><path d=\"M20 70 H140\"/><path d=\"M60 24 V96\"/><path d=\"M100 24 V96\"/><\/g><rect x=\"100\" y=\"44\" width=\"40\" height=\"26\" fill=\"#EAF6EC\"/><rect x=\"60\" y=\"70\" width=\"40\" height=\"26\" fill=\"#EAF6EC\"/><rect x=\"20\" y=\"24\" width=\"120\" height=\"72\" rx=\"9\" fill=\"none\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}]}, {"sq": 1, "n": 3, "titre": "Exercices 5 et 6", "sqt": "Recueillir et organiser des données statistiques", "c": "#2f7d32", "f": "#eaf2ea", "exos": [{"id": "s1-3/Ex. 5", "num": "Ex. 5", "lb": "Ex. 5", "tc": "Nature, jardin, paysage, forêt", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#e2ede2\"/><path d=\"M50 78 L34 78 L50 54 L42 54 L58 28 L74 54 L66 54 L82 78 L66 78 Z\" fill=\"#2f7d32\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58 78 V98\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M104 84 a20 20 0 1 1 0.1 0 Z\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M104 84 V102\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M128 96 a13 13 0 1 1 0.1 0 Z\" fill=\"#2f7d32\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 102 H142\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}, {"id": "s1-3/Ex. 6", "num": "Ex. 6", "lb": "Ex. 6", "tc": "Développement durable", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#e2ede2\"/><circle cx=\"80\" cy=\"60\" r=\"38\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"none\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#2f7d32\"><path d=\"M42 60 H118\"/><path d=\"M80 22 a30 38 0 0 1 0 76 a30 38 0 0 1 0 -76\"/><\/g><path d=\"M80 92 V60\" fill=\"none\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 66 C 80 52, 90 44, 104 42 C 104 58, 94 66, 80 66 Z\" fill=\"#2f7d32\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 74 C 80 62, 71 55, 58 54 C 58 68, 67 74, 80 74 Z\" fill=\"#2f7d32\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}]}, {"sq": 2, "n": 1, "titre": "Les quatre diagrammes", "sqt": "Choisir un mode de représentation adapté", "c": "#b5541a", "f": "#f8eee8", "exos": [{"id": "s2-1/Les quatre diagrammes", "num": "", "lb": "À retenir", "tc": "Les quatre diagrammes", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#f5e7df\"/><g stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"#fff\"><rect x=\"18\" y=\"20\" width=\"56\" height=\"38\" rx=\"7\"/><rect x=\"86\" y=\"20\" width=\"56\" height=\"38\" rx=\"7\"/><rect x=\"18\" y=\"66\" width=\"56\" height=\"38\" rx=\"7\"/><rect x=\"86\" y=\"66\" width=\"56\" height=\"38\" rx=\"7\"/><\/g><g fill=\"#b5541a\"><rect x=\"28\" y=\"38\" width=\"8\" height=\"14\"/><rect x=\"40\" y=\"30\" width=\"8\" height=\"22\"/><rect x=\"52\" y=\"34\" width=\"8\" height=\"18\"/><\/g><circle cx=\"114\" cy=\"39\" r=\"13\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"4\"/><path d=\"M114 39 L114 26 A13 13 0 0 1 125 46 Z\" fill=\"#b5541a\"/><path d=\"M26 96 L38 80 L50 90 L66 74\" fill=\"none\" stroke=\"#b5541a\" stroke-width=\"5\" stroke-linecap=\"round\"/><g fill=\"#b5541a\"><rect x=\"96\" y=\"82\" width=\"10\" height=\"16\"/><rect x=\"106\" y=\"74\" width=\"10\" height=\"24\"/><rect x=\"116\" y=\"86\" width=\"10\" height=\"12\"/><\/g><\/svg>", "h": null}, {"id": "s2-1/Ex. 7", "num": "Ex. 7", "lb": "Ex. 7", "tc": "Nature et type de diagramme", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#f5e7df\"/><rect x=\"18\" y=\"26\" width=\"76\" height=\"62\" rx=\"9\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#b5541a\"><rect x=\"30\" y=\"58\" width=\"12\" height=\"20\"/><rect x=\"46\" y=\"44\" width=\"12\" height=\"34\"/><rect x=\"62\" y=\"52\" width=\"12\" height=\"26\"/><\/g><circle cx=\"104\" cy=\"56\" r=\"26\" fill=\"#fff\" fill-opacity=\".85\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M123 75 L138 92\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#b5541a\"/><\/svg>", "h": null}, {"id": "s2-1/Ex. 8", "num": "Ex. 8", "lb": "Ex. 8", "tc": "Les SMS de la classe", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#f5e7df\"/><rect x=\"24\" y=\"16\" width=\"58\" height=\"90\" rx=\"12\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"53\" cy=\"94\" r=\"5\" fill=\"#b5541a\"/><path d=\"M70 30 H136 a8 8 0 0 1 8 8 v28 a8 8 0 0 1 -8 8 H100 l-14 14 v-14 h-16 a8 8 0 0 1 -8 -8 v-28 a8 8 0 0 1 8 -8 z\" fill=\"#b5541a\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#fff\"><circle cx=\"90\" cy=\"52\" r=\"5\"/><circle cx=\"106\" cy=\"52\" r=\"5\"/><circle cx=\"122\" cy=\"52\" r=\"5\"/><\/g><\/svg>", "h": null}]}, {"sq": 2, "n": 2, "titre": "Cote de popularité", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "f": "#f6e8ef", "exos": [{"id": "s2-2/Ex. 9", "num": "Ex. 9", "lb": "Ex. 9", "tc": "Cote de popularité", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#f3dfe8\"/><g stroke=\"#22323b\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M26 94 H138\"/><path d=\"M26 94 V20\"/><\/g><path d=\"M34 82 L60 66 L86 72 L116 34\" fill=\"none\" stroke=\"#a8185b\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#a8185b\" stroke=\"#22323b\" stroke-width=\"3.5\"><circle cx=\"60\" cy=\"66\" r=\"6\"/><circle cx=\"86\" cy=\"72\" r=\"6\"/><circle cx=\"116\" cy=\"34\" r=\"6\"/><\/g><\/svg>", "h": null}]}, {"sq": 2, "n": 3, "titre": "Activité A - Une boutique de mode", "sqt": "Choisir un mode de représentation adapté", "c": "#6d28d9", "f": "#f0eafb", "exos": [{"id": "s2-3/Activité A", "num": "Activité A", "lb": "Activité A", "tc": "Une boutique de mode", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#ebe1fa\"/><path d=\"M40 38 H120 l-8 62 a8 8 0 0 1 -8 7 H56 a8 8 0 0 1 -8 -7 z\" fill=\"#6d28d9\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 38 v-6 a16 16 0 0 1 32 0 v6\" fill=\"none\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M86 60 h30 a7 7 0 0 1 7 7 v16 a7 7 0 0 1 -7 7 h-30 l-13 -15 z\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"110\" cy=\"75\" r=\"5\" fill=\"#6d28d9\"/><\/svg>", "h": null}]}, {"sq": 2, "n": 4, "titre": "Exercices 10 et 11", "sqt": "Choisir un mode de représentation adapté", "c": "#0b5cab", "f": "#e7eff7", "exos": [{"id": "s2-4/Ex. 10", "num": "Ex. 10", "lb": "Ex. 10", "tc": "Les coques de smartphone", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dde8f3\"/><rect x=\"16\" y=\"24\" width=\"38\" height=\"72\" rx=\"10\" fill=\"#0b5cab\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"62\" y=\"16\" width=\"38\" height=\"88\" rx=\"11\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"108\" y=\"24\" width=\"38\" height=\"72\" rx=\"10\" fill=\"#0b5cab\" fill-opacity=\".45\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"81\" cy=\"34\" r=\"4\" fill=\"#0b5cab\"/><\/svg>", "h": null}, {"id": "s2-4/Ex. 11", "num": "Ex. 11", "lb": "Ex. 11", "tc": "La salle de cinéma", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dde8f3\"/><rect x=\"20\" y=\"16\" width=\"120\" height=\"58\" rx=\"9\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 32 L96 45 L66 58 Z\" fill=\"#0b5cab\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 106 v-14 a10 10 0 0 1 10 -10 h16 a10 10 0 0 1 10 10 v14 z\" fill=\"#0b5cab\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 106 v-14 a10 10 0 0 1 10 -10 h16 a10 10 0 0 1 10 10 v14 z\" fill=\"#0b5cab\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}]}, {"sq": 2, "n": 5, "titre": "Exercice 12 - Les adoptions à la SPA", "sqt": "Choisir un mode de représentation adapté", "c": "#7a6100", "f": "#f2efe6", "exos": [{"id": "s2-5/Ex. 12", "num": "Ex. 12", "lb": "Ex. 12", "tc": "Les adoptions à la SPA", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#ece9db\"/><path d=\"M80 104 C 30 74, 18 52, 30 36 C 44 18, 68 26, 80 44 C 92 26, 116 18, 130 36 C 142 52, 130 74, 80 104 Z\" fill=\"#7a6100\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#fff\"><ellipse cx=\"80\" cy=\"70\" rx=\"17\" ry=\"13\"/><ellipse cx=\"60\" cy=\"55\" rx=\"7\" ry=\"9\"/><ellipse cx=\"72\" cy=\"45\" rx=\"7\" ry=\"9\"/><ellipse cx=\"88\" cy=\"45\" rx=\"7\" ry=\"9\"/><ellipse cx=\"100\" cy=\"55\" rx=\"7\" ry=\"9\"/><\/g><\/svg>", "h": null}]}, {"sq": 2, "n": 6, "titre": "Regrouper par classes", "sqt": "Choisir un mode de représentation adapté", "c": "#007a5e", "f": "#e6f2ef", "exos": [{"id": "s2-6/Regrouper une série en classes", "num": "", "lb": "À retenir", "tc": "Regrouper une série en classes", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbece8\"/><g stroke=\"#22323b\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M22 94 H140\"/><path d=\"M22 94 V22\"/><\/g><g stroke=\"#22323b\" stroke-width=\"4.5\"><rect x=\"30\" y=\"70\" width=\"27\" height=\"24\" fill=\"#007a5e\" opacity=\".5\"/><rect x=\"57\" y=\"46\" width=\"27\" height=\"48\" fill=\"#007a5e\" opacity=\".72\"/><rect x=\"84\" y=\"32\" width=\"27\" height=\"62\" fill=\"#007a5e\"/><rect x=\"111\" y=\"60\" width=\"27\" height=\"34\" fill=\"#007a5e\" opacity=\".6\"/><\/g><\/svg>", "h": null}, {"id": "s2-6/App. 1", "num": "App. 1", "lb": "App. 1", "tc": "La compétition sportive", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbece8\"/><path d=\"M44 24 h72 v82 a6 6 0 0 1 -6 6 H50 a6 6 0 0 1 -6 -6 z\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 24 l-22 12 8 18 14 -8\" fill=\"#007a5e\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116 24 l22 12 -8 18 -14 -8\" fill=\"#007a5e\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#007a5e\"><rect x=\"58\" y=\"52\" width=\"10\" height=\"34\" rx=\"3\"/><rect x=\"76\" y=\"52\" width=\"26\" height=\"10\" rx=\"3\"/><rect x=\"92\" y=\"52\" width=\"10\" height=\"34\" rx=\"3\"/><\/g><\/svg>", "h": null}, {"id": "s2-6/App. 2", "num": "App. 2", "lb": "App. 2", "tc": "Le tableau des classes", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbece8\"/><rect x=\"20\" y=\"18\" width=\"120\" height=\"76\" rx=\"9\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"20\" y=\"18\" width=\"120\" height=\"20\" rx=\"9\" fill=\"#007a5e\"/><rect x=\"20\" y=\"28\" width=\"120\" height=\"10\" fill=\"#007a5e\"/><g fill=\"#EAF6EC\"><rect x=\"86\" y=\"38\" width=\"54\" height=\"18\"/><rect x=\"86\" y=\"56\" width=\"54\" height=\"19\"/><rect x=\"86\" y=\"75\" width=\"54\" height=\"19\"/><\/g><g stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 38 H140\"/><path d=\"M20 56 H140\"/><path d=\"M20 75 H140\"/><path d=\"M86 18 V94\"/><\/g><g fill=\"none\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#007a5e\"><path d=\"M36 42 v10 M32 42 h4 M32 52 h4 M68 42 v10 M68 42 h-4 M68 52 h-4\"/><path d=\"M36 61 v10 M32 61 h4 M32 71 h4 M68 61 v10 M68 61 h-4 M68 71 h-4\"/><path d=\"M36 80 v10 M32 80 h4 M32 90 h4 M68 80 v10 M68 80 h-4 M68 90 h-4\"/><\/g><rect x=\"20\" y=\"18\" width=\"120\" height=\"76\" rx=\"9\" fill=\"none\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}]}, {"sq": 2, "n": 7, "titre": "Activité B - Les jeux vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#9a3412", "f": "#f5ebe7", "exos": [{"id": "s2-7/Activité B", "num": "Activité B", "lb": "Activité B", "tc": "Les jeux vidéo", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#f1e3de\"/><path d=\"M44 36 H116 a26 26 0 0 1 22 40 l-8 14 a14 14 0 0 1 -24 -2 l-6 -12 H76 l-6 12 a14 14 0 0 1 -24 2 l-8 -14 a26 26 0 0 1 22 -40 z\" fill=\"#9a3412\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g stroke=\"#fff\" stroke-width=\"6\" stroke-linecap=\"round\"><path d=\"M56 58 H72\"/><path d=\"M64 50 V66\"/><\/g><g fill=\"#fff\"><circle cx=\"110\" cy=\"52\" r=\"5\"/><circle cx=\"122\" cy=\"62\" r=\"5\"/><\/g><\/svg>", "h": null}]}, {"sq": 2, "n": 8, "titre": "Exercice 13 - Les casquettes", "sqt": "Choisir un mode de représentation adapté", "c": "#00778a", "f": "#e6f1f3", "exos": [{"id": "s2-8/Ex. 13", "num": "Ex. 13", "lb": "Ex. 13", "tc": "Le prix des casquettes", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#dbecef\"/><path d=\"M36 62 a36 34 0 0 1 72 0 Z\" fill=\"#00778a\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M106 62 H136 a12 12 0 0 1 -12 12 H92 a24 24 0 0 0 14 -12 z\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72 28 V62\" fill=\"none\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"72\" cy=\"28\" r=\"6\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"4\"/><rect x=\"46\" y=\"84\" width=\"68\" height=\"20\" rx=\"10\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g fill=\"#00778a\"><rect x=\"56\" y=\"92\" width=\"22\" height=\"5\" rx=\"2.5\"/><circle cx=\"90\" cy=\"94\" r=\"4\"/><\/g><\/svg>", "h": null}]}, {"sq": 2, "n": 9, "titre": "Exercice 14 - Le profil des vues d’une vidéo", "sqt": "Choisir un mode de représentation adapté", "c": "#334155", "f": "#ebecee", "exos": [{"id": "s2-9/Ex. 14", "num": "Ex. 14", "lb": "Ex. 14", "tc": "Le profil des vues", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#e2e4e7\"/><rect x=\"18\" y=\"20\" width=\"124\" height=\"62\" rx=\"11\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 38 L96 51 L66 64 Z\" fill=\"#334155\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 94 H142\" stroke=\"#e2e2ea\" stroke-width=\"9\" stroke-linecap=\"round\"/><path d=\"M18 94 H100\" stroke=\"#334155\" stroke-width=\"9\" stroke-linecap=\"round\"/><circle cx=\"100\" cy=\"94\" r=\"9\" fill=\"#334155\" stroke=\"#22323b\" stroke-width=\"4\"/><\/svg>", "h": null}]}, {"sq": 2, "n": 10, "titre": "Cap vers le CCF - Les subventions du club", "sqt": "Choisir un mode de représentation adapté", "c": "#a8185b", "f": "#f6e8ef", "exos": [{"id": "s2-10/Cap vers le CCF", "num": "Cap vers le CCF", "lb": "Cap vers le CCF", "tc": "Les subventions du club", "d": "<svg class=\"ill\" viewBox=\"0 0 160 110\" role=\"presentation\"><rect width=\"160\" height=\"110\" rx=\"14\" fill=\"#f3dfe8\"/><circle cx=\"46\" cy=\"72\" r=\"30\" fill=\"#fff\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M46 52 l16 12 -6 19 h-20 l-6 -19 z\" fill=\"#a8185b\"/><path d=\"M92 20 H140 v18 a24 24 0 0 1 -48 0 z\" fill=\"#a8185b\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M92 26 H80 a12 12 0 0 0 12 16\" fill=\"none\" stroke=\"#22323b\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116 62 V76\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M98 94 H134 a6 6 0 0 0 -6 -10 H104 a6 6 0 0 0 -6 10 z\" fill=\"#a8185b\" stroke=\"#22323b\" stroke-width=\"5.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><\/svg>", "h": null}]}];
+var vch = document.getElementById("vch"), vsc = document.getElementById("vsc"),
+    vex = document.getElementById("vex");
 
 /* Le corrigé du professeur pose chaque réponse sous sa question. Sur le site,
    les réponses d'une même question sont rangées ensemble dans un seul encadré
@@ -877,30 +1594,62 @@ function ranger(racine){
   });
 }
 
-function ecranSeance(i){
-  var s = SC[i];
-  var o = ['<button class="s-ret" type="button" id="retour" style="color:', s.c,
-    '">&larr; Les séances</button>',
-    '<div class="sban" style="--c:', s.c, '"><div class="n"><span class="lib">SÉANCE</span>',
-    '<span class="chiffre">', s.n, '</span></div><div class="t"><p class="t1">', s.titre,
-    '</p><p class="t2">Séquence ', s.sq, ' &middot; ', s.sqt, '</p></div></div>'];
-  s.exos.forEach(function(e){
-    o.push('<section class="ex" style="--c:', s.c, ';--f:', s.f, '"><div class="ex-h">',
-      e.num ? '<span class="ex-n">' + e.num + '</span>' : '',
-      '<span class="ex-t">', e.tt, '</span></div><div class="ex-c">',
-      e.h ? '<div class="cx">' + e.h + '</div>'
-          : '<p class="attente" style="color:#00778a">La correction sera mise en ligne après la séance.</p>',
-      '</div></section>');
-  });
-  vsc.innerHTML = o.join("");
-  ranger(vsc);
-  vch.hidden = true; vsc.hidden = false;
-  window.scrollTo(0, 0);
-  document.getElementById("retour").addEventListener("click", function(){
-    vsc.hidden = true; vch.hidden = false; window.scrollTo(0, 0); });
+/* Le bandeau d'une séance, repris sur les deux écrans qu'elle ouvre. */
+function bandeau(s){
+  return '<div class="sban" style="--c:' + s.c + '"><div class="n">' +
+    '<span class="lib">SÉANCE</span><span class="chiffre">' + s.n + '</span></div>' +
+    '<div class="t"><p class="t1">' + s.titre + '</p>' +
+    '<p class="t2">Séquence ' + s.sq + ' &middot; ' + s.sqt + '</p></div></div>';
 }
 
-document.querySelectorAll(".carte.sc").forEach(function(b){
+function retour(id, txt, c, fn){
+  var b = document.getElementById(id);
+  b.style.color = c;
+  b.addEventListener("click", fn);
+}
+
+/* Deuxième écran : la séance, un encadré par exercice. On choisit. */
+function ecranSeance(i){
+  var s = SC[i];
+  var o = ['<button class="s-ret" type="button" id="retour">&larr; Les séances</button>',
+           bandeau(s), '<div class="gr ch3 exg">'];
+  s.exos.forEach(function(e, j){
+    o.push('<button class="carte sc xc" type="button" style="--c:', s.c, ';--f:', s.f,
+      '" data-i="', i, '" data-j="', j, '"><span class="ba"></span>', e.d,
+      '<p class="no">', e.lb, '</p><h3>', e.tc, '</h3>',
+      '<p class="nb">', e.h ? 'Correction en ligne' : 'Après la séance', '</p></button>');
+  });
+  o.push('</div>');
+  vsc.innerHTML = o.join("");
+  vch.hidden = true; vex.hidden = true; vsc.hidden = false;
+  window.scrollTo(0, 0);
+  retour("retour", "Les séances", s.c, function(){
+    vsc.hidden = true; vch.hidden = false; window.scrollTo(0, 0); });
+  vsc.querySelectorAll(".carte.xc").forEach(function(b){
+    b.addEventListener("click", function(){
+      ecranExo(+b.dataset.i, +b.dataset.j); });
+  });
+}
+
+/* Troisième écran : l'exercice choisi, seul, avec sa correction. */
+function ecranExo(i, j){
+  var s = SC[i], e = s.exos[j];
+  vex.innerHTML =
+    '<button class="s-ret" type="button" id="retour2">&larr; La séance ' + s.n + '</button>' +
+    bandeau(s) +
+    '<section class="ex" style="--c:' + s.c + ';--f:' + s.f + '"><div class="ex-h">' +
+    (e.num ? '<span class="ex-n">' + e.num + '</span>' : '') +
+    '<span class="ex-t">' + e.tc + '</span></div><div class="ex-c">' +
+    (e.h ? '<div class="cx">' + e.h + '</div>'
+         : '<p class="attente" style="color:#00778a">La correction sera mise en ligne après la séance.</p>') +
+    '</div></section>';
+  ranger(vex);
+  vch.hidden = true; vsc.hidden = true; vex.hidden = false;
+  window.scrollTo(0, 0);
+  retour("retour2", "La séance", s.c, function(){ ecranSeance(i); });
+}
+
+document.querySelectorAll("#vch .carte.sc").forEach(function(b){
   b.addEventListener("click", function(){ ecranSeance(+b.dataset.i); });
 });
 </script>
