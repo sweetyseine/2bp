@@ -1622,12 +1622,15 @@ p.seqt{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;font-weight:8
   font-size:19px;line-height:1.2;margin:0 0 8px;color:#0d1a22}
 .carte.sc .nb{margin:0;font-family:"Bricolage Grotesque",sans-serif;
   font-weight:800;font-size:14.5px;color:var(--c)}
-/* une séance « À venir » : mêmes couleurs, rien ne bouge au survol. Ce n'est
-   pas un bouton : on lui rend le centrage vertical d'un bouton, pour qu'elle
-   se range comme les autres. */
+/* une séance « À venir » : grisée comme les chapitres pas encore ouverts
+   (.carte.ch.off de site_2bp.py), et rien ne bouge au survol (28/09/2026).
+   Ce n'est pas un bouton : on lui rend le centrage vertical d'un bouton,
+   pour qu'elle se range comme les autres. */
 .carte.sc.av{display:flex;flex-direction:column;justify-content:center}
-.carte.sc.av,.carte.sc.av:hover{cursor:default;border-color:#12202a;
-  box-shadow:0 14px 30px -26px rgba(13,26,34,.7)}
+.carte.sc.av,.carte.sc.av:hover{cursor:default;border-style:dashed;
+  border-color:#22323b;box-shadow:none;background:#fbfbfd}
+.carte.sc.av .ba,.carte.sc.av .ill{filter:grayscale(1);opacity:.45}
+.carte.sc.av .no,.carte.sc.av h3,.carte.sc.av .nb{color:#5a6b74}
 
 /* une séance ouverte */
 /* les encadrés d'exercice, dans une séance ouverte */
