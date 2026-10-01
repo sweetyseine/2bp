@@ -566,7 +566,7 @@ ul.cck-l li:last-child{margin-bottom:0}
   .dbl svg,.q4 svg,.docu svg{max-width:100%;height:auto}
 }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>.ong.cons{display:none!important}section.exo>.exo-h .etat{display:none!important}</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -660,6 +660,18 @@ table.fill input.tc:focus{outline:2px solid #00778a;outline-offset:-2px}
 @media (min-width:1250px){body{zoom:1.2}}
 @media (min-width:1500px){body{zoom:1.45}}
 @media (min-width:2200px){body{zoom:1.8}}
+/* sur téléphone (01/10/2026) : la barre du bas sur deux rangées, sinon
+   Précédent et Suivant sortaient de l'écran */
+@media (max-width:640px){
+  .ap-bas{flex-wrap:wrap;gap:6px 8px;padding:6px 8px;justify-content:space-between}
+  .ap-bas .ap-bi{white-space:nowrap}
+  .ap-bas .ap-bd{width:100%;justify-content:space-between;gap:6px}
+  .ap-bas .ap-nb,.ap-bas #bCalc,.ap-bas .calc-b,.ap-bas #bSauver{padding:7px 11px!important;
+    font-size:13.5px!important;white-space:nowrap}
+  .ap-bas .dos{display:none!important}
+  body{padding-bottom:116px}
+  .sban .n{width:72px}
+}
 @media print{.ap-fil,.ap-bas{display:none!important}section.exo.ecp{display:block!important}
   .ecp-cache{display:block!important}}
 </style>
@@ -668,7 +680,7 @@ table.fill input.tc:focus{outline:2px solid #00778a;outline-offset:-2px}
 <script>
 (function(){
 "use strict";
-var VER = {"s2-2/Ex. 9": {"A": {"s": "Y2gwMXxzMi0yL0V4LiA5fEE=", "i": "Bs6B8tA9At7BTlht", "d": "oJJGEhbx792egtHtP1g46VDlAd4mg+hyoI0J72Wpj5dCKXFhjX2p5g4pj7TXafBdSU1dSmYottjSr/xqO+HhwyAp2SsRQlzgcq1VpbSb0t9FW6g5FX8esZNdgmpkNlsqMF/nVmf8Xsh38ehKk1+//qZzxEI2ncYAzKVk2SuYFHCZ49Vb0SAKPSah/LPN5vrlDnXs0oHZWSD24PlMaogYjMMFsxfbigcqZaeZvFmeafATJMHnF1XPporik/wFSETZr9HoTInCH3Lr+LIyL1oah4IXmw0gjfizGUflKEYJkiUsEgpKlstQ1ga6oJ11XWmmhGvDb77CN2k6Q/tKeepXQoO88BQK1BRk9+C5MsXV7qemcry/ntwFjW3CUJQOcKEaa2bhdQ2b1YiZmQEy/HvqgkiwEwfl2ldg67ycis3BvHX87DK9fBEbcDaqpSFxQyfstFRx9G2AjiXy/EgQ07uwaaU5QAGEDQ4hwU3Nrp77Zwnr9qGlH1FlBZUoAhWN9dhlzgRoNOqmMs7q8YF42d/c5mwhSfvuILzeGfYoyHz0BTnU6XZK9RqTbEWW4UxM0FHkYwOrattHLVkj8ZEVye0q7YxRdw94RQ+NTUrv05X6+lorWOx6Jm0uQPygOSxOEJ5yTFVw7TZgkORK7RuPKgNsOtiWtaBZMCM2iIbEYIPHZON5lDVIRswcJ26i6YyCh5vaU/+3x5BvtN3lo2I2D82l/LTvNuDwejvwI0BupbGsmlknnyTNCaQ03acN12m0eXtgHDdHrwEbQCOezd0wD3w6eCynvG2/A1tM8Z0sJZom0u9EsY6sQ5WM8cotwlqmlyaZYcUbY5o0a4WjWhFMYFFhAT8EkUBZ+DhpVl3n5/ECbjyq2eXxEG8kwiYcH/wAKJc7+ZtEpdSOkI412PuZXQefZ560Wd49L2UT3w7uZ+L+Dx3ub3HxVzLQeLUdbY4vBhcxHCWE+uNkpxOZ1qkY0PbIF18PV01e2VCBpF1Hwb86TfQ6zIRIeIKnaRmpsD+5TQuBL8e5fZRXW6P1cxul2FA+W3hbDYZ1cIfms+5X4Sdurb3F2a4PHUKc1jCYn7rdloDpQZv9b9Zu5VJPnAzVGz1QYdqYTrZTGFxzvXLZwXPL+MRD7ILeiYNKcppkq0Q0wqW7FKCHhT68Jx78WnIRAZe4KuY7hidj0MeZBSnYhR8kxR2UufrlvLDtc3lafzRnv390hgMed7FfVy3k7hH9/2b3F9EaqViHGFAbvZGFZvpv7RAUxqUmAfs+5Te34eHGybsHMYBW1aj+sK5tSp0VCIm/XZIp0Da1095iVtYMuGA0ED5CipzKu5HbD1xbTeGRYt3FaLjbyLdo8/sNlDMLl3ZEWX+K9WAZVelNzGvRUg6/Tbg7Kg+R02EFym0ZfGRcv/7Q70iYp29YRGZ8e0rOwzbkRNBBpukfb1+GRHG9OYVCpQ==", "n": 60000}, "B": {"s": "Y2gwMXxzMi0yL0V4LiA5fEI=", "i": "ZhDIXoAbyJ03WpVg", "d": "fvZyYHgkey7OX4XvRPapt0XinS3GepgXtnuMacpmKbMIoyAYY8fYkiR5UqV+FOZe2EM+E4JzsU9ex28HMrNkmN6131BUM6I9oGlTzPiKLYZmw3bXqYtmoyNm+PzUc+zdSFXGEY5txSV3I5WgJfJZPxK6mgA5jzLKGX6UDaaptpnEOPj6drsAHZVVgXRnmJC2p02qQSRinJB9yyOl0oKjd4y1YrLMp66fUm89LxLlth+CkiMdV5MbWLi2RlwpSD14UY7/Zr04X6NvKlEFA7ATvEHtkcw2WOVIQC+9pgzckAsX9tkAXuaImCFDlIxmKKpYHaVgU6mRsz9sl4hQVCoTIHYg0281HPh7Jntodpc86m2R2IF0eKk9vPghLQBZ9reB/sHne9cS2eR9x7GgTtMYcjCqw/Yk0BTNdDHApB2AzRFe8eHnb4pQusUqWlujgBQ/wqGq2D5h/yDEZ+M/G3NU1+fJpLF04SDl1WP3gkTvo0pbw6aQULMGtKMFCB7TLtTuLeXKlYfbxr4wWEGbsr42pWdA81wM4zstSN2s8i3ngqfLa4y699ppyPTP5DwfQbLUpRL3AklWOHP24biFLc9lHvTzCQDvOVW3vaLObtBuMgSa0vUKm8V4hWRUjNnw8oZi2KkkNU0ID2nmXt7vXm/ujX4eMOEGurSVh1dQk3Ub148aU/+NGPe+c7RuxPQBMNoKP7rlZyvtfPMj8AglO0GaDQ/5dIz3vYU/dAeiVTQ9fTcWYuZfm8soTiJscW8Ph4BJNQjax8eAPHtRTaueAhLdCURn8vyfxDY5UVim5QRtOnPV/DPvwxpOnTpZDdyNjQ+IMPX+o96YiGyagB3etlLqhDS8xjKMryB/s9IOftLnnvKxWt3JVSrb8Pyt/BEzL0Gh5+fStIiTzn52gaRYhQ99RBXdb/eBLT0TQeF3GNjYxXP3vbT2cFjVN3Yae8rzkTmxP1Q1UCMN5uECsBhUo6EqzXKMQGmo25O4urm+8eTOw+mV5n3DrfmWMyL6bgNeGxHrZxJJwVDx8yI8mWT0g0Mw1EEvXRWKse45n6rW/kU3vrcg/+imPULoS+VPpOCDTHKBfCoEnVftUHQhStTOOmaKdmrNrgpeloCT4dvEeVWmEg1OzpOU42WZH2SFWT3++m8RmQJiKrVVkQZo8GpD2WUFA1MSaFipehumjWLVhUQ32wDYzlEVsqG3SAPeEBzbVorVRgqYeqxkH0mmDOnhvBmj9lTXcfGft8HNbSBFI2naTQXDknEC+iXyZkako+n48MuNcNY1UhBodVRHvjqIc1qkVqzWy0GafAJVVc6gruo8M5L7pxuS4gGdACXwsP4Lwjh9SIEBsFY7X6GFTV1VEDjLs907ZwxHDbwCC2X7ELvNJbNRGi/jGP/FS+/5WAS3c3ZS3glYwHhB2QzIFDjDE+jUaO2QTvJ+aCqy8eIVNVkXRA==", "n": 60000}}}, IDC = "ver_ch01_s2-2";
+var VER = {"s2-2/Ex. 9": {"A": {"s": "Y2gwMXxzMi0yL0V4LiA5fEE=", "i": "IODeZMZ3Si+d4jhA", "d": "KrVnjiAYTzK1/M/TqdjZttiNSHi5PqqlTM19yA+G4lM0RgJBCwjUZSMikKoxi5Hh59v0zyG9/MYoCGnSYRtxoxds9/IMcDyd+KetBh63or0lwPJiE6fsdquXkl2SS8NjtlUICIQUCqzR2kdF1vrL+GtouKI0G+65v4hg0xW4vEsIZrXxZd0auBOw7/lerFFAOI3gGXq1YVhynY1mLAEDZPQMnG6aXgLkYyBbqdK9VbKoWSEJYb0JGS+nuDRAhTjXywrRDN60JxAQatvRVyqlGlg4INWIUkA1loj6BmryMLID6TY1LRs8ZyE5on4eydR+PzoDvpXEW7AxmrwNnY79c+KfTMMxiXEfUN7tUhl8g2PxWXsmX4DNsgx4HXhciuiIq//pYW24ZGmhKOJ2+or6eLdr+/LH+LM/1U+P5uJxLD0A7XvPL3sFbEWql6dgM67jyKyH2jQiEj1SMlh0AIWwvFUVkbk/9JAQUy8cT4yAp7CwppQ8y9b2e+vSzyiD5WUTh5sIGy/uDbek5n5LvtJ/OfVz49Am87OftYBwE/lROeOQ6sVxsaEseUVE2OdbKWlFf+a7uqsu3glRRAgfIPPReqpaVLOFnQr2Tnj0bkYCU62dY8OeyINpmVRBgeW1DHg86BHqr5qIfHMFugEjXEAHUJhub+kf0jWxONBGucMxrBQo+FYoFRew1UPwg1oI4XA1ekwej2a7Ej5KXTcOT4iONk0BGzTCC8iYLT8lYUU3tz75wsvKpU8fpN3/O0kAGwbBW30001kyi0sb8E/+W9SPXcQYw224yqCAmWGI2p59J/N3CJLdSn2oUDrA41vIcexNlERDyZw4RyVakSDg4MezIHQE8O/hU/KzEInLVHJGdwmg9bF5yCk/FzaCOGofAStQ6XilWPgyFCkK0+akajJ7ibsOrcxORfLvFT3Ijnwle8kpfZH3g9V0Q/8CcyHEoxzjt3SgDdci/8qtEV05TbeMHAEp4/E8neweDHrGrTytGfpOLUZGj1CdKHHr6AyOB+6OGCtu9xuOKgZmUNFa2rE8l4Y1bhBTwrVZ29bo7W7v0Owt9U50UrnLuT9CDEDmqqXl3W3t86zb0vnGP7hJxPEFXepriN4HGwzn0wKaDG2xcV3N3JT3g4t9+xsWhO2xCxJzVvnDhZ7F//M8ijtK9u6i3FM0fiTXBcn38Af8mqMTfBGyLmDoCg8fysJmxFRkaCeSL07Np5953Mtc8hYcsmWSY8Y1AneqMvCsVvylkOC0dpRwdbyYy4mpgkBpj7g69scNSODSiEg7e3EjfTEnnYXdXyrmq50QrIwEnqhCk4YEklN0Q9k5aMwm9ZoCaSV7IVM08fEcPXIu3UFcsXoIl3xVWHVN6J1vMrMMxtscxBSgcXSMPcdq4XvU4Rdj7nr/Ua/tLfJ0TUe9tzhmAUqP+b30BOwvcfJANFXIyb6IcJ3Dig==", "n": 60000}, "B": {"s": "Y2gwMXxzMi0yL0V4LiA5fEI=", "i": "PdgiDVRZjxzF45qr", "d": "kMh0zYmpCOFJGkqzpKDsor6AkfVLyXKSInwPlSg0SRsMcilxwVt7JpEAI5V4nlEb/4pF1sy2t0E1sTbhEorFq/8tvmrsUMbuXc0YagEQM4S69no/AYwie6K6f67FDUt7rds5AGkmOKfrs61Uyd7AqYP3K8Pstt/AQO3l1pX/8/Niofa8wJOKXXY8DnyYWY7AzSN7KaLOvbbxDYm4jG/KoOoawZ+aX34i5z8zof1gFQCyY5tpMjE/Y3InXvx7eotUBPNPyx5WCiu3Xmnlr0sK2mgprmg96EqC2hS4sTGwDdo8szo81XFsEJ+fmLa5CEtQJtuibryJ1jqwmz5YBxWgWNwhcNNIOkmgzE3g8nb5aUxd9hKCt9Nqlj2vNtBMyvyoFKYsWxYUGM0u6EHhSynuKv6T7tn7N4g5XEvkfY1l9BGmt2APs8ZDqzULJ+kR4aGGsrZOx3p+xqIqAMbXBXFRpKELf9P6s8gHjczzZkb3W7HeTcec3JXZQSB7VyYwiOztjYzU33b4tDMd63lwQMX497LXj/NO85Cal+O7Oty8/hcu+xxvSgdlUDGghUisXo4SKBqr49Qdo5wA/pkIQtju8tgUXyZIkomQx1EzXnZqBdzoVj0TrBhE/3tn0RjZxI4Oa2Hb3+FOxFRfOsKDYrSgS3NPPga7x/EVFA4ZxsB5XIC7eWDd+zUl6gJqZllrcod/e1p78G/RuRq3Avy/MW6sbS7o7bk3ciJFtdTl0IMxvU8/k53T9AKo0TVMvPzF1NiOWnyfQdUAc6fEyJ87FPNmejvBh2wRfoQJa4/Glx665nXwqZ+iPiMiKQk1rRMbwok4mrS7MzHxv+XZ/Rxu5flfkIqfz1IPhltoYQI48qMYBNYGBIHk1g3ScQJyTuM8HuYNx74neIsRpNCggjYgdIXJ9K6TkBxU6qxDbpVKNXGVXHlNbtTeMFJlvWzZbKml8i6sBI3KuZxVqRzZ0f8p7lSCT8kYNybx7Ew1+UoF33koT6DI62/9pjEya16d4lfe6VTaK+kR46BVX3OrnTcx1MFOX2i5NRR7Q+i8b5DMWenJQRV8g0E2XLrtzlDNR1MRLMjQqpV4v4xck1A/GnSUN6fx1H9mKd1BK6ug78ebWWAjQMorX/dzIPKuhdJGNw21ApNjxOyDhkwLD6kLv96YbjJQJnfUEFn1bzxGPkGoU9+MxF8DDoHuCWfbFZ9IipytweKWIfbYYHwxHylVAh8JCqPhB0fGA2To5jjUXJw4zefOYn93lEKjC6Ds7EqRidV2iSbUquQ1ttmnmgMsZiGF7etNpWYOoXBxl3/1yjyiYyy5XVW3oepWrqhu7XAXDT0KgJZ+t9xrQh0q1nV7ZcrHnGvLi+tidQM/XZouEVXcnebOeI2fGBJbI8B1yivE4RWkp5pTSU9sW1/A3E//v6HCrikVg+WfH/t/igUZu/9v4SKlOg==", "n": 60000}}}, IDC = "ver_ch01_s2-2";
 if(!VER || !Object.keys(VER).length) return;
 var b64 = function(t){ var b=atob(t), a=new Uint8Array(b.length);
   for(var i=0;i<b.length;i++) a[i]=b.charCodeAt(i); return a; };
@@ -741,7 +753,7 @@ window.deverrouiller = function(){
 
 <div class="wrap"><div class="sban" style="--c:#a8185b"><div class="n"><span class="lib">SÉANCE</span><span class="chiffre">2</span></div><div class="t"><p class="fil">Chapitre 1 &rsaquo; Séquence 2 &middot; Choisir un mode de représentation adapté</p><p class="t1">Cote de popularité</p></div></div>
   <section class="pg"><div class="ong cons"><span class="lb">Consignes</span><p class="cons-t">Pour chacune de vos réponses :</p><ul><li><b>Écrire</b> les calculs et les résultats.</li><li><b>Répondre</b> aux questions en écrivant une phrase réponse.</li></ul></div></section>
-<div class="ong cck"><span class="lb">Capacités et connaissances</span><p class="cck-t">Capacités</p><ul class="cck-l"><li><span class="cck-c">C2</span><span class="cck-x"><b>Organiser</b> des données statistiques en choisissant un mode de représentation adapté à l’aide des fonctions statistiques d’une calculatrice ou d’un tableur.</span></li><li><span class="cck-c">C3</span><span class="cck-x"><b>Extraire</b> des informations d’une représentation d’une série statistique.</span></li></ul></div><section class="exo" data-verrou="s2-2/Ex. 9" data-exo="ex09" data-titre="Ex. 9 - Cote de popularité"><div class="exo-h"><span class="exo-t"><span class="ex-n">Ex. 9</span>Cote de popularité</span><span class="etat">non rendu</span></div><div class="exo-c"></div><div class="exo-f"><div class="aenv"><span class="lb">Envoyer sa copie</span><ol><li><b>Cliquer</b> sur <b>Envoyer ma copie à la professeure</b>. Le navigateur enregistre la copie à côté du fichier, avec <i>Nom Prénom</i> et la date du jour, puis la page du téléversement s’ouvre.</li><li><b>Cliquer</b> sur <b>Téléverser</b>, <b>choisir</b> son fichier à la date du jour et <b>envoyer</b>.</li><li>Un grand cadre au milieu de l’écran confirme que l’envoi est passé.</li></ol></div><button class="env" data-env="ex09">Envoyer ma copie à la professeure</button><span class="note-env" data-note="ex09"></span></div></section>
+<div class="ong cck"><span class="lb">Capacités et connaissances</span><p class="cck-t">Capacités</p><ul class="cck-l"><li><span class="cck-c">C2</span><span class="cck-x"><b>Organiser</b> des données statistiques en choisissant un mode de représentation adapté à l’aide des fonctions statistiques d’une calculatrice ou d’un tableur.</span></li><li><span class="cck-c">C3</span><span class="cck-x"><b>Extraire</b> des informations d’une représentation d’une série statistique.</span></li></ul></div><section class="exo" data-verrou="s2-2/Ex. 9" data-exo="ex09" data-titre="Ex. 9 - Cote de popularité"><div class="exo-h"><span class="exo-t"><span class="ex-n">Ex. 9</span>Cote de popularité</span><span class="etat">non rendu</span></div><div class="exo-c"></div><div class="exo-f"><div class="aenv"><span class="lb">Envoyer sa copie</span><ol><li><b>Cliquer</b> sur <b>Envoyer ma copie à la professeure</b>. La copie s’enregistre sur l’ordinateur, dans le dossier choisi ou dans <b>Téléchargements</b>, avec <i>Nom Prénom</i> et la date du jour, puis la page du Nuage s’ouvre.</li><li><b>Cliquer</b> sur <b>Téléverser</b>, <b>choisir</b> son fichier à la date du jour et <b>envoyer</b>.</li><li>Un grand cadre au milieu de l’écran confirme que l’envoi est passé.</li></ol></div><button class="env" data-env="ex09">Envoyer ma copie à la professeure</button><span class="note-env" data-note="ex09"></span></div></section>
   <nav class="pgnav">
     <button type="button" id="pgPrec">‹ Page précédente</button>
     <span class="pgn" id="pgn"></span>
@@ -766,7 +778,7 @@ window.deverrouiller = function(){
     <button type="button" data-c="7">7</button><button type="button" data-c="8">8</button>
     <button type="button" data-c="9">9</button><button type="button" data-c="&times;" class="o">&times;</button>
     <button type="button" data-c="4">4</button><button type="button" data-c="5">5</button>
-    <button type="button" data-c="6">6</button><button type="button" data-c="&minus;" class="o">&minus;</button>
+    <button type="button" data-c="6">6</button><button type="button" data-c="&minus;" class="o">-</button>
     <button type="button" data-c="1">1</button><button type="button" data-c="2">2</button>
     <button type="button" data-c="3">3</button><button type="button" data-c="+" class="o">+</button>
     <button type="button" data-c="0" class="l">0</button>
@@ -1343,7 +1355,7 @@ function etat(){
 }
 function restaurer(d){
   if(!d)return;
-  $("#nom").value=d.nom||""; $("#prenom").value=d.prenom||""; rendus=d.rendus||{};
+  if(!$("#nom").readOnly){ $("#nom").value=d.nom||""; $("#prenom").value=d.prenom||""; } rendus=d.rendus||{};
   Object.keys(d.exercices||{}).forEach(function(e){
     var r=(d.exercices[e]||{}).reponses||{};
     Object.keys(r).forEach(function(k){
@@ -1653,14 +1665,14 @@ $$("[data-env]", racine||document).forEach(function(btn){
 
     function secours(raison){
       note.className="note-env att";
-      note.innerHTML="Enregistrez votre copie sous le nom <b>"+nf+"</b>, à côté de ce fichier.";
+      note.innerHTML="Enregistrez votre copie sous le nom <b>"+nf+"</b>.";
       enregistrer().then(function(ou){
         if(ou==="annule"){
           note.innerHTML="Enregistrement annulé. <b>Recliquer</b> sur le bouton pour recommencer.";
           return;
         }
         var place = (ou==="choisi")
-          ? "Votre copie est enregistrée <b>à côté de ce fichier</b>, sous le nom <b>"+nf+"</b>."
+          ? "Votre copie est enregistrée dans le dossier choisi, sous le nom <b>"+nf+"</b>."
           : "Votre copie est dans le dossier <b>Téléchargements</b>, sous le nom <b>"+nf+"</b>.";
         note.innerHTML = place + "<br>La page du Nuage s’ouvre : <b>cliquer</b> sur "
           + "<b>Téléverser</b>, <b>choisir</b> ce fichier à la date du jour, puis <b>envoyer</b>."
